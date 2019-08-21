@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import {Python, Node} from 'styled-icons/fa-brands';
 import {Redux, ReactLogo, Javascript, Html5, Css3, Github } from 'styled-icons/boxicons-logos';
+import mongodb from './my_images/mongodb.png'
+import postgresql from './my_images/postgresql.png'
 
 const MainLogoText = styled.div `
     background-color: #fff;
@@ -94,15 +96,17 @@ const MainLogo = () => {
                                 </span>
                             </div>
                         </MainSubText>
-                        <div style={{ minWidth: '350px', maxWidth: '600px', margin: '0 30px 0 50px', padding: "0 20px 0  20px 0"}}>
-                            <ReactLogo style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
-                            <Redux style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
-                            <Node style={{height: '40px', width: '40px', margin: '0 10px 0 10px', position: 'relative', top: '13px'}} />
-                            <Javascript style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
-                            <Python style={{height: '40px', width: '40px', margin: '0 10px 0 10px', position: 'relative', top: '13px'}} />
-                            <Html5 style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
-                            <Css3 style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
-                            <Github style={{height: '40px', width: '40px', margin: '0 10px 0 10px'}} />
+                        <div style={{ minWidth: '350px', maxWidth: '600px', margin: '0 30px 0 30px', padding: "0 20px 0  20px 0", textAlign: 'center'}}>
+                            <ReactLogo style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Redux style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Node style={{height: '40px', width: '40px', margin: '5px 10px 0 10px', position: 'relative', top: '13px'}} />
+                            <Javascript style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Python style={{height: '40px', width: '40px', margin: '5px 10px 0 10px', position: 'relative', top: '13px'}} />
+                            <img src={mongodb} alt={'mongodb icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <img src={postgresql} alt={'postgresql icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Html5 style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Css3 style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                            <Github style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                         </div>
                     </div>
                 </div>
