@@ -62,11 +62,15 @@ const NavBar = () => {
 
 	function openLogoBig() {
 		if (!tlStart.isActive()) {
-			tlOpen.play();
-			logoAnimation();
+			if(tlOpen.totalProgress !== 1) {
+				tlOpen.play();
+				logoAnimation();
+			}
 		} else {
 			return null;
 		}
+
+		console.log(tlStart.time())
 	}
 
 	function closeLogoSmall() {
@@ -109,9 +113,17 @@ const NavBar = () => {
 		TweenMax.to(linkElementContact, 0.05, { scale: 1, ease: Linear.ease });
 	}
 
+	let logoWrapper = {
+		position: 'absolute',
+		width: '200px',
+		height: '40px',
+		zIndex: '100'
+	}
+
 	let logoStyle = {
 		display: "flex",
 		position: "relative",
+		// border: '1px solid red'
 	};
 
 	let shortLogoName = {
@@ -133,12 +145,14 @@ const NavBar = () => {
 			<Navbar sticky="top" expand="sm">
 				<Container>
 					<Navbar.Brand href="#home">
+						<div style={logoWrapper} 
+							onMouseEnter={openLogoBig}
+							onMouseLeave={closeLogoSmall}>
+						</div>
 						<div
 							ref={element => {
 								logoElement = element;
-							}}
-							onMouseEnter={openLogoBig}
-							onMouseLeave={closeLogoSmall}
+							}}								
 							style={logoStyle}
 						>
 							<div>
@@ -150,14 +164,14 @@ const NavBar = () => {
 							</div>
 							<div>
 								<span className="shortName" style={shortLogoName}>
-									O.N.
+									<span style={{color: 'red'}}>O</span>.<span style={{color: 'red'}}>N</span>.
 								</span>
 								<span className="longName" style={longLogoName}>
-									Omerovic, Nedim
+									<span style={{color: 'red'}}>O</span>merovic, <span style={{color: 'red'}}>N</span>edim
 								</span>
 							</div>
 							<div ref={element => (rightBracket = element)}>
-								<img src={right_bracket} alt={"left bracket"} style={{ width: 8, marginleft: 5 }} />
+								<img src={right_bracket} alt={"right bracket"} style={{ width: 8, marginleft: 5 }} />
 							</div>
 						</div>
 					</Navbar.Brand>

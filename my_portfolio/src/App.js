@@ -2,12 +2,14 @@ import React from "react";
 import "./App.css";
 
 import NavBar from "./components/navbar";
+import MainHeader from './components/mainHeader'
 
 function App() {
 	return (
 		<div className="App">
 			<NavBar />
-			<p>This is temp text</p>
+			<MainHeader />
+			{/* <p>This is temp text</p> */}
 		</div>
 	);
 }
