@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade'
 const AboutMeDiv = styled.div `
     background: #222;
     color: #fff;
-    margin: 80px 0 30px 0;
+    margin: 200px 0 30px 0;
 `
 
 const AboutMe = () => {
@@ -16,12 +16,12 @@ const AboutMe = () => {
     return (
         <AboutMeDiv className='aboutMeSection'>
             <Container style={{borderTop: '1px solid #222', borderBottom: '1px solid #222'}}>
-                <h2 style={{textAlign: 'left', margin: '70px 70px 30px 70px', fontFamily: 'Nunito'}}>
+                <h2 style={{textAlign: 'left', margin: '120px 70px 30px 70px', fontFamily: 'Nunito'}}>
                     <span>
                         About
                     </span>
                 </h2>
-                <div style={{margin: '0 100px 70px 100px', textAlign: 'left'}}>
+                <div style={{margin: '0 100px 120px 100px', textAlign: 'left'}}>
                     <Fade left>
                         <p>
                             Creative problem solver, passionate learner and life-long tech enthusiast. 
