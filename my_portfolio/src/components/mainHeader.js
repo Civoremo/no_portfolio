@@ -71,7 +71,7 @@ const MainLogo = () => {
     let mainWrapper = {
         height: '400px',
         display: 'flex',
-        justifyContent: 'left'
+        justifyContent: 'left',
     }
     
     let textWrapper = {
