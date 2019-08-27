@@ -34,7 +34,7 @@ const AboutMe = () => {
                     </Fade>
                     <Fade left>
                         <p>
-                            I love spending my days working on both front-end and back-end projects and collborating with others on creative projects.
+                            I love spending my days working on both the front-end and back-end and collborating with others on creative projects.
                         </p>
                     </Fade>
                     <Fade right>
