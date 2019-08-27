@@ -5,6 +5,7 @@ import NavBar from "./components/navbar";
 import MainHeader from './components/mainHeader';
 import AboutMe from './components/aboutme';
 import Projects from './components/projects';
+import ContactForm from './components/contactSection';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<MainHeader />
 			<AboutMe />
 			<Projects />
+			<ContactForm />
 			{/* <p>This is temp text</p> */}
 		</div>
 	);

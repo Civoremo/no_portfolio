@@ -14,7 +14,7 @@ const CardContainerDiv = styled.div `
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 0 40px 0;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 `
 
 const EachCardDiv = styled.div `
