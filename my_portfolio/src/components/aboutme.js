@@ -39,7 +39,7 @@ const AboutMe = () => {
                     </Fade>
                     <Fade right>
                         <p>
-                            I also love to travel and learn about different cultures and their people; have had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
+                            I also love to travel and experience the various cultures around the world; I've have had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
                         </p>
                     </Fade>
                 </div>
