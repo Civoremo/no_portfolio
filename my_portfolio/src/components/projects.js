@@ -28,7 +28,6 @@ const EachCardWrapperDiv = styled.div `
     position: absolute;
 
     :hover {
-        min-width: 19rem;
         box-shadow: 5px 5px 5px #dadada;
         z-index: 10;
         cursor: pointer;
