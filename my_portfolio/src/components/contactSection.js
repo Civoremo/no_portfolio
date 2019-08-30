@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { TweenMax, Linear, TimelineLite, Back } from 'gsap';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
+import { Github, Linkedin } from 'styled-icons/boxicons-logos'
+import { FilePdf } from 'styled-icons/boxicons-solid'
 
 const ContactContainerDiv = styled.div `
     background: #222;
@@ -11,6 +13,27 @@ const ContactContainerDiv = styled.div `
 
 const FormContainer = styled.div `
     max-width: 650px;
+    margin-bottom: 30px;
+`
+
+const ContactSectionWrapper = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+const SocialLinksContainer = styled.div `
+    padding-left: 20px;
+    min-width: 300px;
+    text-align: left;
+
+`
+
+const TitleDiv = styled.div `
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 4px;
 `
 
 const ContactForm = () => {
@@ -23,30 +46,44 @@ const ContactForm = () => {
                         Get in Contact
                     </span>
                 </h2>
-                <Container style={{border: '1px solid red', padding: '30px 70px'}}>
-                    <FormContainer>
-                        <form action='/contact_page.php' style={{paddingRight: '25px', paddingBottom: '30px', borderRight: '5px solid red'}}>
-                            <div className='form-group' >
-                                <div className='form-row'>
-                                    <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
-                                        <label for='formGroupNameInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Name</label>
-                                        <input type='text' className='form-control' id='formGroupNameInput' required ></input>
+                <Container style={{padding: '30px 70px'}}>
+                    <ContactSectionWrapper>
+                        <FormContainer>
+                            <form action='/contact_page.php' style={{paddingRight: '25px', paddingBottom: '30px'}}>
+                                <div className='form-group' >
+                                    <div className='form-row'>
+                                        <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
+                                            <label htmlFor='formGroupNameInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Name</label>
+                                            <input type='text' className='form-control' id='formGroupNameInput' required ></input>
+                                        </div>
+                                        <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
+                                            <label htmlFor='formGroupEmailInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Email</label>
+                                            <input type='text' className='form-control' id='formGroupEmailInput' required></input>
+                                        </div>
                                     </div>
-                                    <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
-                                        <label for='formGroupEmailInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Email</label>
-                                        <input type='text' className='form-control' id='formGroupEmailInput' required></input>
+                                    <div className='form-row'>
+                                        <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
+                                            <label htmlFor='formGroupMessageInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Message</label>
+                                            <textarea type='text' className='form-control' id='formGroupMessageInput' required rows='6' style={{resize: 'none'}}></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className='form-row'>
-                                    <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
-                                        <label for='formGroupMessageInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Message</label>
-                                        <textarea type='text' className='form-control' id='formGroupMessageInput' required rows='6' style={{resize: 'none'}}></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="button" className='btn btn-danger'>Submit</button>
-                        </form>
-                    </FormContainer>
+                                <button type="submit" className='btn btn-danger'>Submit</button>
+                            </form>
+                        </FormContainer>
+                        <SocialLinksContainer>
+                            <TitleDiv>Current Location</TitleDiv>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}>Orlando, Florida</div>
+                            <TitleDiv>Email</TitleDiv>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href='mailto:contact@nedim.info' style={{ color: '#fff'}}>contact@nedim.info</a></div>
+                            <TitleDiv>Resume</TitleDiv>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a><FilePdf  style={{width: '50px', color: '#fff'}} /></a></div>
+                            <TitleDiv>Github</TitleDiv>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href='https://github.com/Civoremo' target='_blank'><Github style={{width: '50px', color: '#fff'}} /></a></div>
+                            <TitleDiv>LinkedIn</TitleDiv>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href='https://www.linkedin.com/in/nedim-omerovic-46088b25' target='_blank' ><Linkedin style={{width: '50px', color: '#fff'}} /></a></div>
+                        </SocialLinksContainer>
+                    </ContactSectionWrapper>
                 </Container>
             </Container>
         </ContactContainerDiv>
