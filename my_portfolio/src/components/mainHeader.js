@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TweenMax, Linear, TimelineLite, Back } from 'gsap';
+import { Linear, TimelineLite, Back } from 'gsap';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import {Python, Node} from 'styled-icons/fa-brands';
