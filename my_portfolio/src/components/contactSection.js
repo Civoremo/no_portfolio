@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import { Github, Linkedin } from 'styled-icons/boxicons-logos'
 import { FilePdf } from 'styled-icons/boxicons-solid'
+import PDFResume from './assets/Nedim_Omerovic_resume.pdf';
 
 const ContactContainerDiv = styled.div `
     background: #222;
@@ -49,7 +50,7 @@ const ContactForm = () => {
                 <Container style={{padding: '30px 70px'}}>
                     <ContactSectionWrapper>
                         <FormContainer>
-                            <form action='/contact_page.php' style={{paddingRight: '25px', paddingBottom: '30px'}}>
+                            <form className='needs-validation' noValidate id='contact-form' method='post' action='contactSubmit.php' role='form' style={{paddingRight: '25px', paddingBottom: '30px'}}>
                                 <div className='form-group' >
                                     <div className='form-row'>
                                         <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
@@ -77,7 +78,7 @@ const ContactForm = () => {
                             <TitleDiv>Email</TitleDiv>
                             <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href='mailto:contact@nedim.info' style={{ color: '#fff'}}>contact@nedim.info</a></div>
                             <TitleDiv>Resume</TitleDiv>
-                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a><FilePdf  style={{width: '50px', color: '#fff'}} /></a></div>
+                            <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href={PDFResume} target='Nedim_Omerovic_Resume'><FilePdf  style={{width: '50px', color: '#fff'}} /></a></div>
                             <TitleDiv>Github</TitleDiv>
                             <div style={{marginBottom: '15px', marginLeft: '10px', fontFamily: 'Open Sans Condensed', letterSpacing: '4px'}}><a href='https://github.com/Civoremo' target='_blank'><Github style={{width: '50px', color: '#fff'}} /></a></div>
                             <TitleDiv>LinkedIn</TitleDiv>
