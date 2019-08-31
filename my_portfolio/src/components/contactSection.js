@@ -55,21 +55,21 @@ const ContactForm = () => {
                                     <div className='form-row'>
                                         <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
                                             <label htmlFor='formGroupNameInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Name</label>
-                                            <input type='text' className='form-control' id='formGroupNameInput' required ></input>
+                                            <input type='text' className='form-control' id='formGroupNameInput' name='name' required ></input>
                                         </div>
                                         <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
                                             <label htmlFor='formGroupEmailInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Email</label>
-                                            <input type='text' className='form-control' id='formGroupEmailInput' required></input>
+                                            <input type='text' className='form-control' id='formGroupEmailInput' name='email' required></input>
                                         </div>
                                     </div>
                                     <div className='form-row'>
                                         <div className='col' style={{minWidth: '300px', margin: '15px 0 15px 15px'}}>
                                             <label htmlFor='formGroupMessageInput' style={{ textAlign: 'left', width: '100%', fontFamily: 'Open Sans Condensed', fontWeight: 'bold', fontSize: '22px', letterSpacing: '5px', padding: '0 20px'}}>Message</label>
-                                            <textarea type='text' className='form-control' id='formGroupMessageInput' required rows='6' style={{resize: 'none'}}></textarea>
+                                            <textarea type='text' className='form-control' id='formGroupMessageInput' name='message' required rows='6' style={{resize: 'none'}}></textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" className='btn btn-danger'>Submit</button>
+                                <button type="submit" className='btn btn-danger' name='submit'>Submit</button>
                             </form>
                         </FormContainer>
                         <SocialLinksContainer>
