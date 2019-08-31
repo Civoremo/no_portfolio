@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { TweenMax, Linear, TimelineLIte, Back } from 'gsap';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import {Redux, ReactLogo, Javascript, Html5, Css3} from 'styled-icons/boxicons-logos'

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { TweenMax, Linear, TimelineLite, Back } from 'gsap';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade'
