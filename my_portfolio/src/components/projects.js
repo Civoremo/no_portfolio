@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import {Redux, ReactLogo, Javascript, Html5, Css3} from 'styled-icons/boxicons-logos'
@@ -6,6 +6,8 @@ import mongodb from './my_images/mongodb.png'
 import apollo from './my_images/apollo.png';
 import graphql from './my_images/graphql.png';
 import Flip from 'react-reveal/Flip'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 
 const ProjectsDiv = styled.div `
 `
@@ -34,7 +36,22 @@ const EachCardWrapperDiv = styled.div `
     }
 `
 
-const Projects = () => {
+const ModalLink = styled.a `
+    color: #007bff;
+
+    :hover {
+        cursor: pointer;
+    }
+`
+    
+    const Projects = () => {
+        const [lgProject1Show, setLgProject1Show] = useState(false);
+        const [lgProject2Show, setLgProject2Show] = useState(false);
+        const [lgProject3Show, setLgProject3Show] = useState(false);
+        const [lgOlderProject1Show, setLgOlderProject1Show] = useState(false);
+        const [lgOlderProject2Show, setLgOlderProject2Show] = useState(false);
+        const [lgOlderProject3Show, setLgOlderProject3Show] = useState(false);
+        const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
 
     return (
         <ProjectsDiv>
@@ -52,7 +69,21 @@ const Projects = () => {
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Arq</h5>
                                                 <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
-                                                <a href='#'>Learn More</a>
+                                                <ModalLink onClick={() => setLgProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject1Show}
+                                                    onHide={() => setLgProject1Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 1
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 1</Modal.Body>
+                                                </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
@@ -82,9 +113,23 @@ const Projects = () => {
                                         <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
-                                                <h5 className='card-title'>Arq</h5>
+                                                <h5 className='card-title'>Droom</h5>
                                                 <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
-                                                <a href='#'>Learn More</a>
+                                                <ModalLink onClick={() => setLgProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject2Show}
+                                                    onHide={() => setLgProject2Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 2
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 2</Modal.Body>
+                                                </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
@@ -114,9 +159,23 @@ const Projects = () => {
                                         <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
-                                                <h5 className='card-title'>Arq</h5>
+                                                <h5 className='card-title'>Luncher</h5>
                                                 <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
-                                                <a href='#'>Learn More</a>
+                                                <ModalLink onClick={() => setLgProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject3Show}
+                                                    onHide={() => setLgProject3Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 3
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 3</Modal.Body>
+                                                </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
@@ -152,9 +211,23 @@ const Projects = () => {
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <p className='card-text'>Some project description text</p>
-                                    <a href="#">Learn more</a>
+                                    <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject1Show}
+                                        onHide={() => setLgOlderProject1Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 1
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 1</Modal.Body>
+                                    </Modal>                                    
                                 </div>
-                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
                                     <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
@@ -166,9 +239,23 @@ const Projects = () => {
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <p className='card-text'>Some project description text</p>
-                                    <a href="#">Learn more</a>
+                                    <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject2Show}
+                                        onHide={() => setLgOlderProject2Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 2
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 2</Modal.Body>
+                                    </Modal> 
                                 </div>
-                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
                                     <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
@@ -180,9 +267,23 @@ const Projects = () => {
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <p className='card-text'>Some project description text</p>
-                                    <a href="#">Learn more</a>
+                                    <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject3Show}
+                                        onHide={() => setLgOlderProject3Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 3
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 3</Modal.Body>
+                                    </Modal> 
                                 </div>
-                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
                                     <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
@@ -194,9 +295,23 @@ const Projects = () => {
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <p className='card-text'>Some project description text</p>
-                                    <a href="#">Learn more</a>
+                                    <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject4Show}
+                                        onHide={() => setLgOlderProject4Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 4
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 4</Modal.Body>
+                                    </Modal> 
                                 </div>
-                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
                                     <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
