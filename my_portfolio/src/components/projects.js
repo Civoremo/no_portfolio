@@ -146,42 +146,62 @@ const Projects = () => {
                     Older Projects
                 </h4>
                 <CardContainerDiv>
-                    <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                        <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
-                        <div className='card-body'>
-                            <p className='card-text'>Some project description text</p>
-                            <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
-                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                    <Flip top>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                        <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
-                        <div className='card-body'>
-                            <p className='card-text'>Some project description text</p>
-                            <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
-                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                    </Flip>
+                    <Flip bottom>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                        <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
-                        <div className='card-body'>
-                            <p className='card-text'>Some project description text</p>
-                            <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
-                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                    </Flip>
+                    <Flip top>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                        <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
-                        <div className='card-body'>
-                            <p className='card-text'>Some project description text</p>
-                            <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
-                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                    </Flip>
+                    <Flip bottom>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <a href="#">Learn more</a>
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid whitesmoke'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Flip>
                 </CardContainerDiv>
             </Container>
         </ProjectsDiv>
