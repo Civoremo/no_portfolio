@@ -68,7 +68,7 @@ const ModalLink = styled.a `
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Arq</h5>
-                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <p className='card-text'>Worked with team to add features and refactor old code.</p>
                                                 <ModalLink onClick={() => setLgProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                                 <Modal
@@ -80,7 +80,7 @@ const ModalLink = styled.a `
                                                 >
                                                     <Modal.Header closeButton>
                                                     <Modal.Title id="example-modal-sizes-title-lg">
-                                                        Large Modal 1
+                                                        Arq
                                                     </Modal.Title>
                                                     </Modal.Header>
                                                     <Modal.Body>
@@ -165,7 +165,7 @@ const ModalLink = styled.a `
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Droom</h5>
-                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <p className='card-text'>Built the Front-end for a job-posting and job-searching site.</p>
                                                 <ModalLink onClick={() => setLgProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                                 <Modal
@@ -176,7 +176,7 @@ const ModalLink = styled.a `
                                                 >
                                                     <Modal.Header closeButton>
                                                     <Modal.Title id="example-modal-sizes-title-lg">
-                                                        Large Modal 2
+                                                        Droom
                                                     </Modal.Title>
                                                     </Modal.Header>
                                                     <Modal.Body>
@@ -261,7 +261,7 @@ const ModalLink = styled.a `
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Luncher</h5>
-                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <p className='card-text'>Built the Front-end and Back-end for a school lunch fundraising site.</p>
                                                 <ModalLink onClick={() => setLgProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                                 <Modal
@@ -272,7 +272,7 @@ const ModalLink = styled.a `
                                                 >
                                                     <Modal.Header closeButton>
                                                     <Modal.Title id="example-modal-sizes-title-lg">
-                                                        Large Modal 3
+                                                        Luncher
                                                     </Modal.Title>
                                                     </Modal.Header>
                                                     <Modal.Body>
@@ -361,7 +361,8 @@ const ModalLink = styled.a `
                             <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
-                                    <p className='card-text'>Some project description text</p>
+                                    <h5 className='card-title'>Tetris Clone</h5>
+                                    <p className='card-text'>Tetris clone made with the XNA framework.</p>
                                     <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
@@ -372,7 +373,7 @@ const ModalLink = styled.a `
                                     >
                                         <Modal.Header closeButton>
                                         <Modal.Title id="example-modal-sizes-title-lg">
-                                            Large Modal Older 1
+                                            Tetris Clone
                                         </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
@@ -439,7 +440,8 @@ const ModalLink = styled.a `
                             <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
-                                    <p className='card-text'>Some project description text</p>
+                                    <h5 className='card-title'>Orbit Denfender</h5>
+                                    <p className='card-text'>Orbital earth defender made with Unity.</p>
                                     <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
@@ -450,7 +452,7 @@ const ModalLink = styled.a `
                                     >
                                         <Modal.Header closeButton>
                                         <Modal.Title id="example-modal-sizes-title-lg">
-                                            Large Modal Older 2
+                                            Orbit Defender
                                         </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
@@ -517,7 +519,8 @@ const ModalLink = styled.a `
                             <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
-                                    <p className='card-text'>Some project description text</p>
+                                    <h5 className='card-title'>Lottery Luck</h5>
+                                    <p className='card-text'>Are you lucky enough to win the lottery?</p>
                                     <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
@@ -528,7 +531,7 @@ const ModalLink = styled.a `
                                     >
                                         <Modal.Header closeButton>
                                         <Modal.Title id="example-modal-sizes-title-lg">
-                                            Large Modal Older 3
+                                            Lottery Luck
                                         </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
@@ -595,7 +598,8 @@ const ModalLink = styled.a `
                             <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
-                                    <p className='card-text'>Some project description text</p>
+                                    <h5 className='card-title'>Architect Site</h5>
+                                    <p className='card-text'>Responsive site for a make-shift architect firm.</p>
                                     <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
@@ -606,7 +610,7 @@ const ModalLink = styled.a `
                                     >
                                         <Modal.Header closeButton>
                                         <Modal.Title id="example-modal-sizes-title-lg">
-                                            Large Modal Older 4
+                                            Architect Site
                                         </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
