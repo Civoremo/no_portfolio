@@ -76,13 +76,64 @@ const ModalLink = styled.a `
                                                     show={lgProject1Show}
                                                     onHide={() => setLgProject1Show(false)}
                                                     aria-labelledby="example-modal-sizes-title-lg"
+                                                    scrollable='true'
                                                 >
                                                     <Modal.Header closeButton>
                                                     <Modal.Title id="example-modal-sizes-title-lg">
                                                         Large Modal 1
                                                     </Modal.Title>
                                                     </Modal.Header>
-                                                    <Modal.Body>Project 1</Modal.Body>
+                                                    <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                                 </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
@@ -128,7 +179,57 @@ const ModalLink = styled.a `
                                                         Large Modal 2
                                                     </Modal.Title>
                                                     </Modal.Header>
-                                                    <Modal.Body>Project 2</Modal.Body>
+                                                    <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                                 </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
@@ -174,7 +275,57 @@ const ModalLink = styled.a `
                                                         Large Modal 3
                                                     </Modal.Title>
                                                     </Modal.Header>
-                                                    <Modal.Body>Project 3</Modal.Body>
+                                                    <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                                 </Modal>
                                             </div>
                                             <ul className='list-group list-group-flush'>
@@ -224,7 +375,57 @@ const ModalLink = styled.a `
                                             Large Modal Older 1
                                         </Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>Older Project 1</Modal.Body>
+                                        <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                     </Modal>                                    
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
@@ -252,7 +453,57 @@ const ModalLink = styled.a `
                                             Large Modal Older 2
                                         </Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>Older Project 2</Modal.Body>
+                                        <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                     </Modal> 
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
@@ -280,7 +531,57 @@ const ModalLink = styled.a `
                                             Large Modal Older 3
                                         </Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>Older Project 3</Modal.Body>
+                                        <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                     </Modal> 
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
@@ -308,7 +609,57 @@ const ModalLink = styled.a `
                                             Large Modal Older 4
                                         </Modal.Title>
                                         </Modal.Header>
-                                        <Modal.Body>Older Project 4</Modal.Body>
+                                        <Modal.Body>
+                                                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                </div>
+                                                            </div>
+                                                            <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                <span className="sr-only">Previous</span>
+                                                            </a>
+                                                            <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span className="sr-only">Next</span>
+                                                            </a>
+                                                        </div>
+                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <p>Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            Some text here with a more detailed explanation
+                                                            </p>
+                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                                <span>framework</span>
+                                                            </div>
+                                                        </div>
+                                                    </Modal.Body>
                                     </Modal> 
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
