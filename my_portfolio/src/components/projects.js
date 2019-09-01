@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import {Redux, ReactLogo, Javascript, Html5, Css3} from 'styled-icons/boxicons-logos'
 import mongodb from './my_images/mongodb.png'
+import apollo from './my_images/apollo.png';
+import graphql from './my_images/graphql.png';
 import Flip from 'react-reveal/Flip'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 
 const ProjectsDiv = styled.div `
 `
@@ -20,7 +24,7 @@ const EachCardDiv = styled.div `
     margin: 20px 10px 20px 10px;
     width: 18.2rem;
     position: relative;
-    min-height: 500px;
+    min-height: 660px;
 `
 
 const EachCardWrapperDiv = styled.div `
@@ -29,11 +33,25 @@ const EachCardWrapperDiv = styled.div `
     :hover {
         box-shadow: 5px 5px 5px #dadada;
         z-index: 10;
-        cursor: pointer;
     }
 `
 
-const Projects = () => {
+const ModalLink = styled.a `
+    color: #007bff;
+
+    :hover {
+        cursor: pointer;
+    }
+`
+    
+    const Projects = () => {
+        const [lgProject1Show, setLgProject1Show] = useState(false);
+        const [lgProject2Show, setLgProject2Show] = useState(false);
+        const [lgProject3Show, setLgProject3Show] = useState(false);
+        const [lgOlderProject1Show, setLgOlderProject1Show] = useState(false);
+        const [lgOlderProject2Show, setLgOlderProject2Show] = useState(false);
+        const [lgOlderProject3Show, setLgOlderProject3Show] = useState(false);
+        const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
 
     return (
         <ProjectsDiv>
@@ -48,18 +66,41 @@ const Projects = () => {
                                     <div className='card' style={{minWidth: '18rem'}}>
                                         <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
                                         <div className='card-body'>
-                                            <h5 className='card-title'>Project Title</h5>
-                                            <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div style={{ marginBottom: '20px'}}>
+                                                <h5 className='card-title'>Arq</h5>
+                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <ModalLink onClick={() => setLgProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject1Show}
+                                                    onHide={() => setLgProject1Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 1
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 1</Modal.Body>
+                                                </Modal>
+                                            </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
                                                     <ReactLogo className='reactlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
-                                                    <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    {/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
                                                     <img className='mongodblogo' src={mongodb} alt={'mongodb icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='apollo' src={apollo} alt={'apollo icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='graphql' src={graphql} alt={'graphql icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Javascript className='javascriptlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Html5 className='html5logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Css3 className='css3logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                 </li>
                                             </ul>   
+                                            <div className='card-body'>
+                                                <a href='https://arq.community/' className='card-link' target="_blank" rel='noopener noreferrer'>Live Site</a>
+                                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </EachCardWrapperDiv>
@@ -71,18 +112,41 @@ const Projects = () => {
                                     <div className='card' style={{minWidth: '18rem'}}>
                                         <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
                                         <div className='card-body'>
-                                            <h5 className='card-title'>Project Title</h5>
-                                            <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div style={{ marginBottom: '20px'}}>
+                                                <h5 className='card-title'>Droom</h5>
+                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <ModalLink onClick={() => setLgProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject2Show}
+                                                    onHide={() => setLgProject2Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 2
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 2</Modal.Body>
+                                                </Modal>
+                                            </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
                                                     <ReactLogo className='reactlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
-                                                    <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    {/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
                                                     <img className='mongodblogo' src={mongodb} alt={'mongodb icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='apollo' src={apollo} alt={'apollo icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='graphql' src={graphql} alt={'graphql icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Javascript className='javascriptlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Html5 className='html5logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Css3 className='css3logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                 </li>
                                             </ul>   
+                                            <div className='card-body'>
+                                                <a href='https://arq.community/' className='card-link' target="_blank" rel='noopener noreferrer'>Live Site</a>
+                                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </EachCardWrapperDiv>
@@ -94,24 +158,166 @@ const Projects = () => {
                                     <div className='card' style={{minWidth: '18rem'}}>
                                         <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
                                         <div className='card-body'>
-                                            <h5 className='card-title'>Project Title</h5>
-                                            <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <div style={{ marginBottom: '20px'}}>
+                                                <h5 className='card-title'>Luncher</h5>
+                                                <p className='card-text'>Worked with a team to add additional features and refactor old code.</p>
+                                                <ModalLink onClick={() => setLgProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                                <Modal
+                                                    size="lg"
+                                                    show={lgProject3Show}
+                                                    onHide={() => setLgProject3Show(false)}
+                                                    aria-labelledby="example-modal-sizes-title-lg"
+                                                >
+                                                    <Modal.Header closeButton>
+                                                    <Modal.Title id="example-modal-sizes-title-lg">
+                                                        Large Modal 3
+                                                    </Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>Project 3</Modal.Body>
+                                                </Modal>
+                                            </div>
                                             <ul className='list-group list-group-flush'>
                                             <li className='list-group-item'>
                                                     <ReactLogo className='reactlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
-                                                    <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    {/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
                                                     <img className='mongodblogo' src={mongodb} alt={'mongodb icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='apollo' src={apollo} alt={'apollo icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
+                                                    <img className='graphql' src={graphql} alt={'graphql icon'} style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Javascript className='javascriptlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Html5 className='html5logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                     <Css3 className='css3logo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} />
                                                 </li>
                                             </ul>   
+                                            <div className='card-body'>
+                                                <a href='https://arq.community/' className='card-link' target="_blank" rel='noopener noreferrer'>Live Site</a>
+                                                <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </EachCardWrapperDiv>
                             </EachCardDiv>
                         </Flip>
                     </CardContainerDiv>
+            </Container>
+            <Container>
+                <h4 style={{textAlign: 'left', margin: '80px 70px 30px 70px', fontFamily: 'Nunito'}}>
+                    Older Projects
+                </h4>
+                <CardContainerDiv>
+                    <Flip top>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject1Show}
+                                        onHide={() => setLgOlderProject1Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 1
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 1</Modal.Body>
+                                    </Modal>                                    
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </Flip>
+                    <Flip bottom>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject2Show}
+                                        onHide={() => setLgOlderProject2Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 2
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 2</Modal.Body>
+                                    </Modal> 
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </Flip>
+                    <Flip top>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject3Show}
+                                        onHide={() => setLgOlderProject3Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 3
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 3</Modal.Body>
+                                    </Modal> 
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </Flip>
+                    <Flip bottom>
+                        <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div className='card-body'>
+                                <div style={{marginBottom: '15px'}}>
+                                    <p className='card-text'>Some project description text</p>
+                                    <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                    <Modal
+                                        size="lg"
+                                        show={lgOlderProject4Show}
+                                        onHide={() => setLgOlderProject4Show(false)}
+                                        aria-labelledby="example-modal-sizes-title-lg"
+                                    >
+                                        <Modal.Header closeButton>
+                                        <Modal.Title id="example-modal-sizes-title-lg">
+                                            Large Modal Older 4
+                                        </Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Older Project 4</Modal.Body>
+                                    </Modal> 
+                                </div>
+                                <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                </div>
+                            </div>
+                        </div>
+                    </Flip>
+                </CardContainerDiv>
             </Container>
         </ProjectsDiv>
     )

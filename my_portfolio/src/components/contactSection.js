@@ -24,7 +24,7 @@ const ContactSectionWrapper = styled.div `
 `
 
 const SocialLinksContainer = styled.div `
-    padding-left: 20px;
+    padding-left: 64px;
     min-width: 300px;
     text-align: left;
 
