@@ -8196,6 +8196,11 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
+react-smooth-scroller@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-smooth-scroller/-/react-smooth-scroller-1.2.0.tgz#7189d5feef8c838ca8edb1e07361a7dcbc68e0e2"
+  integrity sha512-23x6+eV47qtdsJTP+5WXFjzbZIq8URmg6WE5PVigqcTErbZ88ngQ8cSjkXc8WrJ5Bn3g5BOJpjl2l4kZsabHSw==
+
 react-transition-group@^4.0.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.2.1.tgz#61fc9e36568bff9a1fe4e60fae323c8a6dbc0680"

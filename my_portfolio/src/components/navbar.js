@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Component } from "react";
 import { TweenMax, Linear, TimelineLite } from "gsap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 import left_bracket from "./my_images/left_bracket.png";
 import right_bracket from "./my_images/right_bracket.png";
+import rsScroller from 'react-smooth-scroller';
 
 const NavBG = styled.nav`
 	background-color: #fff;
@@ -34,6 +35,30 @@ const NavBar = () => {
 
 	let tlStart = new TimelineLite();
 	let tlOpen = new TimelineLite();
+
+	// const onScrollTargetHome = () => {
+	// 	rsScroller.onScrollTargetHome('home', { easing: 'linear', duration: 1500, frame: 20, revise: 100 })
+	// }
+
+	function onScrollTargetHomeTop () {
+		rsScroller.scrollToTarget('hometop', { easing: 'linear', duration: 700})
+	}
+
+	function onScrollTargetHome () {
+		rsScroller.scrollToTarget('home', { easing: 'linear', duration: 700})
+	}
+
+	function onScrollTargetAbout () {
+		rsScroller.scrollToTarget('about', { easing: 'linear', duration: 700})
+	}
+
+	function onScrollTargetProjects () {
+		rsScroller.scrollToTarget('projects', { easing: 'linear', duration: 700})
+	}
+
+	function onScrollTargetContact () {
+		rsScroller.scrollToTarget('contact', { easing: 'linear', duration: 700})
+	}
 
 	const logoAnimation = () => {
 		tlOpen
@@ -144,7 +169,7 @@ const NavBar = () => {
 		<NavBG>
 			<Navbar sticky="top" expand="sm">
 				<Container>
-					<Navbar.Brand href="#home">
+					<Navbar.Brand href="#hometop" className='hometop' onClick={ () => onScrollTargetHomeTop() }>
 						<div style={logoWrapper} 
 							onMouseEnter={openLogoBig}
 							onMouseLeave={closeLogoSmall}>
@@ -179,7 +204,7 @@ const NavBar = () => {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="mr-auto" />
 						<Nav>
-							<Nav.Link href="#home">
+							<Nav.Link href="#home" onClick={ () => onScrollTargetHome() } >
 								<div
 									ref={element => {
 										linkElementHome = element;
@@ -190,7 +215,7 @@ const NavBar = () => {
 									<NavLinkColor>Home</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#link">
+							<Nav.Link href="#about" onClick={ () => onScrollTargetAbout() }>
 								<div
 									ref={element => {
 										linkElementAbout = element;
@@ -201,7 +226,7 @@ const NavBar = () => {
 									<NavLinkColor>About</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#link">
+							<Nav.Link href="#projects" onClick={ () => onScrollTargetProjects() }>
 								<div
 									ref={element => {
 										linkElementProjects = element;
@@ -212,7 +237,7 @@ const NavBar = () => {
 									<NavLinkColor>Projects</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#link">
+							<Nav.Link href="#contact" onClick={ () => onScrollTargetContact() }>
 								<div
 									ref={element => {
 										linkElementContact = element;

@@ -124,7 +124,7 @@ class ContactForm extends Component {
 
     render () {
         return (
-            <ContactContainerDiv>
+            <ContactContainerDiv className='contact'>
                 <Container>
                     <h2 style={{textAlign: 'left', margin: '40px 70px 30px 70px', fontFamily: 'Nunito'}}>
                         <span>

@@ -13,7 +13,7 @@ const AboutMe = () => {
 
 
     return (
-        <AboutMeDiv className='aboutMeSection'>
+        <AboutMeDiv className='aboutMeSection' className='about'>
             <Container style={{borderTop: '1px solid #222', borderBottom: '1px solid #222'}}>
                 <h2 style={{textAlign: 'left', margin: '120px 70px 30px 70px', fontFamily: 'Nunito'}}>
                     <span>

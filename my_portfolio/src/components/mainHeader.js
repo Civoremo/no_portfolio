@@ -92,7 +92,7 @@ const MainLogo = () => {
     }
     
     return (
-        <section style={{margin: '130px 0 0 0'}}>
+        <section style={{margin: '130px 0 0 0'}} className='home'>
             <Container className='text-left'>
                 <div style={mainWrapper}>
                     <div style={textWrapper}>
