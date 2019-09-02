@@ -9,6 +9,17 @@ import Flip from 'react-reveal/Flip'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
+import Arq1 from './my_images/projects/arq/arq1b.png';
+import Arq2 from './my_images/projects/arq/arq2.png';
+import Arq3 from './my_images/projects/arq/arq3.png';
+import Arq4 from './my_images/projects/arq/arq4.png';
+import Arq5 from './my_images/projects/arq/arq5.png';
+import Arq6 from './my_images/projects/arq/arq6.png';
+import Arq7 from './my_images/projects/arq/arq7.png';
+import ArqHome from './my_images/projects/arq/arqHome.png';
+
+import DroomHome from './my_images/projects/droom/droomHome.png';
+
 const ProjectsDiv = styled.div `
 `
 
@@ -64,7 +75,9 @@ const ModalLink = styled.a `
                             <EachCardDiv>
                                 <EachCardWrapperDiv>
                                     <div className='card' style={{minWidth: '18rem'}}>
-                                        <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                            <img src={ArqHome} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        </div>
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Arq</h5>
@@ -85,15 +98,27 @@ const ModalLink = styled.a `
                                                     </Modal.Header>
                                                     <Modal.Body>
                                                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                            <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '400px', maxHeight: '400px'}}>
                                                                 <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                <img src={Arq1} className="d-block" alt="first slide" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                <img src={Arq2} className="d-block" alt="second slide" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                <img src={Arq3} className="d-block" alt="third slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src={Arq4} className="d-block" alt="fourth slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src={Arq5} className="d-block" alt="fifth slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src={Arq6} className="d-block" alt="sixth slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src={Arq7} className="d-block" alt="seventh slide" />
                                                                 </div>
                                                             </div>
                                                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -161,7 +186,9 @@ const ModalLink = styled.a `
                             <EachCardDiv>
                                 <EachCardWrapperDiv>
                                     <div className='card' style={{minWidth: '18rem'}}>
-                                        <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                            <img src={DroomHome} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        </div>
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Droom</h5>
@@ -257,7 +284,9 @@ const ModalLink = styled.a `
                             <EachCardDiv>
                                 <EachCardWrapperDiv>
                                     <div className='card' style={{minWidth: '18rem'}}>
-                                        <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                            <img src='https://placekitten.com/g/200/300' className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                        </div>
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Luncher</h5>
