@@ -54,7 +54,7 @@ const ModalLink = styled.a `
         const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
 
     return (
-        <ProjectsDiv>
+        <ProjectsDiv className='projects'>
             <Container>
                 <h2 style={{textAlign: 'left', margin: '120px 70px 30px 70px', fontFamily: 'Nunito'}}>
                     Recent Projects
