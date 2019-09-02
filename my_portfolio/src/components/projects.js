@@ -88,7 +88,10 @@ const ModalLink = styled.a `
         const [lgOlderProject2Show, setLgOlderProject2Show] = useState(false);
         const [lgOlderProject3Show, setLgOlderProject3Show] = useState(false);
         const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
-        const [showMoreProjects, setShowMoreProjects] = useState(false);
+        const [lgOlderProject5Show, setLgOlderProject5Show] = useState(false);
+        const [lgOlderProject6Show, setLgOlderProject6Show] = useState(false);
+        const [lgOlderProject7Show, setLgOlderProject7Show] = useState(false);
+        const [lgOlderProject8Show, setLgOlderProject8Show] = useState(false);
 
         function showMoreProjectsPart2() {
             let projectsDiv = document.getElementById('olderProjectsPart2');
@@ -769,12 +772,12 @@ const ModalLink = styled.a `
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>Note App</h5>
                                         <p className='card-text'>Create, edit, update, delete and search for notes.</p>
-                                        <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <ModalLink onClick={() => setLgOlderProject5Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject1Show}
-                                            onHide={() => setLgOlderProject1Show(false)}
+                                            show={lgOlderProject5Show}
+                                            onHide={() => setLgOlderProject5Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
@@ -853,12 +856,12 @@ const ModalLink = styled.a `
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>ToDo App</h5>
                                         <p className='card-text'>An app to create a ToDo list with search functionality.</p>
-                                        <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <ModalLink onClick={() => setLgOlderProject6Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject2Show}
-                                            onHide={() => setLgOlderProject2Show(false)}
+                                            show={lgOlderProject6Show}
+                                            onHide={() => setLgOlderProject6Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
@@ -934,12 +937,12 @@ const ModalLink = styled.a `
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>Quiz Bliss</h5>
                                         <p className='card-text'>React app for creating and taking quizzes.</p>
-                                        <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <ModalLink onClick={() => setLgOlderProject7Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject3Show}
-                                            onHide={() => setLgOlderProject3Show(false)}
+                                            show={lgOlderProject7Show}
+                                            onHide={() => setLgOlderProject7Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
@@ -1018,12 +1021,12 @@ const ModalLink = styled.a `
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>Shopping Cart List</h5>
                                         <p className='card-text'>Keep track of items you need and items you found; prevents duplicates.</p>
-                                        <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <ModalLink onClick={() => setLgOlderProject8Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject4Show}
-                                            onHide={() => setLgOlderProject4Show(false)}
+                                            show={lgOlderProject8Show}
+                                            onHide={() => setLgOlderProject8Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
