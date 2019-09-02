@@ -20,6 +20,23 @@ import ArqHome from './my_images/projects/arq/arqHome.png';
 
 import DroomHome from './my_images/projects/droom/droomHome.png';
 
+import Note1 from './my_images/projects/note/note1.png';
+import Note2 from './my_images/projects/note/note2.png';
+import Note3 from './my_images/projects/note/note3.png';
+import Note4 from './my_images/projects/note/note4.png';
+
+import Quizz1 from './my_images/projects/quizz/quizz1.png';
+import Quizz2 from './my_images/projects/quizz/quizz2.png';
+import Quizz3 from './my_images/projects/quizz/quizz3.png';
+import Quizz4 from './my_images/projects/quizz/quizz4.png';
+
+import Shopping1 from './my_images/projects/shopping/shopping1.png'
+import Shopping2 from './my_images/projects/shopping/shopping2.png'
+
+import ToDo1 from './my_images/projects/todo/todo1.png';
+import ToDo2 from './my_images/projects/todo/todo2.png';
+import ToDo3 from './my_images/projects/todo/todo3.png';
+
 const ProjectsDiv = styled.div `
 `
 
@@ -71,7 +88,10 @@ const ModalLink = styled.a `
         const [lgOlderProject2Show, setLgOlderProject2Show] = useState(false);
         const [lgOlderProject3Show, setLgOlderProject3Show] = useState(false);
         const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
-        const [showMoreProjects, setShowMoreProjects] = useState(false);
+        const [lgOlderProject5Show, setLgOlderProject5Show] = useState(false);
+        const [lgOlderProject6Show, setLgOlderProject6Show] = useState(false);
+        const [lgOlderProject7Show, setLgOlderProject7Show] = useState(false);
+        const [lgOlderProject8Show, setLgOlderProject8Show] = useState(false);
 
         function showMoreProjectsPart2() {
             let projectsDiv = document.getElementById('olderProjectsPart2');
@@ -415,7 +435,9 @@ const ModalLink = styled.a `
                 <CardContainerOlderProjectsDiv>
                     <Flip top>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                            </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <h5 className='card-title'>Tetris Clone</h5>
@@ -494,7 +516,9 @@ const ModalLink = styled.a `
                     </Flip>
                     <Flip bottom>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                            </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <h5 className='card-title'>Orbit Denfender</h5>
@@ -573,7 +597,9 @@ const ModalLink = styled.a `
                     </Flip>
                     <Flip top>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                            </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <h5 className='card-title'>Lottery Luck</h5>
@@ -652,7 +678,9 @@ const ModalLink = styled.a `
                     </Flip>
                     <Flip bottom>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                            <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                            </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <h5 className='card-title'>Architect Site</h5>
@@ -737,35 +765,40 @@ const ModalLink = styled.a `
                     <CardContainerOlderProjectsDiv>
                         <Flip top>
                             <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                    <img src={Note1} className='card-omg-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='...' />
+                                </div>
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
-                                        <h5 className='card-title'>Tetris Clone</h5>
-                                        <p className='card-text'>Tetris clone made with the XNA framework.</p>
-                                        <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <h5 className='card-title'>Note App</h5>
+                                        <p className='card-text'>Create, edit, update, delete and search for notes.</p>
+                                        <ModalLink onClick={() => setLgOlderProject5Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject1Show}
-                                            onHide={() => setLgOlderProject1Show(false)}
+                                            show={lgOlderProject5Show}
+                                            onHide={() => setLgOlderProject5Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
                                             <Modal.Title id="example-modal-sizes-title-lg">
-                                                Tetris Clone
+                                                Note App
                                             </Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                                 <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                     <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    <img src={Note1} className="d-block" alt="first slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    <img src={Note2} className="d-block" alt="second slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    <img src={Note3} className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src={Note4} className="d-block" alt="fourth slide" />
                                                                     </div>
                                                                 </div>
                                                                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -816,35 +849,37 @@ const ModalLink = styled.a `
                         </Flip>
                         <Flip bottom>
                             <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                    <img src={ToDo1} className='card-omg-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='...' />
+                                </div>
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
-                                        <h5 className='card-title'>Orbit Denfender</h5>
-                                        <p className='card-text'>Orbital earth defender made with Unity.</p>
-                                        <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <h5 className='card-title'>ToDo App</h5>
+                                        <p className='card-text'>An app to create a ToDo list with search functionality.</p>
+                                        <ModalLink onClick={() => setLgOlderProject6Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject2Show}
-                                            onHide={() => setLgOlderProject2Show(false)}
+                                            show={lgOlderProject6Show}
+                                            onHide={() => setLgOlderProject6Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
                                             <Modal.Title id="example-modal-sizes-title-lg">
-                                                Orbit Defender
+                                                ToDo App
                                             </Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                                 <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                     <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    <img src={ToDo1} className="d-block" alt="first slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    <img src={ToDo2} className="d-block" alt="second slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    <img src={ToDo3} className="d-block" alt="third slide" />
                                                                     </div>
                                                                 </div>
                                                                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -895,35 +930,40 @@ const ModalLink = styled.a `
                         </Flip>
                         <Flip top>
                             <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                    <img src={Quizz1} className='card-omg-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='...' />
+                                </div>
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
-                                        <h5 className='card-title'>Lottery Luck</h5>
-                                        <p className='card-text'>Are you lucky enough to win the lottery?</p>
-                                        <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <h5 className='card-title'>Quiz Bliss</h5>
+                                        <p className='card-text'>React app for creating and taking quizzes.</p>
+                                        <ModalLink onClick={() => setLgOlderProject7Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject3Show}
-                                            onHide={() => setLgOlderProject3Show(false)}
+                                            show={lgOlderProject7Show}
+                                            onHide={() => setLgOlderProject7Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
                                             <Modal.Title id="example-modal-sizes-title-lg">
-                                                Lottery Luck
+                                                Quiz Bliss
                                             </Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                                 <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                     <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    <img src={Quizz1} className="d-block" alt="first slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    <img src={Quizz2} className="d-block" alt="second slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    <img src={Quizz3} className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src={Quizz4} className="d-block" alt="fourth slide" />
                                                                     </div>
                                                                 </div>
                                                                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -974,35 +1014,34 @@ const ModalLink = styled.a `
                         </Flip>
                         <Flip bottom>
                             <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
-                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
+                                    <img src={Shopping1} className='card-omg-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='...' />
+                                </div>
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
-                                        <h5 className='card-title'>Architect Site</h5>
-                                        <p className='card-text'>Responsive site for a make-shift architect firm.</p>
-                                        <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+                                        <h5 className='card-title'>Shopping Cart List</h5>
+                                        <p className='card-text'>Keep track of items you need and items you found; prevents duplicates.</p>
+                                        <ModalLink onClick={() => setLgOlderProject8Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
                                             size="lg"
-                                            show={lgOlderProject4Show}
-                                            onHide={() => setLgOlderProject4Show(false)}
+                                            show={lgOlderProject8Show}
+                                            onHide={() => setLgOlderProject8Show(false)}
                                             aria-labelledby="example-modal-sizes-title-lg"
                                         >
                                             <Modal.Header closeButton>
                                             <Modal.Title id="example-modal-sizes-title-lg">
-                                                Architect Site
+                                                Shopping Cart List
                                             </Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
                                                             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                                 <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                     <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    <img src={Shopping1} className="d-block" alt="first slide" />
                                                                     </div>
                                                                     <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
-                                                                    </div>
-                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    <img src={Shopping2} className="d-block" alt="second slide" />
                                                                     </div>
                                                                 </div>
                                                                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
