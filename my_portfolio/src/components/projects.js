@@ -130,32 +130,38 @@ const ModalLink = styled.a `
                                                                 <span className="sr-only">Next</span>
                                                             </a>
                                                         </div>
-                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
+                                                        <div style={{ margin: '30px 20px', fontFamily: 'Nunito', letterSpacing: '2px'}}>
+                                                            <p>
+                                                                Team was tasked with adding new features to an already existing codebase.
                                                             </p>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
+                                                            <p>
+                                                                New features included the ability to add files, to be able to organize files into folders, move files between folders, edit and delete files and folders.
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <p>
+                                                                I was tasked with redeploying the back-end and adding the necessary code for the creation, editing, updating and deleting of files and folders.
+                                                            </p>
+                                                            <p>
+                                                                The first hurdle I had to overcome was the inadequate documentation for redeployment. After spending some hours familiarizing myself with the existing code and trying to follow the documentation for deployment, I kept running into the issue of the back-end working on local machines but not on the server.<br />
+                                                                Combing through all of the code, the issue was discovered; an undocumented environment variable.
+                                                            </p>
+                                                            <p>
+                                                                The real work could finally begin; learning about mongoDB, mongoose and graphQL.<br /><br />
+                                                                The following 4 weeks were some of the intense and most rewarding time; while constantly under the pressure to build out the back-end so the rest of the team could work on the front-end features, I had the opportunity to learn unfamiliar frameworks.
+                                                            </p>
+                                                            <p>
+                                                                Once the back-end was complete, I jumped to the front-end to help the team build out all the necessary components. My initial focus was on the the Drag-n-Drop functionality of files and folders. Next I chose to work on the editing of files and folders. Lastly I focused on my attention on the filter system of our newly implemented "Activity Timeline".
+                                                            </p>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
