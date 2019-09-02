@@ -31,6 +31,14 @@ const CardContainerDiv = styled.div `
     margin-bottom: 80px;
 `
 
+const CardContainerOlderProjectsDiv = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0 40px 0;
+    margin-bottom: 10px;
+`
+
 const EachCardDiv = styled.div `
     margin: 20px 10px 20px 10px;
     width: 18.2rem;
@@ -63,6 +71,20 @@ const ModalLink = styled.a `
         const [lgOlderProject2Show, setLgOlderProject2Show] = useState(false);
         const [lgOlderProject3Show, setLgOlderProject3Show] = useState(false);
         const [lgOlderProject4Show, setLgOlderProject4Show] = useState(false);
+        const [showMoreProjects, setShowMoreProjects] = useState(false);
+
+        function showMoreProjectsPart2() {
+            let projectsDiv = document.getElementById('olderProjectsPart2');
+            let showMoreProjectsLink = document.getElementById('showMoreProjectsLink1')
+            if (projectsDiv.style.display === 'none') {
+                showMoreProjectsLink.style.display ='none'
+                projectsDiv.style.display = 'block'
+            } else {
+                projectsDiv.style.display = 'none'
+                showMoreProjectsLink.style.display = 'block'
+            }
+
+        }
 
     return (
         <ProjectsDiv className='projects'>
@@ -390,7 +412,7 @@ const ModalLink = styled.a `
                 <h4 style={{textAlign: 'left', margin: '80px 70px 30px 70px', fontFamily: 'Nunito'}}>
                     Older Projects
                 </h4>
-                <CardContainerDiv>
+                <CardContainerOlderProjectsDiv>
                     <Flip top>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
                             <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
@@ -707,7 +729,332 @@ const ModalLink = styled.a `
                             </div>
                         </div>
                     </Flip>
-                </CardContainerDiv>
+                </CardContainerOlderProjectsDiv>
+
+                    <div id='showMoreProjectsLink1' onClick={ () => showMoreProjectsPart2()} style={{color: '#007bff', cursor: 'pointer', display: 'block', marginBottom: '64px'}}>Show more</div>
+
+                <div id='olderProjectsPart2' style={{display: 'none'}}>
+                    <CardContainerOlderProjectsDiv>
+                        <Flip top>
+                            <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div className='card-body'>
+                                    <div style={{marginBottom: '15px'}}>
+                                        <h5 className='card-title'>Tetris Clone</h5>
+                                        <p className='card-text'>Tetris clone made with the XNA framework.</p>
+                                        <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                        <Modal
+                                            size="lg"
+                                            show={lgOlderProject1Show}
+                                            onHide={() => setLgOlderProject1Show(false)}
+                                            aria-labelledby="example-modal-sizes-title-lg"
+                                        >
+                                            <Modal.Header closeButton>
+                                            <Modal.Title id="example-modal-sizes-title-lg">
+                                                Tetris Clone
+                                            </Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                                            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                                <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                    <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                </div>
+                                                                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                    <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                    <span className="sr-only">Previous</span>
+                                                                </a>
+                                                                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span className="sr-only">Next</span>
+                                                                </a>
+                                                            </div>
+                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                </div>
+                                                            </div>
+                                                        </Modal.Body>
+                                        </Modal>                                    
+                                    </div>
+                                    <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </Flip>
+                        <Flip bottom>
+                            <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div className='card-body'>
+                                    <div style={{marginBottom: '15px'}}>
+                                        <h5 className='card-title'>Orbit Denfender</h5>
+                                        <p className='card-text'>Orbital earth defender made with Unity.</p>
+                                        <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                        <Modal
+                                            size="lg"
+                                            show={lgOlderProject2Show}
+                                            onHide={() => setLgOlderProject2Show(false)}
+                                            aria-labelledby="example-modal-sizes-title-lg"
+                                        >
+                                            <Modal.Header closeButton>
+                                            <Modal.Title id="example-modal-sizes-title-lg">
+                                                Orbit Defender
+                                            </Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                                            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                                <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                    <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                </div>
+                                                                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                    <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                    <span className="sr-only">Previous</span>
+                                                                </a>
+                                                                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span className="sr-only">Next</span>
+                                                                </a>
+                                                            </div>
+                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                </div>
+                                                            </div>
+                                                        </Modal.Body>
+                                        </Modal> 
+                                    </div>
+                                    <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </Flip>
+                        <Flip top>
+                            <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div className='card-body'>
+                                    <div style={{marginBottom: '15px'}}>
+                                        <h5 className='card-title'>Lottery Luck</h5>
+                                        <p className='card-text'>Are you lucky enough to win the lottery?</p>
+                                        <ModalLink onClick={() => setLgOlderProject3Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                        <Modal
+                                            size="lg"
+                                            show={lgOlderProject3Show}
+                                            onHide={() => setLgOlderProject3Show(false)}
+                                            aria-labelledby="example-modal-sizes-title-lg"
+                                        >
+                                            <Modal.Header closeButton>
+                                            <Modal.Title id="example-modal-sizes-title-lg">
+                                                Lottery Luck
+                                            </Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                                            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                                <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                    <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                </div>
+                                                                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                    <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                    <span className="sr-only">Previous</span>
+                                                                </a>
+                                                                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span className="sr-only">Next</span>
+                                                                </a>
+                                                            </div>
+                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                </div>
+                                                            </div>
+                                                        </Modal.Body>
+                                        </Modal> 
+                                    </div>
+                                    <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </Flip>
+                        <Flip bottom>
+                            <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
+                                <img src="https://placekitten.com/g/200/200" className='card-omg-top' alt='...' />
+                                <div className='card-body'>
+                                    <div style={{marginBottom: '15px'}}>
+                                        <h5 className='card-title'>Architect Site</h5>
+                                        <p className='card-text'>Responsive site for a make-shift architect firm.</p>
+                                        <ModalLink onClick={() => setLgOlderProject4Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
+
+                                        <Modal
+                                            size="lg"
+                                            show={lgOlderProject4Show}
+                                            onHide={() => setLgOlderProject4Show(false)}
+                                            aria-labelledby="example-modal-sizes-title-lg"
+                                        >
+                                            <Modal.Header closeButton>
+                                            <Modal.Title id="example-modal-sizes-title-lg">
+                                                Architect Site
+                                            </Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                                            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                                                                <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
+                                                                    <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                    </div>
+                                                                    <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                    <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                    </div>
+                                                                </div>
+                                                                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                                    <span className="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                                                    <span className="sr-only">Previous</span>
+                                                                </a>
+                                                                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                    <span className="sr-only">Next</span>
+                                                                </a>
+                                                            </div>
+                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <p>Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                Some text here with a more detailed explanation
+                                                                </p>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                    <span>framework</span>
+                                                                </div>
+                                                            </div>
+                                                        </Modal.Body>
+                                        </Modal> 
+                                    </div>
+                                    <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </Flip>
+                    </CardContainerOlderProjectsDiv>
+
+                    {/* <div style={{color: '#007bff', cursor: 'pointer', display: 'block', marginBottom: '64px'}}>Show more</div> */}
+                </div>
             </Container>
         </ProjectsDiv>
     )
