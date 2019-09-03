@@ -295,13 +295,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -393,13 +397,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -496,13 +504,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -577,13 +589,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -658,13 +674,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -739,13 +759,17 @@ const ModalLink = styled.a `
                                                             Some text here with a more detailed explanation
                                                             Some text here with a more detailed explanation
                                                             </p>
-                                                            <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
-                                                                <span>framework</span>
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
+                                                                <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </Modal.Body>
@@ -829,14 +853,18 @@ const ModalLink = styled.a `
                                                                 Some text here with a more detailed explanation
                                                                 Some text here with a more detailed explanation
                                                                 </p>
+                                                                <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
                                                                 </div>
+                                                            </div>
                                                             </div>
                                                         </Modal.Body>
                                         </Modal>                                    
@@ -910,14 +938,18 @@ const ModalLink = styled.a `
                                                                 Some text here with a more detailed explanation
                                                                 Some text here with a more detailed explanation
                                                                 </p>
+                                                                <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
                                                                 </div>
+                                                            </div>
                                                             </div>
                                                         </Modal.Body>
                                         </Modal> 
@@ -994,14 +1026,18 @@ const ModalLink = styled.a `
                                                                 Some text here with a more detailed explanation
                                                                 Some text here with a more detailed explanation
                                                                 </p>
+                                                                <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
+                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
+                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
+                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
+                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
+                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
                                                                 </div>
+                                                            </div>
                                                             </div>
                                                         </Modal.Body>
                                         </Modal> 
@@ -1053,39 +1089,26 @@ const ModalLink = styled.a `
                                                                     <span className="sr-only">Next</span>
                                                                 </a>
                                                             </div>
-                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                            <div style={{ margin: '30px 20px'}}>
+                                                                <p>
+                                                                    Built a React app that let's users keep track of a shopping list. The user can add items they need and move the items from 'Need' to "Found" and delete unnecessary items.
                                                                 </p>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                                <p>
+                                                                    Duplicate items are not allowed; it is case insensitive.
                                                                 </p>
+                                                                <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
+                                                                <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
-                                                                    <span>framework</span>
+                                                                    <span style={{margin: '0 5px'}}>React</span>
+                                                                    <span style={{margin: '0 5px'}}>Javascript</span>
                                                                 </div>
+                                                            </div>
                                                             </div>
                                                         </Modal.Body>
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                        <a href='https://github.com/Civoremo/shopping-cart-lists' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
                             </div>
