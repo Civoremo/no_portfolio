@@ -20,6 +20,11 @@ import ArqHome from './my_images/projects/arq/arqHome.png';
 
 import DroomHome from './my_images/projects/droom/droomHome.png';
 
+import Architect1 from './my_images/projects/architect/architect1.png';
+import Architect2 from './my_images/projects/architect/architect2.png';
+import Architect3 from './my_images/projects/architect/architect3.png';
+import Architect4 from './my_images/projects/architect/architect4.png';
+
 import Note1 from './my_images/projects/note/note1.png';
 import Note2 from './my_images/projects/note/note2.png';
 import Note3 from './my_images/projects/note/note3.png';
@@ -699,7 +704,7 @@ const ModalLink = styled.a `
                     <Flip bottom>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                                <img src={Architect1} style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
                             </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
@@ -722,13 +727,16 @@ const ModalLink = styled.a `
                                                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                             <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                 <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                <img src={Architect1} className="d-block" alt="first slide" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                <img src={Architect2} className="d-block" alt="second slide" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                <img src={Architect3} className="d-block" alt="third slide" />
+                                                                </div>
+                                                                <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
+                                                                <img src={Architect4} className="d-block" alt="fourth slide" />
                                                                 </div>
                                                             </div>
                                                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -740,35 +748,18 @@ const ModalLink = styled.a `
                                                                 <span className="sr-only">Next</span>
                                                             </a>
                                                         </div>
-                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
+                                                        <div style={{ margin: '30px 20px'}}>
+                                                            <p>
+                                                                Recreated a pixel-perfect version of an architect firm's site. Design files were provided along with the content and the challenge was to build the site according to the designs. 
                                                             </p>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            </p>
+                                                            <p>The services page contains tabs that will change the content based on the button clicked.</p>
                                                             <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
                                                                 <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
-                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
-                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
-                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
-                                                                    <span style={{margin: '0 5px'}}>React</span>
-                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
-                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                    <span style={{margin: '0 5px'}}>HTML 5</span>
+                                                                    <span style={{margin: '0 5px'}}>CSS 3</span>
+                                                                    <span style={{margin: '0 5px'}}>LESS</span>
+                                                                    <span style={{margin: '0 5px'}}>Responsive</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -776,7 +767,7 @@ const ModalLink = styled.a `
                                     </Modal> 
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    <a href='https://github.com/Civoremo/User-Interface-Project-Week' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
                         </div>
@@ -834,35 +825,22 @@ const ModalLink = styled.a `
                                                                     <span className="sr-only">Next</span>
                                                                 </a>
                                                             </div>
-                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                            <div style={{ margin: '30px 20px'}}>
+                                                                <p>
+                                                                    A note taking app that allows for all CRUD operations. Performed all API calls to a remote server that stored the created notes and kept track of all changes made to said note along with deleting notes. A search function was added to more easily look for notes.
                                                                 </p>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                                <p>
+                                                                    Site is responsive.
                                                                 </p>
                                                                 <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
                                                                 <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
-                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
-                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
-                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
                                                                     <span style={{margin: '0 5px'}}>React</span>
-                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
-                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                    <span style={{margin: '0 5px'}}>Redux</span>
+                                                                    <span style={{margin: '0 5px'}}>Javascript</span>
+                                                                    <span style={{margin: '0 5px'}}>HTML 5</span>
+                                                                    <span style={{margin: '0 5px'}}>CSS 3</span>
+                                                                    <span style={{margin: '0 5px'}}>Less</span>
                                                                 </div>
                                                             </div>
                                                             </div>
@@ -870,7 +848,7 @@ const ModalLink = styled.a `
                                         </Modal>                                    
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                        <a href='https://github.com/Civoremo/front-end-project-week' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
                             </div>
@@ -919,35 +897,17 @@ const ModalLink = styled.a `
                                                                     <span className="sr-only">Next</span>
                                                                 </a>
                                                             </div>
-                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                </p>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                            <div style={{ margin: '30px 20px'}}>
+                                                                <p>
+                                                                    A ToDo app that allows the user to add items that need to be done; those items that are completed can be marked as completed and with a single button all those that were marked as complete can be removed. Items are stored in local storage to persist during a refresh of the site.
                                                                 </p>
                                                                 <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
                                                                 <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
-                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
-                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
-                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
                                                                     <span style={{margin: '0 5px'}}>React</span>
-                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
-                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                    <span style={{margin: '0 5px'}}>Javascript</span>
+                                                                    <span style={{margin: '0 5px'}}>HTML 5</span>
+                                                                    <span style={{margin: '0 5px'}}>CSS 3</span>
                                                                 </div>
                                                             </div>
                                                             </div>
@@ -955,7 +915,7 @@ const ModalLink = styled.a `
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                        <a href='https://github.com/Civoremo/React-Todo' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
                             </div>
@@ -1007,35 +967,22 @@ const ModalLink = styled.a `
                                                                     <span className="sr-only">Next</span>
                                                                 </a>
                                                             </div>
-                                                            <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                            <div style={{ margin: '30px 20px'}}>
+                                                                <p>
+                                                                    Worked with 3 other developers that developed the back-end for the app. I spent one week during Christmas to build the front-end. 
                                                                 </p>
-                                                                <p>Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
-                                                                Some text here with a more detailed explanation
+                                                                <p>
+                                                                    Start the app by creating an account, the app allows you to create, update and delete quizzes for you and others to take. It keeps track of your highest score for each attempted quiz along with a tournament mode that combines multiple quizzes into a Japorday style game. There is a search/filter function to sort through the maze of created quizzes.
                                                                 </p>
                                                                 <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
                                                                 <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
-                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
-                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
-                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
                                                                     <span style={{margin: '0 5px'}}>React</span>
-                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
-                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                    <span style={{margin: '0 5px'}}>Redux</span>
+                                                                    <span style={{margin: '0 5px'}}>JWT Token</span>
+                                                                    <span style={{margin: '0 5px'}}>Javascript</span>
+                                                                    <span style={{margin: '0 5px'}}>HTML 5</span>
+                                                                    <span style={{margin: '0 5px'}}>CSS 3</span>
                                                                 </div>
                                                             </div>
                                                             </div>
@@ -1043,7 +990,7 @@ const ModalLink = styled.a `
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                        <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                        <a href='https://github.com/Civoremo/Quiz_Bliss' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
                             </div>
@@ -1056,7 +1003,7 @@ const ModalLink = styled.a `
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>Shopping Cart List</h5>
-                                        <p className='card-text'>Keep track of items you need and items you found; prevents duplicates.</p>
+                                        <p className='card-text'>Shopping list tracking react app.</p>
                                         <ModalLink onClick={() => setLgOlderProject8Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
