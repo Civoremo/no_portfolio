@@ -767,6 +767,7 @@ const ModalLink = styled.a `
                                     </Modal> 
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                    <a href='https://smith-jones-architect.netlify.com/' className='card-link' target="_blank" rel='noopener noreferrer'>Live</a>
                                     <a href='https://github.com/Civoremo/User-Interface-Project-Week' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
@@ -786,7 +787,7 @@ const ModalLink = styled.a `
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>Note App</h5>
-                                        <p className='card-text'>Create, edit, update, delete and search for notes.</p>
+                                        <p className='card-text'>Note taking app with CRUD operations.</p>
                                         <ModalLink onClick={() => setLgOlderProject5Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
@@ -848,6 +849,7 @@ const ModalLink = styled.a `
                                         </Modal>                                    
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://lambda-notes.netlify.com/' className='card-link' target="_blank" rel='noopener noreferrer'>Live</a>
                                         <a href='https://github.com/Civoremo/front-end-project-week' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
@@ -861,7 +863,7 @@ const ModalLink = styled.a `
                                 <div className='card-body'>
                                     <div style={{marginBottom: '15px'}}>
                                         <h5 className='card-title'>ToDo App</h5>
-                                        <p className='card-text'>An app to create a ToDo list with search functionality.</p>
+                                        <p className='card-text'>A ToDo list with search functionality.</p>
                                         <ModalLink onClick={() => setLgOlderProject6Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                         <Modal
@@ -915,6 +917,7 @@ const ModalLink = styled.a `
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://todo-reactapp.netlify.com' className='card-link' target="_blank" rel='noopener noreferrer'>Live</a>
                                         <a href='https://github.com/Civoremo/React-Todo' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
@@ -990,6 +993,7 @@ const ModalLink = styled.a `
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://quizbliss.netlify.com/' className='card-link' target="_blank" rel='noopener noreferrer'>Live</a>
                                         <a href='https://github.com/Civoremo/Quiz_Bliss' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
@@ -1055,6 +1059,7 @@ const ModalLink = styled.a `
                                         </Modal> 
                                     </div>
                                     <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
+                                        <a href='https://shopping-list-reactapp.netlify.com/' className='card-link' target="_blank" rel='noopener noreferrer'>Live</a>
                                         <a href='https://github.com/Civoremo/shopping-cart-lists' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                     </div>
                                 </div>
