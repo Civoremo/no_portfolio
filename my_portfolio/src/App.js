@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 
 import NavBar from "./components/navbar";
-import MainHeader from './components/mainHeader';
-import AboutMe from './components/aboutme';
-import Projects from './components/projects';
-import ContactForm from './components/contactSection';
-import FooterBar from './components/footerBar';
+import MainHeader from "./components/mainHeader";
+import AboutMe from "./components/aboutme";
+import Projects from "./components/projects";
+import ContactForm from "./components/contactSection";
+import FooterBar from "./components/footerBar";
 
 function App() {
 	return (
@@ -17,7 +17,6 @@ function App() {
 			<Projects />
 			<ContactForm />
 			<FooterBar />
-			{/* <p>This is temp text</p> */}
 		</div>
 	);
 }
