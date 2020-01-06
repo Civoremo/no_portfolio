@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
-import {Redux, ReactLogo, Javascript, Html5, Css3} from 'styled-icons/boxicons-logos'
+import { ReactLogo, Javascript, Html5, Css3} from 'styled-icons/boxicons-logos'
 import mongodb from './my_images/mongodb.png'
 import apollo from './my_images/apollo.png';
 import graphql from './my_images/graphql.png';
 import Flip from 'react-reveal/Flip'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
 import Arq1 from './my_images/projects/arq/arq1b.png';

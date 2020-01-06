@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, Component } from "react";
+import React, { useEffect, useRef } from "react";
 import { TweenMax, Linear, TimelineLite } from "gsap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 import left_bracket from "./my_images/left_bracket.png";
 import right_bracket from "./my_images/right_bracket.png";
-import rsScroller from 'react-smooth-scroller';
+import rsScroller from "react-smooth-scroller";
 
 const NavBG = styled.nav`
 	background-color: #fff;
@@ -40,24 +40,24 @@ const NavBar = () => {
 	// 	rsScroller.onScrollTargetHome('home', { easing: 'linear', duration: 1500, frame: 20, revise: 100 })
 	// }
 
-	function onScrollTargetHomeTop () {
-		rsScroller.scrollToTarget('hometop', { easing: 'linear', duration: 700})
+	function onScrollTargetHomeTop() {
+		rsScroller.scrollToTarget("hometop", { easing: "linear", duration: 700 });
 	}
 
-	function onScrollTargetHome () {
-		rsScroller.scrollToTarget('home', { easing: 'linear', duration: 700})
+	function onScrollTargetHome() {
+		rsScroller.scrollToTarget("home", { easing: "linear", duration: 700 });
 	}
 
-	function onScrollTargetAbout () {
-		rsScroller.scrollToTarget('about', { easing: 'linear', duration: 700})
+	function onScrollTargetAbout() {
+		rsScroller.scrollToTarget("about", { easing: "linear", duration: 700 });
 	}
 
-	function onScrollTargetProjects () {
-		rsScroller.scrollToTarget('projects', { easing: 'linear', duration: 700})
+	function onScrollTargetProjects() {
+		rsScroller.scrollToTarget("projects", { easing: "linear", duration: 700 });
 	}
 
-	function onScrollTargetContact () {
-		rsScroller.scrollToTarget('contact', { easing: 'linear', duration: 700})
+	function onScrollTargetContact() {
+		rsScroller.scrollToTarget("contact", { easing: "linear", duration: 700 });
 	}
 
 	const logoAnimation = () => {
@@ -87,7 +87,7 @@ const NavBar = () => {
 
 	function openLogoBig() {
 		if (!tlStart.isActive()) {
-			if(tlOpen.totalProgress !== 1) {
+			if (tlOpen.totalProgress !== 1) {
 				tlOpen.play();
 				logoAnimation();
 			}
@@ -95,7 +95,7 @@ const NavBar = () => {
 			return null;
 		}
 
-		console.log(tlStart.time())
+		console.log(tlStart.time());
 	}
 
 	function closeLogoSmall() {
@@ -139,11 +139,11 @@ const NavBar = () => {
 	}
 
 	let logoWrapper = {
-		position: 'absolute',
-		width: '200px',
-		height: '40px',
-		zIndex: '100'
-	}
+		position: "absolute",
+		width: "200px",
+		height: "40px",
+		zIndex: "100",
+	};
 
 	let logoStyle = {
 		display: "flex",
@@ -169,15 +169,12 @@ const NavBar = () => {
 		<NavBG>
 			<Navbar sticky="top" expand="sm">
 				<Container>
-					<Navbar.Brand href="#hometop" className='hometop' onClick={ () => onScrollTargetHomeTop() }>
-						<div style={logoWrapper} 
-							onMouseEnter={openLogoBig}
-							onMouseLeave={closeLogoSmall}>
-						</div>
+					<Navbar.Brand href="#hometop" className="hometop" onClick={() => onScrollTargetHomeTop()}>
+						<div style={logoWrapper} onMouseEnter={openLogoBig} onMouseLeave={closeLogoSmall}></div>
 						<div
 							ref={element => {
 								logoElement = element;
-							}}								
+							}}
 							style={logoStyle}
 						>
 							<div>
@@ -189,14 +186,19 @@ const NavBar = () => {
 							</div>
 							<div>
 								<span className="shortName" style={shortLogoName}>
-									<span style={{color: 'red'}}>O</span>.<span style={{color: 'red'}}>N</span>.
+									<span style={{ color: "red" }}>O</span>.<span style={{ color: "red" }}>N</span>.
 								</span>
 								<span className="longName" style={longLogoName}>
-									<span style={{color: 'red'}}>O</span>merovic, <span style={{color: 'red'}}>N</span>edim
+									<span style={{ color: "red" }}>O</span>merovic,{" "}
+									<span style={{ color: "red" }}>N</span>edim
 								</span>
 							</div>
 							<div ref={element => (rightBracket = element)}>
-								<img src={right_bracket} alt={"right bracket"} style={{ width: 8, marginleft: 5 }} />
+								<img
+									src={right_bracket}
+									alt={"right bracket"}
+									style={{ width: 8, marginleft: 5 }}
+								/>
 							</div>
 						</div>
 					</Navbar.Brand>
@@ -204,7 +206,7 @@ const NavBar = () => {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="mr-auto" />
 						<Nav>
-							<Nav.Link href="#home" onClick={ () => onScrollTargetHome() } >
+							<Nav.Link href="#home" onClick={() => onScrollTargetHome()}>
 								<div
 									ref={element => {
 										linkElementHome = element;
@@ -215,7 +217,7 @@ const NavBar = () => {
 									<NavLinkColor>Home</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#about" onClick={ () => onScrollTargetAbout() }>
+							<Nav.Link href="#about" onClick={() => onScrollTargetAbout()}>
 								<div
 									ref={element => {
 										linkElementAbout = element;
@@ -226,7 +228,7 @@ const NavBar = () => {
 									<NavLinkColor>About</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#projects" onClick={ () => onScrollTargetProjects() }>
+							<Nav.Link href="#projects" onClick={() => onScrollTargetProjects()}>
 								<div
 									ref={element => {
 										linkElementProjects = element;
@@ -237,7 +239,7 @@ const NavBar = () => {
 									<NavLinkColor>Projects</NavLinkColor>
 								</div>
 							</Nav.Link>
-							<Nav.Link href="#contact" onClick={ () => onScrollTargetContact() }>
+							<Nav.Link href="#contact" onClick={() => onScrollTargetContact()}>
 								<div
 									ref={element => {
 										linkElementContact = element;
