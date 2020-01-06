@@ -9,6 +9,16 @@ const AboutMeDiv = styled.div`
 	margin: 200px 0 30px 0;
 `;
 
+const AboutContentDiv = styled.div`
+	margin: 0 100px 120px 100px;
+	text-align: left;
+
+	@media (max-width: 414px) {
+		width: 85vw;
+		margin: 0 100px 120px 20px;
+	}
+`;
+
 const AboutMe = () => {
 	return (
 		<AboutMeDiv className="about">
@@ -16,7 +26,7 @@ const AboutMe = () => {
 				<h2 style={{ textAlign: "left", margin: "120px 70px 30px 70px", fontFamily: "Nunito" }}>
 					<span>About</span>
 				</h2>
-				<div style={{ margin: "0 100px 120px 100px", textAlign: "left" }}>
+				<AboutContentDiv>
 					<Fade left>
 						<p>Creative problem solver, passionate learner and life-long tech enthusiast.</p>
 					</Fade>
@@ -30,8 +40,8 @@ const AboutMe = () => {
 					</Fade>
 					<Fade left>
 						<p>
-							I love spending my days working on both the front-end and back-end and collborating
-							with others on creative projects.
+							I enjoy working on both the front-end and back-end and collborating with others on
+							creative projects.
 						</p>
 					</Fade>
 					{/* <Fade right>
@@ -39,7 +49,7 @@ const AboutMe = () => {
                             I also love to travel and experience the various cultures around the world; I've had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
                         </p>
                     </Fade> */}
-				</div>
+				</AboutContentDiv>
 			</Container>
 		</AboutMeDiv>
 	);
