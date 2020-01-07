@@ -92,7 +92,7 @@ class ContactForm extends Component {
 	}
 
 	onVerify = recaptchaResponse => {
-		let reResponse = `${document.querySelector("#g-recaptcha-response").value}`;
+		// let reResponse = `${document.querySelector("#g-recaptcha-response").value}`;
 		// console.log(reResponse);
 
 		fetch("https://www.google.com/recaptcha/api/siteverify", {

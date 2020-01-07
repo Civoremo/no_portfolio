@@ -20,6 +20,8 @@ import ArqHome from './my_images/projects/arq/arqHome.png';
 
 import DroomHome from './my_images/projects/droom/droomHome.png';
 
+import MineterisGif from './my_images/projects/minetris/minetris2.gif';
+
 import Architect1 from './my_images/projects/architect/architect1.png';
 import Architect2 from './my_images/projects/architect/architect2.png';
 import Architect3 from './my_images/projects/architect/architect3.png';
@@ -449,12 +451,13 @@ const ModalLink = styled.a `
                     <Flip top>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                                {/* <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' /> */}
+                                <img src={MineterisGif} style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='Tetris Clone Gif' />
                             </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
                                     <h5 className='card-title'>Tetris Clone</h5>
-                                    <p className='card-text'>Tetris clone made with the XNA framework.</p>
+                                    <p className='card-text'>Tetris Clone with C# and XNA</p>
                                     <ModalLink onClick={() => setLgOlderProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
