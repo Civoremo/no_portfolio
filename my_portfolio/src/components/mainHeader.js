@@ -157,7 +157,7 @@ const MainLogo = () => {
 						<MainSubText>
 							<div ref={element => (developerSubHeader = element)}>
 								<span className="subText" style={{ zIndex: 5 }}>
-									Full-stack Web Developer
+									Full-stack Developer
 								</span>
 							</div>
 						</MainSubText>
