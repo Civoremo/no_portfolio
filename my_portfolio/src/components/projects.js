@@ -16,10 +16,16 @@ import Arq4 from './my_images/projects/arq/arq4.png';
 import Arq5 from './my_images/projects/arq/arq5.png';
 import Arq6 from './my_images/projects/arq/arq6.png';
 import Arq7 from './my_images/projects/arq/arq7.png';
-// import ArqHome from './my_images/projects/arq/arqHome.png';
 import ArqGif from './my_images/projects/arq/arqgif.gif';
 
+import PortfolioGif from './my_images/projects/portfolio/portfolio.gif';
+
 import DroomHome from './my_images/projects/droom/droomHome.png';
+
+import PPSRgif from './my_images/projects/ppsr/ppsrgif.gif';
+import PPSRvalidate from './my_images/projects/ppsr/errors.jpg';
+import PPSRreCaptcha from './my_images/projects/ppsr/recaptcha.jpg';
+import PPSRsignup from './my_images/projects/ppsr/signup.jpg';
 
 import MineterisGif from './my_images/projects/minetris/minetris.gif';
 import MinetrisGO from './my_images/projects/minetris/minetris_go.jpg';
@@ -251,12 +257,12 @@ const ModalLink = styled.a `
                                 <EachCardWrapperDiv>
                                     <div className='card' style={{minWidth: '18rem'}}>
                                         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                            <img src={DroomHome} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                            <img src={PPSRgif} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='Pool & Patio Screen Repair Gif' />
                                         </div>
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
-                                                <h5 className='card-title'>Droom</h5>
-                                                <p className='card-text'>Built the Front-end for a job-posting and job-searching site.</p>
+                                                <h5 className='card-title'>Pool & Patio Screen Repair</h5>
+                                                <p className='card-text'>Responsive local business site with CRUD operations for customer signup and access to restricted info.</p>
                                                 <ModalLink onClick={() => setLgProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                                 <Modal
@@ -267,20 +273,20 @@ const ModalLink = styled.a `
                                                 >
                                                     <Modal.Header closeButton>
                                                     <Modal.Title id="example-modal-sizes-title-lg">
-                                                        Droom
+                                                        Pool & Patio Screen Repair
                                                     </Modal.Title>
                                                     </Modal.Header>
                                                     <Modal.Body>
                                                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                             <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                 <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                <img src={PPSRreCaptcha} className="d-block" alt="PPSR reCaptcha" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                <img src={PPSRvalidate} className="d-block" alt="PPSR Form Validation" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                <img src={PPSRsignup} className="d-block" alt="PPSR Sign Up Error Handling" />
                                                                 </div>
                                                             </div>
                                                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -529,12 +535,12 @@ const ModalLink = styled.a `
                     <Flip bottom>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' />
+                                <img src={PortfolioGif} style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='Portfolio Gif' />
                             </div>
                             <div className='card-body'>
                                 <div style={{marginBottom: '15px'}}>
-                                    <h5 className='card-title'>Orbit Denfender</h5>
-                                    <p className='card-text'>Orbital earth defender made with Unity.</p>
+                                    <h5 className='card-title'>Portfolio</h5>
+                                    <p className='card-text'>Custom portfolio site.</p>
                                     <ModalLink onClick={() => setLgOlderProject2Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                     <Modal
@@ -545,7 +551,7 @@ const ModalLink = styled.a `
                                     >
                                         <Modal.Header closeButton>
                                         <Modal.Title id="example-modal-sizes-title-lg">
-                                            Orbit Defender
+                                            Portfolio Site
                                         </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
