@@ -18,9 +18,6 @@ import Arq6 from "./my_images/projects/arq/arq6.png";
 import Arq7 from "./my_images/projects/arq/arq7.png";
 import ArqGif from "./my_images/projects/arq/arqgif.gif";
 
-
-import DroomHome from "./my_images/projects/droom/droomHome.png";
-
 import PPSRgif from "./my_images/projects/ppsr/ppsrgif.gif";
 import PPSRvalidate from "./my_images/projects/ppsr/errors.jpg";
 import PPSRreCaptcha from "./my_images/projects/ppsr/recaptcha.jpg";
@@ -33,10 +30,10 @@ import MinetrisMM from "./my_images/projects/minetris/minetris_mm.jpg";
 
 import PortfolioGif from "./my_images/projects/portfolio/portfolio.gif";
 
-import BSLgif from './my_images/projects/backyardSportsLeague/BSLgif.gif';
-import BSLuser from './my_images/projects/backyardSportsLeague/userQuery.jpg';
-import BSLgame from './my_images/projects/backyardSportsLeague/gameQuery.jpg';
-import BSLpost from './my_images/projects/backyardSportsLeague/postGame.jpg';
+import BSLgif from "./my_images/projects/backyardSportsLeague/BSLgif.gif";
+import BSLuser from "./my_images/projects/backyardSportsLeague/userQuery.jpg";
+import BSLgame from "./my_images/projects/backyardSportsLeague/gameQuery.jpg";
+import BSLpost from "./my_images/projects/backyardSportsLeague/postGame.jpg";
 
 import ArchitectGif from "./my_images/projects/architect/architectGif.gif";
 import Architect1 from "./my_images/projects/architect/architect1.png";
@@ -44,22 +41,25 @@ import Architect2 from "./my_images/projects/architect/architect2.png";
 import Architect3 from "./my_images/projects/architect/architect3.png";
 import Architect4 from "./my_images/projects/architect/architect4.png";
 
+import NoteGif from "./my_images/projects/note/lambdaNotesGif.gif";
 import Note1 from "./my_images/projects/note/note1.png";
 import Note2 from "./my_images/projects/note/note2.png";
 import Note3 from "./my_images/projects/note/note3.png";
 import Note4 from "./my_images/projects/note/note4.png";
 
+import ODgif from "./my_images/projects/orbitDanger/orbitDangerGif.gif";
+import OD1 from "./my_images/projects/orbitDanger/OD1.jpg";
+import OD2 from "./my_images/projects/orbitDanger/OD2.jpg";
+import OD3 from "./my_images/projects/orbitDanger/OD3.jpg";
+
+import QuizzGif from "./my_images/projects/quizz/quizBlissGif.gif";
 import Quizz1 from "./my_images/projects/quizz/quizz1.png";
 import Quizz2 from "./my_images/projects/quizz/quizz2.png";
 import Quizz3 from "./my_images/projects/quizz/quizz3.png";
 import Quizz4 from "./my_images/projects/quizz/quizz4.png";
 
-import Shopping1 from "./my_images/projects/shopping/shopping1.png";
-import Shopping2 from "./my_images/projects/shopping/shopping2.png";
-
-import ToDo1 from "./my_images/projects/todo/todo1.png";
-import ToDo2 from "./my_images/projects/todo/todo2.png";
-import ToDo3 from "./my_images/projects/todo/todo3.png";
+import BrickBreakerGif from "./my_images/projects/brickbreaker/brickbreakerGif.gif";
+import bbMapEditor from "./my_images/projects/brickbreaker/mapEditor.jpg";
 
 const ProjectsDiv = styled.div``;
 
@@ -1598,6 +1598,8 @@ const Projects = () => {
 
 				<div id="olderProjectsPart2" style={{ display: "none" }}>
 					<CardContainerOlderProjectsDiv>
+						{/* LAMBDA NOTES */}
+
 						<Flip top>
 							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
 								<EachCardWrapperDiv>
@@ -1610,7 +1612,7 @@ const Projects = () => {
 										}}
 									>
 										<img
-											src={Note1}
+											src={NoteGif}
 											className="card-omg-top"
 											style={{ maxWidth: "100%", maxHeight: "15rem" }}
 											alt="..."
@@ -1656,25 +1658,25 @@ const Projects = () => {
 																className="carousel-item active"
 																style={{ marginRight: "0px", width: "auto" }}
 															>
-																<img src={Note1} className="d-block" alt="first slide" />
+																<img src={Note1} className="d-block" alt="Lambda Notes" />
 															</div>
 															<div
 																className="carousel-item"
 																style={{ marginRight: "0px", width: "auto" }}
 															>
-																<img src={Note2} className="d-block" alt="second slide" />
+																<img src={Note2} className="d-block" alt="Lambda Notes Save" />
 															</div>
 															<div
 																className="carousel-item"
 																style={{ marginRight: "0px", width: "auto" }}
 															>
-																<img src={Note3} className="d-block" alt="third slide" />
+																<img src={Note3} className="d-block" alt="Lambda Notes Filter" />
 															</div>
 															<div
 																className="carousel-item"
 																style={{ marginRight: "0px", width: "auto" }}
 															>
-																<img src={Note4} className="d-block" alt="fourth slide" />
+																<img src={Note4} className="d-block" alt="Lambda Notes Delete" />
 															</div>
 														</div>
 														<a
@@ -1764,6 +1766,9 @@ const Projects = () => {
 								</EachCardWrapperDiv>
 							</div>
 						</Flip>
+
+						{/* DANGER IN ORBIT */}
+
 						<Flip bottom>
 							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
 								<div
@@ -1775,10 +1780,10 @@ const Projects = () => {
 									}}
 								>
 									<img
-										src={ToDo1}
+										src={ODgif}
 										className="card-omg-top"
 										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
+										alt="Orbit Danger Gif"
 									/>
 								</div>
 								<div className="card-body">
@@ -1821,19 +1826,19 @@ const Projects = () => {
 															className="carousel-item active"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={ToDo1} className="d-block" alt="first slide" />
+															<img src={OD1} className="d-block" alt="OD Beginning Screen" />
 														</div>
 														<div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={ToDo2} className="d-block" alt="second slide" />
+															<img src={OD2} className="d-block" alt="OD UFO Attack" />
 														</div>
 														<div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={ToDo3} className="d-block" alt="third slide" />
+															<img src={OD3} className="d-block" alt="OD UFO Explosion" />
 														</div>
 													</div>
 													<a
@@ -1913,6 +1918,9 @@ const Projects = () => {
 								</div>
 							</div>
 						</Flip>
+
+						{/* QUIZ BLISS */}
+
 						<Flip top>
 							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
 								<div
@@ -1924,10 +1932,10 @@ const Projects = () => {
 									}}
 								>
 									<img
-										src={Quizz1}
+										src={QuizzGif}
 										className="card-omg-top"
 										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
+										alt="Quiz Bliss Gif"
 									/>
 								</div>
 								<div className="card-body">
@@ -1970,25 +1978,33 @@ const Projects = () => {
 															className="carousel-item active"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={Quizz1} className="d-block" alt="first slide" />
+															<img
+																src={Quizz1}
+																className="d-block"
+																alt="Quiz Bliss Quiz Selection"
+															/>
 														</div>
 														<div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={Quizz2} className="d-block" alt="second slide" />
+															<img src={Quizz2} className="d-block" alt="Quiz Bliss Quiz Screen" />
 														</div>
 														<div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={Quizz3} className="d-block" alt="third slide" />
+															<img src={Quizz3} className="d-block" alt="Quiz Bliss Quiz Score" />
 														</div>
 														<div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={Quizz4} className="d-block" alt="fourth slide" />
+															<img
+																src={Quizz4}
+																className="d-block"
+																alt="Quiz Bliss Quiz Tournament"
+															/>
 														</div>
 													</div>
 													<a
@@ -2075,6 +2091,8 @@ const Projects = () => {
 								</div>
 							</div>
 						</Flip>
+
+						{/* BRICK BREAKER */}
 						<Flip bottom>
 							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
 								<div
@@ -2086,10 +2104,10 @@ const Projects = () => {
 									}}
 								>
 									<img
-										src={Shopping1}
+										src={BrickBreakerGif}
 										className="card-omg-top"
 										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
+										alt="Brickbreaker Clone Gif"
 									/>
 								</div>
 								<div className="card-body">
@@ -2134,639 +2152,18 @@ const Projects = () => {
 															className="carousel-item active"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
-															<img src={Shopping1} className="d-block" alt="first slide" />
+															<img
+																src={bbMapEditor}
+																className="d-block"
+																alt="Brickbreaker Map Editor"
+															/>
 														</div>
-														<div
+														{/* <div
 															className="carousel-item"
 															style={{ marginRight: "0px", width: "auto" }}
 														>
 															<img src={Shopping2} className="d-block" alt="second slide" />
-														</div>
-													</div>
-													<a
-														className="carousel-control-prev"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="prev"
-													>
-														<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-														<span className="sr-only">Previous</span>
-													</a>
-													<a
-														className="carousel-control-next"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="next"
-													>
-														<span className="carousel-control-next-icon" aria-hidden="true"></span>
-														<span className="sr-only">Next</span>
-													</a>
-												</div>
-												<div style={{ margin: "30px 20px" }}>
-													<p>
-														Built a React app that let's users keep track of a shopping list. The
-														user can add items they need and move the items from 'Need' to "Found"
-														and delete unnecessary items.
-													</p>
-													<p>Duplicate items are not allowed; it is case insensitive.</p>
-													<div
-														style={{
-															display: "flex",
-															alignItems: "center",
-															flexWrap: "wrap",
-															flexDirection: "column",
-															marginTop: "40px",
-															fontFamily: "Nunito",
-														}}
-													>
-														<div style={{ fontWeight: "bold", marginBottom: "10px" }}>
-															Frameworks
-														</div>
-														<div
-															style={{
-																display: "flex",
-																justifyContent: "center",
-																flexWrap: "wrap",
-															}}
-														>
-															<span style={{ margin: "0 5px" }}>React</span>
-															<span style={{ margin: "0 5px" }}>Javascript</span>
-														</div>
-													</div>
-												</div>
-											</Modal.Body>
-										</Modal>
-									</div>
-									<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
-										<a
-											href="https://shopping-list-reactapp.netlify.com/"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Live
-										</a>
-										<a
-											href="https://github.com/Civoremo/shopping-cart-lists"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Github
-										</a>
-									</div>
-								</div>
-							</div>
-						</Flip>
-					</CardContainerOlderProjectsDiv>
-					<div
-						id="showMoreProjectsLink2"
-						onClick={() => showMoreProjectsPart3()}
-						style={{ color: "#007bff", cursor: "pointer", display: "block", marginBottom: "64px" }}
-					>
-						Show even more
-					</div>
-				</div>
-
-				{/* Even More Older Projects Section */}
-				<div id="olderProjectsPart3" style={{ display: "none" }}>
-					<CardContainerOlderProjectsDiv>
-						<Flip top>
-							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
-								<div
-									style={{
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										height: "250px",
-									}}
-								>
-									<img
-										src={Note1}
-										className="card-omg-top"
-										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
-									/>
-								</div>
-								<div className="card-body">
-									<div style={{ marginBottom: "15px" }}>
-										<h5 className="card-title">Note App</h5>
-										<p className="card-text">Note taking app with CRUD operations.</p>
-										<ModalLink
-											onClick={() => setLgOlderProject5Show(true)}
-											style={{ color: "#007bff" }}
-										>
-											Learn more
-										</ModalLink>
-
-										<Modal
-											size="lg"
-											show={lgOlderProject5Show}
-											onHide={() => setLgOlderProject5Show(false)}
-											aria-labelledby="example-modal-sizes-title-lg"
-										>
-											<Modal.Header closeButton>
-												<Modal.Title id="example-modal-sizes-title-lg">Note App</Modal.Title>
-											</Modal.Header>
-											<Modal.Body>
-												<div
-													id="carouselExampleControls"
-													className="carousel slide"
-													data-ride="carousel"
-												>
-													<div
-														className="carousel-inner"
-														style={{
-															backgroundColor: "#222",
-															display: "flex",
-															justifyContent: "center",
-															alignItems: "center",
-															height: "400px",
-														}}
-													>
-														<div
-															className="carousel-item active"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Note1} className="d-block" alt="first slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Note2} className="d-block" alt="second slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Note3} className="d-block" alt="third slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Note4} className="d-block" alt="fourth slide" />
-														</div>
-													</div>
-													<a
-														className="carousel-control-prev"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="prev"
-													>
-														<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-														<span className="sr-only">Previous</span>
-													</a>
-													<a
-														className="carousel-control-next"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="next"
-													>
-														<span className="carousel-control-next-icon" aria-hidden="true"></span>
-														<span className="sr-only">Next</span>
-													</a>
-												</div>
-												<div style={{ margin: "30px 20px" }}>
-													<p>
-														A note taking app that allows for all CRUD operations. Performed all API
-														calls to a remote server that stored the created notes and kept track of
-														all changes made to said note along with deleting notes. A search
-														function was added to more easily look for notes.
-													</p>
-													<p>Site is responsive.</p>
-													<div
-														style={{
-															display: "flex",
-															alignItems: "center",
-															flexWrap: "wrap",
-															flexDirection: "column",
-															marginTop: "40px",
-															fontFamily: "Nunito",
-														}}
-													>
-														<div style={{ fontWeight: "bold", marginBottom: "10px" }}>
-															Frameworks
-														</div>
-														<div
-															style={{
-																display: "flex",
-																justifyContent: "center",
-																flexWrap: "wrap",
-															}}
-														>
-															<span style={{ margin: "0 5px" }}>React</span>
-															<span style={{ margin: "0 5px" }}>Redux</span>
-															<span style={{ margin: "0 5px" }}>Javascript</span>
-															<span style={{ margin: "0 5px" }}>HTML 5</span>
-															<span style={{ margin: "0 5px" }}>CSS 3</span>
-															<span style={{ margin: "0 5px" }}>Less</span>
-														</div>
-													</div>
-												</div>
-											</Modal.Body>
-										</Modal>
-									</div>
-									<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
-										<a
-											href="https://lambda-notes.netlify.com/"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Live
-										</a>
-										<a
-											href="https://github.com/Civoremo/front-end-project-week"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Github
-										</a>
-									</div>
-								</div>
-							</div>
-						</Flip>
-						<Flip bottom>
-							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
-								<div
-									style={{
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										height: "250px",
-									}}
-								>
-									<img
-										src={ToDo1}
-										className="card-omg-top"
-										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
-									/>
-								</div>
-								<div className="card-body">
-									<div style={{ marginBottom: "15px" }}>
-										<h5 className="card-title">ToDo App</h5>
-										<p className="card-text">A ToDo list with search functionality.</p>
-										<ModalLink
-											onClick={() => setLgOlderProject6Show(true)}
-											style={{ color: "#007bff" }}
-										>
-											Learn more
-										</ModalLink>
-
-										<Modal
-											size="lg"
-											show={lgOlderProject6Show}
-											onHide={() => setLgOlderProject6Show(false)}
-											aria-labelledby="example-modal-sizes-title-lg"
-										>
-											<Modal.Header closeButton>
-												<Modal.Title id="example-modal-sizes-title-lg">ToDo App</Modal.Title>
-											</Modal.Header>
-											<Modal.Body>
-												<div
-													id="carouselExampleControls"
-													className="carousel slide"
-													data-ride="carousel"
-												>
-													<div
-														className="carousel-inner"
-														style={{
-															backgroundColor: "#222",
-															display: "flex",
-															justifyContent: "center",
-															alignItems: "center",
-															height: "400px",
-														}}
-													>
-														<div
-															className="carousel-item active"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={ToDo1} className="d-block" alt="first slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={ToDo2} className="d-block" alt="second slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={ToDo3} className="d-block" alt="third slide" />
-														</div>
-													</div>
-													<a
-														className="carousel-control-prev"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="prev"
-													>
-														<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-														<span className="sr-only">Previous</span>
-													</a>
-													<a
-														className="carousel-control-next"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="next"
-													>
-														<span className="carousel-control-next-icon" aria-hidden="true"></span>
-														<span className="sr-only">Next</span>
-													</a>
-												</div>
-												<div style={{ margin: "30px 20px" }}>
-													<p>
-														A ToDo app that allows the user to add items that need to be done; those
-														items that are completed can be marked as completed and with a single
-														button all those that were marked as complete can be removed. Items are
-														stored in local storage to persist during a refresh of the site.
-													</p>
-													<div
-														style={{
-															display: "flex",
-															alignItems: "center",
-															flexWrap: "wrap",
-															flexDirection: "column",
-															marginTop: "40px",
-															fontFamily: "Nunito",
-														}}
-													>
-														<div style={{ fontWeight: "bold", marginBottom: "10px" }}>
-															Frameworks
-														</div>
-														<div
-															style={{
-																display: "flex",
-																justifyContent: "center",
-																flexWrap: "wrap",
-															}}
-														>
-															<span style={{ margin: "0 5px" }}>React</span>
-															<span style={{ margin: "0 5px" }}>Javascript</span>
-															<span style={{ margin: "0 5px" }}>HTML 5</span>
-															<span style={{ margin: "0 5px" }}>CSS 3</span>
-														</div>
-													</div>
-												</div>
-											</Modal.Body>
-										</Modal>
-									</div>
-									<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
-										<a
-											href="https://todo-reactapp.netlify.com"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Live
-										</a>
-										<a
-											href="https://github.com/Civoremo/React-Todo"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Github
-										</a>
-									</div>
-								</div>
-							</div>
-						</Flip>
-						<Flip top>
-							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
-								<div
-									style={{
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										height: "250px",
-									}}
-								>
-									<img
-										src={Quizz1}
-										className="card-omg-top"
-										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
-									/>
-								</div>
-								<div className="card-body">
-									<div style={{ marginBottom: "15px" }}>
-										<h5 className="card-title">Quiz Bliss</h5>
-										<p className="card-text">React app for creating and taking quizzes.</p>
-										<ModalLink
-											onClick={() => setLgOlderProject7Show(true)}
-											style={{ color: "#007bff" }}
-										>
-											Learn more
-										</ModalLink>
-
-										<Modal
-											size="lg"
-											show={lgOlderProject7Show}
-											onHide={() => setLgOlderProject7Show(false)}
-											aria-labelledby="example-modal-sizes-title-lg"
-										>
-											<Modal.Header closeButton>
-												<Modal.Title id="example-modal-sizes-title-lg">Quiz Bliss</Modal.Title>
-											</Modal.Header>
-											<Modal.Body>
-												<div
-													id="carouselExampleControls"
-													className="carousel slide"
-													data-ride="carousel"
-												>
-													<div
-														className="carousel-inner"
-														style={{
-															backgroundColor: "#222",
-															display: "flex",
-															justifyContent: "center",
-															alignItems: "center",
-															height: "400px",
-														}}
-													>
-														<div
-															className="carousel-item active"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Quizz1} className="d-block" alt="first slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Quizz2} className="d-block" alt="second slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Quizz3} className="d-block" alt="third slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Quizz4} className="d-block" alt="fourth slide" />
-														</div>
-													</div>
-													<a
-														className="carousel-control-prev"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="prev"
-													>
-														<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-														<span className="sr-only">Previous</span>
-													</a>
-													<a
-														className="carousel-control-next"
-														href="#carouselExampleControls"
-														role="button"
-														data-slide="next"
-													>
-														<span className="carousel-control-next-icon" aria-hidden="true"></span>
-														<span className="sr-only">Next</span>
-													</a>
-												</div>
-												<div style={{ margin: "30px 20px" }}>
-													<p>
-														Worked with 3 other developers that developed the back-end for the app.
-														I spent one week during Christmas to build the front-end.
-													</p>
-													<p>
-														Start the app by creating an account, the app allows you to create,
-														update and delete quizzes for you and others to take. It keeps track of
-														your highest score for each attempted quiz along with a tournament mode
-														that combines multiple quizzes into a Japorday style game. There is a
-														search/filter function to sort through the maze of created quizzes.
-													</p>
-													<div
-														style={{
-															display: "flex",
-															alignItems: "center",
-															flexWrap: "wrap",
-															flexDirection: "column",
-															marginTop: "40px",
-															fontFamily: "Nunito",
-														}}
-													>
-														<div style={{ fontWeight: "bold", marginBottom: "10px" }}>
-															Frameworks
-														</div>
-														<div
-															style={{
-																display: "flex",
-																justifyContent: "center",
-																flexWrap: "wrap",
-															}}
-														>
-															<span style={{ margin: "0 5px" }}>React</span>
-															<span style={{ margin: "0 5px" }}>Redux</span>
-															<span style={{ margin: "0 5px" }}>JWT Token</span>
-															<span style={{ margin: "0 5px" }}>Javascript</span>
-															<span style={{ margin: "0 5px" }}>HTML 5</span>
-															<span style={{ margin: "0 5px" }}>CSS 3</span>
-														</div>
-													</div>
-												</div>
-											</Modal.Body>
-										</Modal>
-									</div>
-									<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
-										<a
-											href="https://quizbliss.netlify.com/"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Live
-										</a>
-										<a
-											href="https://github.com/Civoremo/Quiz_Bliss"
-											className="card-link"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Github
-										</a>
-									</div>
-								</div>
-							</div>
-						</Flip>
-						<Flip bottom>
-							<div className="card" style={{ width: "14rem", margin: "3px 3px" }}>
-								<div
-									style={{
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										height: "250px",
-									}}
-								>
-									<img
-										src={Shopping1}
-										className="card-omg-top"
-										style={{ maxWidth: "100%", maxHeight: "15rem" }}
-										alt="..."
-									/>
-								</div>
-								<div className="card-body">
-									<div style={{ marginBottom: "15px" }}>
-										<h5 className="card-title">Shopping Cart List</h5>
-										<p className="card-text">Shopping list tracking react app.</p>
-										<ModalLink
-											onClick={() => setLgOlderProject8Show(true)}
-											style={{ color: "#007bff" }}
-										>
-											Learn more
-										</ModalLink>
-
-										<Modal
-											size="lg"
-											show={lgOlderProject8Show}
-											onHide={() => setLgOlderProject8Show(false)}
-											aria-labelledby="example-modal-sizes-title-lg"
-										>
-											<Modal.Header closeButton>
-												<Modal.Title id="example-modal-sizes-title-lg">
-													Shopping Cart List
-												</Modal.Title>
-											</Modal.Header>
-											<Modal.Body>
-												<div
-													id="carouselExampleControls"
-													className="carousel slide"
-													data-ride="carousel"
-												>
-													<div
-														className="carousel-inner"
-														style={{
-															backgroundColor: "#222",
-															display: "flex",
-															justifyContent: "center",
-															alignItems: "center",
-															height: "400px",
-														}}
-													>
-														<div
-															className="carousel-item active"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Shopping1} className="d-block" alt="first slide" />
-														</div>
-														<div
-															className="carousel-item"
-															style={{ marginRight: "0px", width: "auto" }}
-														>
-															<img src={Shopping2} className="d-block" alt="second slide" />
-														</div>
+														</div> */}
 													</div>
 													<a
 														className="carousel-control-prev"
