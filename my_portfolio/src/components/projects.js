@@ -16,7 +16,8 @@ import Arq4 from './my_images/projects/arq/arq4.png';
 import Arq5 from './my_images/projects/arq/arq5.png';
 import Arq6 from './my_images/projects/arq/arq6.png';
 import Arq7 from './my_images/projects/arq/arq7.png';
-import ArqHome from './my_images/projects/arq/arqHome.png';
+// import ArqHome from './my_images/projects/arq/arqHome.png';
+import ArqGif from './my_images/projects/arq/arqgif.gif';
 
 import DroomHome from './my_images/projects/droom/droomHome.png';
 
@@ -74,7 +75,8 @@ const EachCardDiv = styled.div `
 `
 
 const EachCardWrapperDiv = styled.div `
-    position: absolute;
+    /* position: absolute; */
+    position: relative;
 
     :hover {
         box-shadow: 5px 5px 5px #dadada;
@@ -128,12 +130,12 @@ const ModalLink = styled.a `
                                 <EachCardWrapperDiv>
                                     <div className='card' style={{minWidth: '18rem'}}>
                                         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                            <img src={ArqHome} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='project 1' />
+                                            <img src={ArqGif} className='card-img-top' style={{maxWidth: '100%', maxHeight: '15rem'}} alt='Arq Gif' />
                                         </div>
                                         <div className='card-body'>
                                             <div style={{ marginBottom: '20px'}}>
                                                 <h5 className='card-title'>Arq</h5>
-                                                <p className='card-text'>Worked with team to add features and refactor old code.</p>
+                                                <p className='card-text'>A team collaboration, organization, and communication tool which keeps track of a teams multi-platform documents, activity and conversations all in one place.</p>
                                                 <ModalLink onClick={() => setLgProject1Show(true)} style={{color: '#007bff'}}>Learn more</ModalLink>
 
                                                 <Modal
@@ -184,6 +186,9 @@ const ModalLink = styled.a `
                                                         </div>
                                                         <div style={{ margin: '30px 20px', fontFamily: 'Nunito', letterSpacing: '2px'}}>
                                                             <p>
+                                                                <a href='https://www.youtube.com/watch?v=XI_-0z4J-n4' className='card-link' target="_blank" rel='noopener noreferrer'>Team Project Video</a>
+                                                            </p>
+                                                            <p>
                                                                 Team was tasked with adding new features to an already existing codebase.
                                                             </p>
                                                             <p>
@@ -232,7 +237,8 @@ const ModalLink = styled.a `
                                                 </li>
                                             </ul>   
                                             <div className='card-body'>
-                                                <a href='https://arq.community/' className='card-link' target="_blank" rel='noopener noreferrer'>Live Site</a>
+                                                <a href='https://arq.community/' className='card-link' target="_blank" rel='noopener noreferrer'>New Site</a>
+                                                <a href='https://sveza.app/' className='card-link' target="_blank" rel='noopener noreferrer'>Old Site</a>
                                                 <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                             </div>
                                         </div>

@@ -28,14 +28,13 @@ const AboutMe = () => {
 				</h2>
 				<AboutContentDiv>
 					<Fade left>
-						<p>Creative problem solver, passionate learner and life-long tech enthusiast.</p>
+						<p>Creative problem solver, passionate learner and lifelong tech enthusiast.</p>
 					</Fade>
 					<Fade right>
 						<p>
 							Hi, my name is Nedim (Ned-eem) Omerovic; a Lambda School Full-Stack graduate currently
-							living in Orlando, Florida. My passion lies in the creative and development process of
-							software development, at a younger age I tried my hand at game development before
-							discovering the wonders of web development.
+							living in Orlando, Florida. My passions lie in the creative and development process of
+							software development.
 						</p>
 					</Fade>
 					<Fade left>
