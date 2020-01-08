@@ -20,7 +20,10 @@ import ArqHome from './my_images/projects/arq/arqHome.png';
 
 import DroomHome from './my_images/projects/droom/droomHome.png';
 
-import MineterisGif from './my_images/projects/minetris/minetris2.gif';
+import MineterisGif from './my_images/projects/minetris/minetris.gif';
+import MinetrisGO from './my_images/projects/minetris/minetris_go.jpg';
+import MinetrisGP from './my_images/projects/minetris/minetris_gp.jpg';
+import MinetrisMM from './my_images/projects/minetris/minetris_mm.jpg';
 
 import Architect1 from './my_images/projects/architect/architect1.png';
 import Architect2 from './my_images/projects/architect/architect2.png';
@@ -451,7 +454,6 @@ const ModalLink = styled.a `
                     <Flip top>
                         <div className='card' style={{width: '14rem', margin: '3px 3px'}}>
                             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '250px'}}>
-                                {/* <img src="https://placekitten.com/g/200/200" style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='...' /> */}
                                 <img src={MineterisGif} style={{maxWidth: '100%', maxHeight: '15rem'}} className='card-omg-top' alt='Tetris Clone Gif' />
                             </div>
                             <div className='card-body'>
@@ -475,13 +477,13 @@ const ModalLink = styled.a `
                                                         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                                             <div className="carousel-inner" style={{backgroundColor: '#222', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px'}}>
                                                                 <div className="carousel-item active" style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/200/300" className="d-block" alt="first slide" />
+                                                                <img style={{width: '60%', margin: 'auto'}} src={MinetrisMM} className="d-block" alt="Minetris Main Menu" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/300/500" className="d-block" alt="second slide" />
+                                                                <img style={{width: '60%', margin: 'auto'}} src={MinetrisGP} className="d-block" alt="Minetris Gameplay" />
                                                                 </div>
                                                                 <div className="carousel-item"  style={{ marginRight: '0px', width: 'auto'}}>
-                                                                <img src="https://placekitten.com/g/400/300" className="d-block" alt="third slide" />
+                                                                <img style={{width: '60%', margin: 'auto'}} src={MinetrisGO} className="d-block" alt="Minetris Game Over" />
                                                                 </div>
                                                             </div>
                                                             <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -493,35 +495,19 @@ const ModalLink = styled.a `
                                                                 <span className="sr-only">Next</span>
                                                             </a>
                                                         </div>
-                                                        <div style={{ border: '1px solid red', margin: '30px 20px'}}>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
+                                                        <div style={{ margin: '30px 20px'}}>
+                                                            <p>First attempt at making a game from scratch after learning the basics of C# and the XNA framework.
                                                             </p>
-                                                            <p>Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
-                                                            Some text here with a more detailed explanation
+                                                            <p>Having built a few simple windows applications before; I had stubled across the XNA framework from Microsoft, which allowed developers to build games and apps for their phones and the Xbox.
+                                                            </p>
+                                                            <p>
+                                                                The game is in all essence Tetris and features a particle system and a high score board. The speed of falling pieces increases as lines are cleared, and a bonus score is awarded when Tetris (clearing 4 lines) is made.
                                                             </p>
                                                             <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', flexDirection: 'column', marginTop: '40px', fontFamily: 'Nunito'}}>
                                                                 <div style={{fontWeight: 'bold', marginBottom: '10px'}}>Frameworks</div>
                                                                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                                                                    <span style={{margin: '0 5px'}}>GraphQL</span>
-                                                                    <span style={{margin: '0 5px'}}>MongoDB</span>
-                                                                    <span style={{margin: '0 5px'}}>Mongoose</span>
-                                                                    <span style={{margin: '0 5px'}}>Material UI</span>
-                                                                    <span style={{margin: '0 5px'}}>React</span>
-                                                                    <span style={{margin: '0 5px'}}>Apollo</span>
-                                                                    <span style={{margin: '0 5px'}}>Auth0</span>
+                                                                    <span style={{margin: '0 5px'}}>C#</span>
+                                                                    <span style={{margin: '0 5px'}}>XNA</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -529,7 +515,7 @@ const ModalLink = styled.a `
                                     </Modal>                                    
                                 </div>
                                 <div className='card-body' style={{borderTop: '1px solid rgba(0,0,0,.125)'}}>
-                                    <a href='https://github.com/Civoremo/Arq' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
+                                    <a href='https://github.com/Civoremo/MineTris/tree/master/MineTris/MineTris' className='card-link' target="_blank" rel='noopener noreferrer'>Github</a>
                                 </div>
                             </div>
                         </div>
