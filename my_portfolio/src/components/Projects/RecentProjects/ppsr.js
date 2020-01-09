@@ -30,8 +30,8 @@ const EachCardWrapperDiv = styled.div`
 	}
 `;
 
-const ModalLink = styled.a`
-	color: #007bff;
+const ModalLink = styled.div`
+	color: #dc3545;
 
 	:hover {
 		cursor: pointer;
@@ -67,9 +67,7 @@ const PPSR = () => {
 									Responsive local business site with CRUD operations for customer signup and access
 									to restricted info.
 								</p>
-								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
-									Learn more
-								</ModalLink>
+								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
 									size="lg"

@@ -14,8 +14,8 @@ const EachCardWrapperDiv = styled.div`
 	}
 `;
 
-const ModalLink = styled.a`
-	color: #007bff;
+const ModalLink = styled.div`
+	color: #dc3545;
 
 	:hover {
 		cursor: pointer;
@@ -48,9 +48,7 @@ const QUIZBLISS = () => {
 							<div style={{ marginBottom: "15px" }}>
 								<h5 className="card-title">Quiz Bliss</h5>
 								<p className="card-text">React app for creating and taking quizzes.</p>
-								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
-									Learn more
-								</ModalLink>
+								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
 									size="lg"

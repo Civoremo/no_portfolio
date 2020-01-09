@@ -34,8 +34,8 @@ const EachCardWrapperDiv = styled.div`
 	}
 `;
 
-const ModalLink = styled.a`
-	color: #007bff;
+const ModalLink = styled.div`
+	color: #dc3545;
 
 	:hover {
 		cursor: pointer;
@@ -71,9 +71,7 @@ const ArqProject = () => {
 									A team collaboration, organization, and communication tool which keeps track of a
 									teams multi-platform documents, activities and conversations all in one place.
 								</p>
-								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
-									Learn more
-								</ModalLink>
+								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
 									size="lg"
@@ -177,6 +175,7 @@ const ArqProject = () => {
 													className="card-link"
 													target="_blank"
 													rel="noopener noreferrer"
+													style={{ color: "#ff3333" }}
 												>
 													Team Project Video
 												</a>

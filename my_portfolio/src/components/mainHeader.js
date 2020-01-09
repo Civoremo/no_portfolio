@@ -136,7 +136,7 @@ const MainLogo = () => {
 	};
 
 	return (
-		<section style={{ margin: "130px 0 0 0" }} className="home">
+		<section style={{ margin: "130px 0 200px 0" }} className="home">
 			<Container className="text-left">
 				<div style={mainWrapper}>
 					<div style={textWrapper}>
@@ -150,7 +150,7 @@ const MainLogo = () => {
 						<div style={lineWrapper}>
 							<div
 								className="lineSeperator"
-								style={{ position: "absolute", border: "5px solid red", width: "100%" }}
+								style={{ position: "absolute", border: "5px solid #DC3545", width: "100%" }}
 								ref={element => (lineSegmentSeperator = element)}
 							></div>
 						</div>

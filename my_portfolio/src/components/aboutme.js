@@ -4,7 +4,8 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const AboutMeDiv = styled.div`
-	background: #222;
+	/* background: #222; */
+	background-color: #222;
 	color: #fff;
 	margin: 200px 0 30px 0;
 `;
@@ -24,7 +25,7 @@ const AboutMe = () => {
 		<AboutMeDiv className="about">
 			<Container style={{ borderTop: "1px solid #222", borderBottom: "1px solid #222" }}>
 				<h2 style={{ textAlign: "left", margin: "120px 70px 30px 70px", fontFamily: "Nunito" }}>
-					<span>About</span>
+					<span style={{ color: "#DC3545" }}>About</span>
 				</h2>
 				<AboutContentDiv>
 					<Fade left>
@@ -32,7 +33,7 @@ const AboutMe = () => {
 					</Fade>
 					<Fade right>
 						<p>
-							Hi, my name is Nedim (Ned-eem) Omerovic; a Lambda School Full-Stack graduate currently
+							Hi, my name is Nedim (Ned-eem) Omerovic, a Lambda School Full-Stack graduate currently
 							living in Orlando, Florida. My passions lie in the creative and development process of
 							software development.
 						</p>
@@ -45,9 +46,27 @@ const AboutMe = () => {
 					</Fade>
 					{/* <Fade right>
                         <p>
-                            I also love to travel and experience the various cultures around the world; I've had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
+												I also love to travel and experience the various cultures around the world; I've had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
                         </p>
-                    </Fade> */}
+											</Fade> */}
+				</AboutContentDiv>
+				<h2
+					style={{
+						textAlign: "left",
+						margin: "120px 70px 30px 70px",
+						fontFamily: "Nunito",
+					}}
+				>
+					<span style={{ color: "#DC3545" }}>Stack</span>
+				</h2>
+				<AboutContentDiv>
+					<Fade bottom>
+						<p>
+							HTML | CSS | JavaScript | Animation | React | Hooks | Redux | Python | C | C# | Styled
+							Components | Responsive Design | UI / UX | Node | GraphQL | Apollo | Prisma | RDBMS |
+							SQL | JWT | RESTful API | Git
+						</p>
+					</Fade>
 				</AboutContentDiv>
 			</Container>
 		</AboutMeDiv>

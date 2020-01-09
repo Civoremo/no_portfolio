@@ -13,8 +13,9 @@ const NavBG = styled.nav`
 	margin-bottom: 20px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	border-bottom: 1px solid #bcbcbc;
-	box-shadow: 0px 5px 5px #dadada;
+	border-bottom: 1px solid #afafaf;
+	/* box-shadow: inset 0 -15px 15px -15px #797979; */
+	box-shadow: 0 3px 10px #a7a7a7;
 `;
 const NavLinkColor = styled.span`
 	color: rgba(0, 0, 0, 0.5);
@@ -22,6 +23,7 @@ const NavLinkColor = styled.span`
 
 	:hover {
 		color: #c9c9c9;
+		/* color: "#FF3333" !important; */
 	}
 `;
 
@@ -186,11 +188,12 @@ const NavBar = () => {
 							</div>
 							<div>
 								<span className="shortName" style={shortLogoName}>
-									<span style={{ color: "red" }}>O</span>.<span style={{ color: "red" }}>N</span>.
+									<span style={{ color: "#DC3545" }}>O</span>.
+									<span style={{ color: "#DC3545" }}>N</span>.
 								</span>
 								<span className="longName" style={longLogoName}>
-									<span style={{ color: "red" }}>O</span>merovic,{" "}
-									<span style={{ color: "red" }}>N</span>edim
+									<span style={{ color: "#DC3545" }}>O</span>merovic,{" "}
+									<span style={{ color: "#DC3545" }}>N</span>edim
 								</span>
 							</div>
 							<div ref={element => (rightBracket = element)}>

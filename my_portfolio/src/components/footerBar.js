@@ -3,7 +3,8 @@ import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 
 const FooterDiv = styled.div`
-	background-color: red;
+	/* background-color: #ff3333; */
+	background-color: #dc3545;
 	color: #222;
 	font-family: Open Sans Condensed;
 	letter-spacing: 4px;

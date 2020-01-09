@@ -22,8 +22,8 @@ const EachCardWrapperDiv = styled.div`
 	}
 `;
 
-const ModalLink = styled.a`
-	color: #007bff;
+const ModalLink = styled.div`
+	color: #dc3545;
 
 	:hover {
 		cursor: pointer;
@@ -58,9 +58,7 @@ const LUNCHER = () => {
 								<p className="card-text">
 									Built the Front-end and Back-end for a school lunch fundraising site.
 								</p>
-								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
-									Learn more
-								</ModalLink>
+								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
 									size="lg"

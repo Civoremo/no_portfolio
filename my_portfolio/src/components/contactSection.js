@@ -157,7 +157,7 @@ class ContactForm extends Component {
 			<ContactContainerDiv className="contact">
 				<Container>
 					<h2 style={{ textAlign: "left", margin: "40px 70px 30px 70px", fontFamily: "Nunito" }}>
-						<span>Get in Contact</span>
+						<span style={{ color: "#DC3545" }}>Get in Contact</span>
 					</h2>
 					<Container style={{ padding: "30px 70px" }}>
 						<ContactSectionWrapper>

@@ -71,12 +71,20 @@ const Projects = () => {
 					<BACKYARDSPORTLEAGUE />
 					<ARCHITECT />
 				</CardContainerOlderProjectsDiv>
-				<div
-					id="showMoreProjectsLink1"
-					onClick={() => showMoreProjectsPart2()}
-					style={{ color: "#007bff", cursor: "pointer", display: "block", marginBottom: "64px" }}
-				>
-					Show more
+				<div style={{ display: "flex", justifyContent: "center" }}>
+					<span
+						id="showMoreProjectsLink1"
+						onClick={() => showMoreProjectsPart2()}
+						style={{
+							color: "#DC3545",
+							cursor: "pointer",
+							display: "block",
+							marginBottom: "64px",
+							fontSize: "1.2rem",
+						}}
+					>
+						Show More
+					</span>
 				</div>
 
 				<div id="olderProjectsPart2" style={{ display: "none" }}>
