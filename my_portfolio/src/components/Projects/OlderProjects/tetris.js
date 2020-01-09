@@ -1,30 +1,8 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
 import { MineterisGif, MinetrisGO, MinetrisGP, MinetrisMM } from "../../images";
-
-const EachCardWrapperDiv = styled.div`
-	/* position: absolute; */
-	position: relative;
-
-	:hover {
-		box-shadow: 5px 5px 5px #dadada;
-		z-index: 10;
-	}
-`;
-
-const ModalLink = styled.div`
-	color: #dc3545;
-
-	:hover {
-		cursor: pointer;
-	}
-`;
-
-const CarouselImage = styled.img`
-	height: 400px;
-`;
+import { EachCardWrapperDiv, ModalLink, CarouselImage } from "../styledCompProjects";
 
 const TETRIS = () => {
 	const [lgProject, setLgProject] = useState(false);
