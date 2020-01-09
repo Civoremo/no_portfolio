@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
-import { MineterisGif, MinetrisGO, MinetrisGP, MinetrisMM } from "../../images";
+import { NoteGif, Note1, Note2, Note3, Note4 } from "../../images";
 
 const EachCardWrapperDiv = styled.div`
 	/* position: absolute; */
@@ -22,7 +22,7 @@ const ModalLink = styled.a`
 	}
 `;
 
-const TETRIS = () => {
+const NOTES = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
 		<div style={{ margin: "3px 3px" }}>
@@ -38,16 +38,16 @@ const TETRIS = () => {
 							}}
 						>
 							<img
-								src={MineterisGif}
-								style={{ maxWidth: "100%", maxHeight: "15rem" }}
+								src={NoteGif}
 								className="card-omg-top"
-								alt="Tetris Clone Gif"
+								style={{ maxWidth: "100%", maxHeight: "15rem" }}
+								alt="..."
 							/>
 						</div>
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
-								<h5 className="card-title">Tetris Clone</h5>
-								<p className="card-text">Tetris Clone with C# and XNA</p>
+								<h5 className="card-title">Note App</h5>
+								<p className="card-text">Note taking app with CRUD operations.</p>
 								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
 									Learn more
 								</ModalLink>
@@ -59,7 +59,7 @@ const TETRIS = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">Tetris Clone</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">Note App</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -81,34 +81,25 @@ const TETRIS = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisMM}
-														className="d-block"
-														alt="Minetris Main Menu"
-													/>
+													<img src={Note1} className="d-block" alt="Lambda Notes" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisGP}
-														className="d-block"
-														alt="Minetris Gameplay"
-													/>
+													<img src={Note2} className="d-block" alt="Lambda Notes Save" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisGO}
-														className="d-block"
-														alt="Minetris Game Over"
-													/>
+													<img src={Note3} className="d-block" alt="Lambda Notes Filter" />
+												</div>
+												<div
+													className="carousel-item"
+													style={{ marginRight: "0px", width: "auto" }}
+												>
+													<img src={Note4} className="d-block" alt="Lambda Notes Delete" />
 												</div>
 											</div>
 											<a
@@ -132,19 +123,12 @@ const TETRIS = () => {
 										</div>
 										<div style={{ margin: "30px 20px" }}>
 											<p>
-												First attempt at making a game from scratch after learning the basics of C#
-												and the XNA framework.
+												A note taking app that allows for all CRUD operations. Performed all API
+												calls to a remote server that stored the created notes and kept track of all
+												changes made to said note along with deleting notes. A search function was
+												added to more easily look for notes.
 											</p>
-											<p>
-												Having built a few simple windows applications before; I had stubled across
-												the XNA framework from Microsoft, which allowed developers to build games
-												and apps for their phones and the Xbox.
-											</p>
-											<p>
-												The game is in all essence Tetris and features a particle system and a high
-												score board. The speed of falling pieces increases as lines are cleared, and
-												a bonus score is awarded when Tetris (clearing 4 lines) is made.
-											</p>
+											<p>Site is responsive.</p>
 											<div
 												style={{
 													display: "flex",
@@ -163,8 +147,12 @@ const TETRIS = () => {
 														flexWrap: "wrap",
 													}}
 												>
-													<span style={{ margin: "0 5px" }}>C#</span>
-													<span style={{ margin: "0 5px" }}>XNA</span>
+													<span style={{ margin: "0 5px" }}>React</span>
+													<span style={{ margin: "0 5px" }}>Redux</span>
+													<span style={{ margin: "0 5px" }}>Javascript</span>
+													<span style={{ margin: "0 5px" }}>HTML 5</span>
+													<span style={{ margin: "0 5px" }}>CSS 3</span>
+													<span style={{ margin: "0 5px" }}>Less</span>
 												</div>
 											</div>
 										</div>
@@ -173,7 +161,15 @@ const TETRIS = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://github.com/Civoremo/MineTris/tree/master/MineTris/MineTris"
+									href="https://lambda-notes.netlify.com/"
+									className="card-link"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Live
+								</a>
+								<a
+									href="https://github.com/Civoremo/front-end-project-week"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -189,4 +185,4 @@ const TETRIS = () => {
 	);
 };
 
-export default TETRIS;
+export default NOTES;

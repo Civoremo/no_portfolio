@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
-import { MineterisGif, MinetrisGO, MinetrisGP, MinetrisMM } from "../../images";
+import { BrickBreakerGif, bbMapEditor } from "../../images";
 
 const EachCardWrapperDiv = styled.div`
 	/* position: absolute; */
@@ -22,11 +22,11 @@ const ModalLink = styled.a`
 	}
 `;
 
-const TETRIS = () => {
+const BRICKBRAKER = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
 		<div style={{ margin: "3px 3px" }}>
-			<Flip top>
+			<Flip bottom>
 				<div className="card" style={{ width: "14rem" }}>
 					<EachCardWrapperDiv>
 						<div
@@ -38,16 +38,16 @@ const TETRIS = () => {
 							}}
 						>
 							<img
-								src={MineterisGif}
-								style={{ maxWidth: "100%", maxHeight: "15rem" }}
+								src={BrickBreakerGif}
 								className="card-omg-top"
-								alt="Tetris Clone Gif"
+								style={{ maxWidth: "100%", maxHeight: "15rem" }}
+								alt="Brickbreaker Clone Gif"
 							/>
 						</div>
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
-								<h5 className="card-title">Tetris Clone</h5>
-								<p className="card-text">Tetris Clone with C# and XNA</p>
+								<h5 className="card-title">Shopping Cart List</h5>
+								<p className="card-text">Shopping list tracking react app.</p>
 								<ModalLink onClick={() => setLgProject(true)} style={{ color: "#007bff" }}>
 									Learn more
 								</ModalLink>
@@ -59,7 +59,7 @@ const TETRIS = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">Tetris Clone</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">Shopping Cart List</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -82,34 +82,17 @@ const TETRIS = () => {
 													style={{ marginRight: "0px", width: "auto" }}
 												>
 													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisMM}
+														src={bbMapEditor}
 														className="d-block"
-														alt="Minetris Main Menu"
+														alt="Brickbreaker Map Editor"
 													/>
 												</div>
-												<div
-													className="carousel-item"
-													style={{ marginRight: "0px", width: "auto" }}
-												>
-													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisGP}
-														className="d-block"
-														alt="Minetris Gameplay"
-													/>
-												</div>
-												<div
-													className="carousel-item"
-													style={{ marginRight: "0px", width: "auto" }}
-												>
-													<img
-														style={{ width: "60%", margin: "auto" }}
-														src={MinetrisGO}
-														className="d-block"
-														alt="Minetris Game Over"
-													/>
-												</div>
+												{/* <div
+															className="carousel-item"
+															style={{ marginRight: "0px", width: "auto" }}
+														>
+															<img src={Shopping2} className="d-block" alt="second slide" />
+														</div> */}
 											</div>
 											<a
 												className="carousel-control-prev"
@@ -132,19 +115,11 @@ const TETRIS = () => {
 										</div>
 										<div style={{ margin: "30px 20px" }}>
 											<p>
-												First attempt at making a game from scratch after learning the basics of C#
-												and the XNA framework.
+												Built a React app that let's users keep track of a shopping list. The user
+												can add items they need and move the items from 'Need' to "Found" and delete
+												unnecessary items.
 											</p>
-											<p>
-												Having built a few simple windows applications before; I had stubled across
-												the XNA framework from Microsoft, which allowed developers to build games
-												and apps for their phones and the Xbox.
-											</p>
-											<p>
-												The game is in all essence Tetris and features a particle system and a high
-												score board. The speed of falling pieces increases as lines are cleared, and
-												a bonus score is awarded when Tetris (clearing 4 lines) is made.
-											</p>
+											<p>Duplicate items are not allowed; it is case insensitive.</p>
 											<div
 												style={{
 													display: "flex",
@@ -163,8 +138,8 @@ const TETRIS = () => {
 														flexWrap: "wrap",
 													}}
 												>
-													<span style={{ margin: "0 5px" }}>C#</span>
-													<span style={{ margin: "0 5px" }}>XNA</span>
+													<span style={{ margin: "0 5px" }}>React</span>
+													<span style={{ margin: "0 5px" }}>Javascript</span>
 												</div>
 											</div>
 										</div>
@@ -173,7 +148,15 @@ const TETRIS = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://github.com/Civoremo/MineTris/tree/master/MineTris/MineTris"
+									href="https://shopping-list-reactapp.netlify.com/"
+									className="card-link"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Live
+								</a>
+								<a
+									href="https://github.com/Civoremo/shopping-cart-lists"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -189,4 +172,4 @@ const TETRIS = () => {
 	);
 };
 
-export default TETRIS;
+export default BRICKBRAKER;
