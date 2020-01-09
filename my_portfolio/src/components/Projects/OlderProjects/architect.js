@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const ARCHITECT = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -79,7 +83,7 @@ const ARCHITECT = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={Architect1}
 														className="d-block"
 														alt="Architect Site Home Page"
@@ -89,13 +93,17 @@ const ARCHITECT = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Architect2} className="d-block" alt="Architect Site Styling" />
+													<CarouselImage
+														src={Architect2}
+														className="d-block"
+														alt="Architect Site Styling"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={Architect3}
 														className="d-block"
 														alt="Architect Site Service Page"
@@ -105,7 +113,7 @@ const ARCHITECT = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={Architect4}
 														className="d-block"
 														alt="Architect Site Contact Page"

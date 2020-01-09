@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const NOTES = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -79,25 +83,33 @@ const NOTES = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Note1} className="d-block" alt="Lambda Notes" />
+													<CarouselImage src={Note1} className="d-block" alt="Lambda Notes" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Note2} className="d-block" alt="Lambda Notes Save" />
+													<CarouselImage src={Note2} className="d-block" alt="Lambda Notes Save" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Note3} className="d-block" alt="Lambda Notes Filter" />
+													<CarouselImage
+														src={Note3}
+														className="d-block"
+														alt="Lambda Notes Filter"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Note4} className="d-block" alt="Lambda Notes Delete" />
+													<CarouselImage
+														src={Note4}
+														className="d-block"
+														alt="Lambda Notes Delete"
+													/>
 												</div>
 											</div>
 											<a

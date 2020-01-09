@@ -30,6 +30,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const LUNCHER = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -89,7 +93,7 @@ const LUNCHER = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/200/300"
 														className="d-block"
 														alt="first slide"
@@ -99,7 +103,7 @@ const LUNCHER = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/300/500"
 														className="d-block"
 														alt="second slide"
@@ -109,7 +113,7 @@ const LUNCHER = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/400/300"
 														className="d-block"
 														alt="third slide"

@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const ORBITDANGER = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -46,8 +50,8 @@ const ORBITDANGER = () => {
 						</div>
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
-								<h5 className="card-title">ToDo App</h5>
-								<p className="card-text">A ToDo list with search functionality.</p>
+								<h5 className="card-title">Danger in Orbit</h5>
+								<p className="card-text">Missle Command type prototype.</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
@@ -57,7 +61,7 @@ const ORBITDANGER = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">ToDo App</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">Danger in Orbit</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -79,19 +83,19 @@ const ORBITDANGER = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={OD1} className="d-block" alt="OD Beginning Screen" />
+													<CarouselImage src={OD1} className="d-block" alt="OD Beginning Screen" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={OD2} className="d-block" alt="OD UFO Attack" />
+													<CarouselImage src={OD2} className="d-block" alt="OD UFO Attack" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={OD3} className="d-block" alt="OD UFO Explosion" />
+													<CarouselImage src={OD3} className="d-block" alt="OD UFO Explosion" />
 												</div>
 											</div>
 											<a

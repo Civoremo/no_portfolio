@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const QUIZBLISS = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -79,25 +83,41 @@ const QUIZBLISS = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Quizz1} className="d-block" alt="Quiz Bliss Quiz Selection" />
+													<CarouselImage
+														src={Quizz1}
+														className="d-block"
+														alt="Quiz Bliss Quiz Selection"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Quizz2} className="d-block" alt="Quiz Bliss Quiz Screen" />
+													<CarouselImage
+														src={Quizz2}
+														className="d-block"
+														alt="Quiz Bliss Quiz Screen"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Quizz3} className="d-block" alt="Quiz Bliss Quiz Score" />
+													<CarouselImage
+														src={Quizz3}
+														className="d-block"
+														alt="Quiz Bliss Quiz Score"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Quizz4} className="d-block" alt="Quiz Bliss Quiz Tournament" />
+													<CarouselImage
+														src={Quizz4}
+														className="d-block"
+														alt="Quiz Bliss Quiz Tournament"
+													/>
 												</div>
 											</div>
 											<a

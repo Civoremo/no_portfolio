@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const BACKYARDSPORTLEAGUE = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -46,7 +50,7 @@ const BACKYARDSPORTLEAGUE = () => {
 						</div>
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
-								<h5 className="card-title">Backyard Sport League GraphQL</h5>
+								<h5 className="card-title">Backyard Sports League GraphQL</h5>
 								<p className="card-text">API for organizing sports leagues.</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
@@ -57,7 +61,7 @@ const BACKYARDSPORTLEAGUE = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">Lottery Luck</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">BSL - GraphQL</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -79,19 +83,27 @@ const BACKYARDSPORTLEAGUE = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={BSLuser} className="d-block" alt="BSL Playground User Query" />
+													<CarouselImage
+														src={BSLuser}
+														className="d-block"
+														alt="BSL Playground User Query"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={BSLgame} className="d-block" alt="BSL Playground Game Query" />
+													<CarouselImage
+														src={BSLgame}
+														className="d-block"
+														alt="BSL Playground Game Query"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={BSLpost}
 														className="d-block"
 														alt="BSL Playground League Mutation"

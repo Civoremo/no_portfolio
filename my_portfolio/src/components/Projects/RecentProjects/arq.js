@@ -42,6 +42,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const ArqProject = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -96,51 +100,56 @@ const ArqProject = () => {
 													display: "flex",
 													justifyContent: "center",
 													alignItems: "center",
-													minHeight: "400px",
-													maxHeight: "400px",
+													height: "400px",
+													// minHeight: "400px",
+													// maxHeight: "400px",
 												}}
 											>
 												<div
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq1} className="d-block" alt="first slide" />
+													<CarouselImage src={Arq1} className="d-block" alt="Arq Team Page" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq2} className="d-block" alt="second slide" />
+													<CarouselImage src={Arq2} className="d-block" alt="Arq Message Board" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq3} className="d-block" alt="third slide" />
+													<CarouselImage src={Arq3} className="d-block" alt="Arq Message View" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq4} className="d-block" alt="fourth slide" />
+													<CarouselImage
+														src={Arq4}
+														className="d-block"
+														alt="Arq Activity Timeline"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq5} className="d-block" alt="fifth slide" />
+													<CarouselImage src={Arq5} className="d-block" alt="Arq Document Board" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq6} className="d-block" alt="sixth slide" />
+													<CarouselImage src={Arq6} className="d-block" alt="Arq Document View" />
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={Arq7} className="d-block" alt="seventh slide" />
+													<CarouselImage src={Arq7} className="d-block" alt="Arq Team View" />
 												</div>
 											</div>
 											<a
@@ -165,8 +174,8 @@ const ArqProject = () => {
 										<div
 											style={{
 												margin: "30px 20px",
-												fontFamily: "Nunito",
-												letterSpacing: "2px",
+												// fontFamily: "Nunito",
+												// letterSpacing: "2px",
 											}}
 										>
 											<p>

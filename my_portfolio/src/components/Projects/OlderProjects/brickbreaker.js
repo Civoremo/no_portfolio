@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const BRICKBRAKER = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -46,8 +50,8 @@ const BRICKBRAKER = () => {
 						</div>
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
-								<h5 className="card-title">Shopping Cart List</h5>
-								<p className="card-text">Shopping list tracking react app.</p>
+								<h5 className="card-title">Breakout Clone</h5>
+								<p className="card-text">A unity prototype of Breakout with a map editor.</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
@@ -57,7 +61,7 @@ const BRICKBRAKER = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">Shopping Cart List</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">Breakout Clone</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -79,7 +83,7 @@ const BRICKBRAKER = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={bbMapEditor}
 														className="d-block"
 														alt="Brickbreaker Map Editor"

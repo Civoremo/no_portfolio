@@ -38,6 +38,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const PPSR = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -100,22 +104,30 @@ const PPSR = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={PPSRreCaptcha} className="d-block" alt="PPSR reCaptcha" />
+													<CarouselImage
+														src={PPSRreCaptcha}
+														className="d-block"
+														alt="PPSR reCaptcha View"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img src={PPSRvalidate} className="d-block" alt="PPSR Form Validation" />
+													<CarouselImage
+														src={PPSRvalidate}
+														className="d-block"
+														alt="PPSR Form Validation View"
+													/>
 												</div>
 												<div
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src={PPSRsignup}
 														className="d-block"
-														alt="PPSR Sign Up Error Handling"
+														alt="PPSR Sign Up Error Handling View"
 													/>
 												</div>
 											</div>

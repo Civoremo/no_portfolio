@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const TETRIS = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -79,7 +83,7 @@ const TETRIS = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														style={{ width: "60%", margin: "auto" }}
 														src={MinetrisMM}
 														className="d-block"
@@ -90,7 +94,7 @@ const TETRIS = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														style={{ width: "60%", margin: "auto" }}
 														src={MinetrisGP}
 														className="d-block"
@@ -101,7 +105,7 @@ const TETRIS = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														style={{ width: "60%", margin: "auto" }}
 														src={MinetrisGO}
 														className="d-block"

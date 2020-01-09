@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	}
 `;
 
+const CarouselImage = styled.img`
+	height: 400px;
+`;
+
 const PORTFOLIO = () => {
 	const [lgProject, setLgProject] = useState(false);
 	return (
@@ -57,7 +61,7 @@ const PORTFOLIO = () => {
 									aria-labelledby="example-modal-sizes-title-lg"
 								>
 									<Modal.Header closeButton>
-										<Modal.Title id="example-modal-sizes-title-lg">Portfolio Site</Modal.Title>
+										<Modal.Title id="example-modal-sizes-title-lg">Portfolio</Modal.Title>
 									</Modal.Header>
 									<Modal.Body>
 										<div
@@ -79,7 +83,7 @@ const PORTFOLIO = () => {
 													className="carousel-item active"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/200/300"
 														className="d-block"
 														alt="first slide"
@@ -89,7 +93,7 @@ const PORTFOLIO = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/300/500"
 														className="d-block"
 														alt="second slide"
@@ -99,7 +103,7 @@ const PORTFOLIO = () => {
 													className="carousel-item"
 													style={{ marginRight: "0px", width: "auto" }}
 												>
-													<img
+													<CarouselImage
 														src="https://placekitten.com/g/400/300"
 														className="d-block"
 														alt="third slide"
