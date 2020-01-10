@@ -54,6 +54,8 @@ import Quizz4 from "./my_images/projects/quizz/quizz4.png";
 import BrickBreakerGif from "./my_images/projects/brickbreaker/brickbreakerGif.gif";
 import bbMapEditor from "./my_images/projects/brickbreaker/mapEditor.jpg";
 
+import LuncherSchools from "./my_images/projects/luncher/schools.jpg";
+
 export {
 	mongodb,
 	graphql,
@@ -100,4 +102,5 @@ export {
 	Quizz4,
 	BrickBreakerGif,
 	bbMapEditor,
+	LuncherSchools,
 };

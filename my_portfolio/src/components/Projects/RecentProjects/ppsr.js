@@ -152,6 +152,7 @@ const PPSR = () => {
 										React | PostgreSQL | EmailJS | SendGrid | React-Bootstrap | Reaptcha |
 										React-Scroll | JWT | Knex | Styled Components
 									</p>
+									<br></br>
 								</li>
 							</ul>
 							<div className="card-body">

@@ -214,6 +214,7 @@ const ArqProject = () => {
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
+									style={{ display: "block" }}
 								>
 									New Site
 								</a>
@@ -231,7 +232,7 @@ const ArqProject = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Github
+									Github-(FE+BE)
 								</a>
 							</div>
 						</div>

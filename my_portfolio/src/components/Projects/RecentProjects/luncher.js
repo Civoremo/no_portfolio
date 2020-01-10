@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-// import styled from "styled-components";
-import { ReactLogo, Javascript, Html5, Css3 } from "styled-icons/boxicons-logos";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
-import { mongodb, graphql, apollo } from "../../images";
+import { LuncherSchools } from "../../images";
 import { EachCardDiv, EachCardWrapperDiv, ModalLink, CarouselImage } from "../styledCompProjects";
 
 const LUNCHER = () => {
@@ -22,7 +20,7 @@ const LUNCHER = () => {
 							}}
 						>
 							<img
-								src="https://placekitten.com/g/200/300"
+								src={LuncherSchools}
 								className="card-img-top"
 								style={{ maxWidth: "100%", maxHeight: "15rem" }}
 								alt="project 1"
@@ -32,7 +30,10 @@ const LUNCHER = () => {
 							<div style={{ marginBottom: "20px" }}>
 								<h5 className="card-title">Luncher</h5>
 								<p className="card-text" style={{ height: "120px" }}>
-									Built the Front-end and Back-end for a school lunch fundraising site.
+									School Lunch fundraising app.
+									<br></br>
+									Allows schools to post their monetery needs and users to make donations towards
+									the schools of their choosing.
 								</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
@@ -137,24 +138,7 @@ const LUNCHER = () => {
 													marginTop: "40px",
 													fontFamily: "Nunito",
 												}}
-											>
-												<div style={{ fontWeight: "bold", marginBottom: "10px" }}>Frameworks</div>
-												<div
-													style={{
-														display: "flex",
-														justifyContent: "center",
-														flexWrap: "wrap",
-													}}
-												>
-													<span style={{ margin: "0 5px" }}>GraphQL</span>
-													<span style={{ margin: "0 5px" }}>MongoDB</span>
-													<span style={{ margin: "0 5px" }}>Mongoose</span>
-													<span style={{ margin: "0 5px" }}>Material UI</span>
-													<span style={{ margin: "0 5px" }}>React</span>
-													<span style={{ margin: "0 5px" }}>Apollo</span>
-													<span style={{ margin: "0 5px" }}>Auth0</span>
-												</div>
-											</div>
+											></div>
 										</div>
 									</Modal.Body>
 								</Modal>
@@ -162,41 +146,11 @@ const LUNCHER = () => {
 							<ul className="list-group list-group-flush">
 								<li className="list-group-item">
 									<h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
-									<ReactLogo
-										className="reactlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									{/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
-									<img
-										className="mongodblogo"
-										src={mongodb}
-										alt={"mongodb icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="apollo"
-										src={apollo}
-										alt={"apollo icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="graphql"
-										src={graphql}
-										alt={"graphql icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Javascript
-										className="javascriptlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Html5
-										className="html5logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Css3
-										className="css3logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
+									<p>
+										React | React Hooks | Stripe | CSS Grid | PostgreSQL | Styled Components | JWT
+									</p>
+									<br></br>
+									<br></br>
 								</li>
 							</ul>
 							<div className="card-body">
@@ -205,6 +159,7 @@ const LUNCHER = () => {
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
+									style={{ display: "block" }}
 								>
 									Live Site
 								</a>
@@ -214,7 +169,15 @@ const LUNCHER = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Github
+									Github-FE
+								</a>
+								<a
+									href="https://github.com/Civoremo/Arq"
+									className="card-link"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Github-BE
 								</a>
 							</div>
 						</div>
