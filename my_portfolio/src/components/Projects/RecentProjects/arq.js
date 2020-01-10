@@ -208,7 +208,7 @@ const ArqProject = () => {
 													fontFamily: "Nunito",
 												}}
 											>
-												<div style={{ fontWeight: "bold", marginBottom: "10px" }}>Frameworks</div>
+												{/* <div style={{ fontWeight: "bold", marginBottom: "10px" }}>Frameworks</div>
 												<div
 													style={{
 														display: "flex",
@@ -223,7 +223,7 @@ const ArqProject = () => {
 													<span style={{ margin: "0 5px" }}>React</span>
 													<span style={{ margin: "0 5px" }}>Apollo</span>
 													<span style={{ margin: "0 5px" }}>Auth0</span>
-												</div>
+												</div> */}
 											</div>
 										</div>
 									</Modal.Body>
@@ -231,12 +231,16 @@ const ArqProject = () => {
 							</div>
 							<ul className="list-group list-group-flush">
 								<li className="list-group-item">
-									<ReactLogo
+									<span>
+										React | Apollo | Stripe | GraphQL | MongoDB | Mongoose | ExpressJS | Material UI
+										| Styled Components
+									</span>
+									{/* <ReactLogo
 										className="reactlogo"
 										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
+									/> */}
 									{/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
-									<img
+									{/* <img
 										className="mongodblogo"
 										src={mongodb}
 										alt={"mongodb icon"}
@@ -265,7 +269,7 @@ const ArqProject = () => {
 									<Css3
 										className="css3logo"
 										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
+									/> */}
 								</li>
 							</ul>
 							<div className="card-body">

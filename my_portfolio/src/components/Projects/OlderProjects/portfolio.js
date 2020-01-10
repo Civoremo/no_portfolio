@@ -157,7 +157,7 @@ const PORTFOLIO = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://github.com/Civoremo/Arq"
+									href="https://github.com/Civoremo/no_portfolio"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"

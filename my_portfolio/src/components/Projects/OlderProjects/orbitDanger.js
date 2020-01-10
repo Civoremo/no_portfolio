@@ -29,7 +29,7 @@ const ORBITDANGER = () => {
 						<div className="card-body">
 							<div style={{ marginBottom: "15px" }}>
 								<h5 className="card-title">Danger in Orbit</h5>
-								<p className="card-text">Missle Command type prototype.</p>
+								<p className="card-text">Contra/Defender type prototype.</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
 
 								<Modal
@@ -132,15 +132,7 @@ const ORBITDANGER = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://todo-reactapp.netlify.com"
-									className="card-link"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Live
-								</a>
-								<a
-									href="https://github.com/Civoremo/React-Todo"
+									href="https://github.com/Civoremo/DangerInOrbit"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"

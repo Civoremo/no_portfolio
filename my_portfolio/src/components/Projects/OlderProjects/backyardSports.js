@@ -157,7 +157,15 @@ const BACKYARDSPORTLEAGUE = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://github.com/Civoremo/Arq"
+									href="https://bsleague-api.herokuapp.com/"
+									className="card-link"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Live Site
+								</a>
+								<a
+									href="https://github.com/Civoremo/bsl-api"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"

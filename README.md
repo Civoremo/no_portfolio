@@ -27,7 +27,7 @@ Personal portfolio site
         └──index.js
 ```
 
-## Tech-Stack
+## Stack
 
 ### React
 

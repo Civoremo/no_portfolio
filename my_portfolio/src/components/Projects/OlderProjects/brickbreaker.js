@@ -128,15 +128,7 @@ const BRICKBRAKER = () => {
 							</div>
 							<div className="card-body" style={{ borderTop: "1px solid rgba(0,0,0,.125)" }}>
 								<a
-									href="https://shopping-list-reactapp.netlify.com/"
-									className="card-link"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Live
-								</a>
-								<a
-									href="https://github.com/Civoremo/shopping-cart-lists"
+									href="https://github.com/Civoremo/BrickBlasterEvolution"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
