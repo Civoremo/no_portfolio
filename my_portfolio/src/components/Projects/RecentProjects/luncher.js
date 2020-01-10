@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { ReactLogo, Javascript, Html5, Css3 } from "styled-icons/boxicons-logos";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";

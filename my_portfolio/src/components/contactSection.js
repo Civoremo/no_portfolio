@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 import { Github, Linkedin } from "styled-icons/boxicons-logos";
-import { FilePdf } from "styled-icons/boxicons-solid";
-import PDFResume from "./assets/Nedim_Omerovic_resume.pdf";
+// import { FilePdf } from "styled-icons/boxicons-solid";
+// import PDFResume from "./assets/Nedim_Omerovic_resume.pdf";
 import * as emailjs from "emailjs-com";
 import Reaptcha from "reaptcha";
 
