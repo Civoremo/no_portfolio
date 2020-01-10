@@ -36,4 +36,10 @@
 
 a {
 	color: #dc3545;
+	font-family: "Open Sans Condensed";
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+a:hover {
+	color: #007bff;
 }

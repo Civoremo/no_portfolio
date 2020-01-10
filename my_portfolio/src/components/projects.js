@@ -33,6 +33,18 @@ const CardContainerOlderProjectsDiv = styled.div`
 	margin-bottom: 10px;
 `;
 
+const ShowMoreSpan = styled.span`
+	color: #dc3545;
+	display: block;
+	margin-bottom: 64px;
+	font-size: 1.2rem;
+
+	:hover {
+		cursor: pointer;
+		color: #007bff;
+	}
+`;
+
 const Projects = () => {
 	function showMoreProjectsPart2() {
 		let projectsDiv = document.getElementById("olderProjectsPart2");
@@ -47,7 +59,7 @@ const Projects = () => {
 	}
 
 	return (
-		<div>
+		<div className="projects">
 			{/* RECENT PROJECTS SECTION */}
 			<Container>
 				<h2 style={{ textAlign: "left", margin: "120px 70px 30px 70px", fontFamily: "Nunito" }}>
@@ -72,19 +84,9 @@ const Projects = () => {
 					<ARCHITECT />
 				</CardContainerOlderProjectsDiv>
 				<div style={{ display: "flex", justifyContent: "center" }}>
-					<span
-						id="showMoreProjectsLink1"
-						onClick={() => showMoreProjectsPart2()}
-						style={{
-							color: "#DC3545",
-							cursor: "pointer",
-							display: "block",
-							marginBottom: "64px",
-							fontSize: "1.2rem",
-						}}
-					>
+					<ShowMoreSpan id="showMoreProjectsLink1" onClick={() => showMoreProjectsPart2()}>
 						Show More
-					</span>
+					</ShowMoreSpan>
 				</div>
 
 				<div id="olderProjectsPart2" style={{ display: "none" }}>

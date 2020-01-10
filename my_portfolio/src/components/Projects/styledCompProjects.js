@@ -19,9 +19,13 @@ const EachCardWrapperDiv = styled.div`
 
 const ModalLink = styled.div`
 	color: #dc3545;
+	font-family: "Open Sans Condensed";
+	letter-spacing: 2px;
+	font-weight: bold;
 
 	:hover {
 		cursor: pointer;
+		color: #007bff;
 	}
 `;
 

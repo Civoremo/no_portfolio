@@ -28,6 +28,7 @@ const SocialLinksContainer = styled.div`
 	padding-left: 64px;
 	min-width: 300px;
 	text-align: left;
+	padding-top: 25px;
 `;
 
 const TitleDiv = styled.div`
@@ -307,7 +308,7 @@ class ContactForm extends Component {
 										contact@nedim.info
 									</a>
 								</div>
-								<TitleDiv>Resume</TitleDiv>
+								{/* <TitleDiv>Resume</TitleDiv>
 								<div
 									style={{
 										marginBottom: "15px",
@@ -319,7 +320,7 @@ class ContactForm extends Component {
 									<a href={PDFResume} target="Nedim_Omerovic_Resume">
 										<FilePdf style={{ width: "50px", color: "#fff" }} />
 									</a>
-								</div>
+								</div> */}
 								<TitleDiv>Github</TitleDiv>
 								<div
 									style={{
