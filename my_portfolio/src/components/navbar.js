@@ -43,23 +43,23 @@ const NavBar = () => {
 	// }
 
 	function onScrollTargetHomeTop() {
-		rsScroller.scrollToTarget("hometop", { easing: "linear", duration: 700 });
+		rsScroller.scrollToTarget("hometop", { easing: "linear", duration: 500 });
 	}
 
 	function onScrollTargetHome() {
-		rsScroller.scrollToTarget("home", { easing: "linear", duration: 700 });
+		rsScroller.scrollToTarget("home", { easing: "linear", duration: 500 });
 	}
 
 	function onScrollTargetAbout() {
-		rsScroller.scrollToTarget("about", { easing: "linear", duration: 700 });
+		rsScroller.scrollToTarget("about", { easing: "linear", duration: 500 });
 	}
 
 	function onScrollTargetProjects() {
-		rsScroller.scrollToTarget("projects", { easing: "linear", duration: 700 });
+		rsScroller.scrollToTarget("projects", { easing: "linear", duration: 500 });
 	}
 
 	function onScrollTargetContact() {
-		rsScroller.scrollToTarget("contact", { easing: "linear", duration: 700 });
+		rsScroller.scrollToTarget("contact", { easing: "linear", duration: 500 });
 	}
 
 	const logoAnimation = () => {
