@@ -1,20 +1,7 @@
 import React, { useState } from "react";
-import { ReactLogo, Javascript, Html5, Css3 } from "styled-icons/boxicons-logos";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
-import {
-	Arq1,
-	Arq2,
-	Arq3,
-	Arq4,
-	Arq5,
-	Arq6,
-	Arq7,
-	ArqGif,
-	mongodb,
-	graphql,
-	apollo,
-} from "../../images";
+import { Arq1, Arq2, Arq3, Arq4, Arq5, Arq6, Arq7, ArqGif } from "../../images";
 import { EachCardDiv, EachCardWrapperDiv, ModalLink, CarouselImage } from "../styledCompProjects";
 
 const ArqProject = () => {
@@ -42,7 +29,7 @@ const ArqProject = () => {
 						<div className="card-body">
 							<div style={{ marginBottom: "20px" }}>
 								<h5 className="card-title">Arq</h5>
-								<p className="card-text">
+								<p className="card-text" style={{ height: "120px" }}>
 									A team collaboration, organization, and communication tool which keeps track of a
 									teams multi-platform documents, activities and conversations all in one place.
 								</p>
@@ -207,69 +194,18 @@ const ArqProject = () => {
 													marginTop: "40px",
 													fontFamily: "Nunito",
 												}}
-											>
-												{/* <div style={{ fontWeight: "bold", marginBottom: "10px" }}>Frameworks</div>
-												<div
-													style={{
-														display: "flex",
-														justifyContent: "center",
-														flexWrap: "wrap",
-													}}
-												>
-													<span style={{ margin: "0 5px" }}>GraphQL</span>
-													<span style={{ margin: "0 5px" }}>MongoDB</span>
-													<span style={{ margin: "0 5px" }}>Mongoose</span>
-													<span style={{ margin: "0 5px" }}>Material UI</span>
-													<span style={{ margin: "0 5px" }}>React</span>
-													<span style={{ margin: "0 5px" }}>Apollo</span>
-													<span style={{ margin: "0 5px" }}>Auth0</span>
-												</div> */}
-											</div>
+											></div>
 										</div>
 									</Modal.Body>
 								</Modal>
 							</div>
 							<ul className="list-group list-group-flush">
 								<li className="list-group-item">
-									<span>
+									<h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
+									<p>
 										React | Apollo | Stripe | GraphQL | MongoDB | Mongoose | ExpressJS | Material UI
 										| Styled Components
-									</span>
-									{/* <ReactLogo
-										className="reactlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/> */}
-									{/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
-									{/* <img
-										className="mongodblogo"
-										src={mongodb}
-										alt={"mongodb icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="apollo"
-										src={apollo}
-										alt={"apollo icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="graphql"
-										src={graphql}
-										alt={"graphql icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Javascript
-										className="javascriptlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Html5
-										className="html5logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Css3
-										className="css3logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/> */}
+									</p>
 								</li>
 							</ul>
 							<div className="card-body">

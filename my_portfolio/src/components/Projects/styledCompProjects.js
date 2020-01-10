@@ -22,6 +22,10 @@ const ModalLink = styled.div`
 	font-family: "Open Sans Condensed";
 	letter-spacing: 2px;
 	font-weight: bold;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	:hover {
 		cursor: pointer;

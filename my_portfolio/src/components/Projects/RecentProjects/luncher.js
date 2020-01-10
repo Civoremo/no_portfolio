@@ -31,7 +31,7 @@ const LUNCHER = () => {
 						<div className="card-body">
 							<div style={{ marginBottom: "20px" }}>
 								<h5 className="card-title">Luncher</h5>
-								<p className="card-text">
+								<p className="card-text" style={{ height: "120px" }}>
 									Built the Front-end and Back-end for a school lunch fundraising site.
 								</p>
 								<ModalLink onClick={() => setLgProject(true)}>Learn more</ModalLink>
@@ -161,6 +161,7 @@ const LUNCHER = () => {
 							</div>
 							<ul className="list-group list-group-flush">
 								<li className="list-group-item">
+									<h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
 									<ReactLogo
 										className="reactlogo"
 										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}

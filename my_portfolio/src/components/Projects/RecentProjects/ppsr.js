@@ -38,7 +38,7 @@ const PPSR = () => {
 						<div className="card-body">
 							<div style={{ marginBottom: "20px" }}>
 								<h5 className="card-title">Pool & Patio Screen Repair</h5>
-								<p className="card-text">
+								<p className="card-text" style={{ height: "120px" }}>
 									Responsive local business site with CRUD operations for customer signup and access
 									to restricted info.
 								</p>
@@ -147,70 +147,23 @@ const PPSR = () => {
 													marginTop: "40px",
 													fontFamily: "Nunito",
 												}}
-											>
-												<div style={{ fontWeight: "bold", marginBottom: "10px" }}>Frameworks</div>
-												<div
-													style={{
-														display: "flex",
-														justifyContent: "center",
-														flexWrap: "wrap",
-													}}
-												>
-													<span style={{ margin: "0 5px" }}>GraphQL</span>
-													<span style={{ margin: "0 5px" }}>MongoDB</span>
-													<span style={{ margin: "0 5px" }}>Mongoose</span>
-													<span style={{ margin: "0 5px" }}>Material UI</span>
-													<span style={{ margin: "0 5px" }}>React</span>
-													<span style={{ margin: "0 5px" }}>Apollo</span>
-													<span style={{ margin: "0 5px" }}>Auth0</span>
-												</div>
-											</div>
+											></div>
 										</div>
 									</Modal.Body>
 								</Modal>
 							</div>
 							<ul className="list-group list-group-flush">
 								<li className="list-group-item">
-									<ReactLogo
-										className="reactlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									{/* <Redux className='reduxlogo' style={{height: '40px', width: '40px', margin: '5px 10px 0 10px'}} /> */}
-									<img
-										className="mongodblogo"
-										src={mongodb}
-										alt={"mongodb icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="apollo"
-										src={apollo}
-										alt={"apollo icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<img
-										className="graphql"
-										src={graphql}
-										alt={"graphql icon"}
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Javascript
-										className="javascriptlogo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Html5
-										className="html5logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
-									<Css3
-										className="css3logo"
-										style={{ height: "40px", width: "40px", margin: "5px 10px 0 10px" }}
-									/>
+									<h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
+									<p>
+										React | PostgreSQL | EmailJS | Sendgrid | React-Bootstrap | Reaptcha |
+										React-Scroll | JWT | Knex | Styled Components
+									</p>
 								</li>
 							</ul>
 							<div className="card-body">
 								<a
-									href="https://arq.community/"
+									href="https://ppsr.netlify.com/"
 									className="card-link"
 									target="_blank"
 									rel="noopener noreferrer"
