@@ -1,16 +1,7 @@
 import React, { useState } from "react";
-import { ReactLogo, Javascript, Html5, Css3 } from "styled-icons/boxicons-logos";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
-import {
-	PPSRgif,
-	PPSRvalidate,
-	PPSRreCaptcha,
-	PPSRsignup,
-	mongodb,
-	graphql,
-	apollo,
-} from "../../images";
+import { PPSRgif, PPSRvalidate, PPSRreCaptcha, PPSRsignup } from "../../images";
 import { EachCardDiv, EachCardWrapperDiv, ModalLink, CarouselImage } from "../styledCompProjects";
 
 const PPSR = () => {
@@ -121,22 +112,24 @@ const PPSR = () => {
 												<span className="sr-only">Next</span>
 											</a>
 										</div>
-										<div style={{ border: "1px solid red", margin: "30px 20px" }}>
+										<div style={{ margin: "30px 20px" }}>
 											<p>
-												Some text here with a more detailed explanation Some text here with a more
-												detailed explanation Some text here with a more detailed explanation Some
-												text here with a more detailed explanation Some text here with a more
-												detailed explanation Some text here with a more detailed explanation Some
-												text here with a more detailed explanation Some text here with a more
-												detailed explanation
+												Local business requested a website to showcase their work and allow
+												customers to make requests through the online form.
 											</p>
 											<p>
-												Some text here with a more detailed explanation Some text here with a more
-												detailed explanation Some text here with a more detailed explanation Some
-												text here with a more detailed explanation Some text here with a more
-												detailed explanation Some text here with a more detailed explanation Some
-												text here with a more detailed explanation Some text here with a more
-												detailed explanation
+												The frontend is built with react and a PostgreSQL backend for user
+												registration. Incorporated into the site are various review widgets,
+												ReCaptcha for form submition and cloudinary for the gallery.
+											</p>
+											<p>
+												EmailJS is used to send new registration verification codes while Sendgrid
+												is used for form submition.
+											</p>
+											<p>
+												Backend generates an authentication code for each new user which needs to be
+												submitted with first log in. Registered users are then able to view prices
+												in the Shop.
 											</p>
 											<div
 												style={{
@@ -156,7 +149,7 @@ const PPSR = () => {
 								<li className="list-group-item">
 									<h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
 									<p>
-										React | PostgreSQL | EmailJS | Sendgrid | React-Bootstrap | Reaptcha |
+										React | PostgreSQL | EmailJS | SendGrid | React-Bootstrap | Reaptcha |
 										React-Scroll | JWT | Knex | Styled Components
 									</p>
 								</li>
