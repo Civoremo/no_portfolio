@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
@@ -23,6 +23,8 @@ const AboutContentDiv = styled.div`
 `;
 
 const AboutMe = () => {
+  const [aboutData, setAboutData] = useState(null);
+
   return (
     <AboutMeDiv className='about'>
       <Container
