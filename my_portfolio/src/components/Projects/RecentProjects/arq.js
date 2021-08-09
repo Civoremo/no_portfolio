@@ -1,7 +1,6 @@
 /** @format */
 
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
 import { Arq1, Arq2, Arq3, Arq4, Arq5, Arq6, Arq7, ArqGif } from "../../images";
@@ -14,24 +13,6 @@ import {
 
 const ArqProject = () => {
   const [lgProject, setLgProject] = useState(false);
-  const [projectsData, setProjectsData] = useState(null);
-
-  useEffect(() => {
-    axios({
-      method: "get",
-      url: `${process.env.REACT_APP_API_URL}/projects/all`,
-      responseType: "json",
-    })
-      .then(result => {
-        console.log("projects", result.data);
-        if (result.status === 200) {
-          setProjectsData(result.data);
-        }
-      })
-      .catch(err => {
-        console.log("failed to fetch projects data");
-      });
-  }, []);
 
   return (
     <Flip right>
