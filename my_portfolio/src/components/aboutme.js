@@ -24,7 +24,7 @@ const AboutContentDiv = styled.div`
 `;
 
 const AboutMe = () => {
-  const [aboutData, setAboutData] = useState(null);
+  // const [aboutData, setAboutData] = useState(null);
   const [aboutMeData, setAboutMeData] = useState({});
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const AboutMe = () => {
       .then(result => {
         if (result.status === 200) {
           // console.log("about result", result.data);
-          setAboutData(result.data);
+          // setAboutData(result.data);
           for (let info of result.data) {
             // console.log(info);
             if (info[0].title === "ABOUT") {
@@ -70,28 +70,50 @@ const AboutMe = () => {
       if (index % 2 === 0) {
         return (
           <Fade left key={content.id}>
-            <p>{content.textContent}</p>
+            <p style={{ lineHeight: "40px" }}>{content.textContent}</p>
           </Fade>
         );
       } else {
         return (
           <Fade right key={content.id}>
-            <p>{content.textContent}</p>
+            <p style={{ lineHeight: "40px" }}>{content.textContent}</p>
           </Fade>
         );
       }
     });
   };
 
-  const displayStackContent = () => {};
+  const displayStackContent = () => {
+    return (
+      <p style={{ lineHeight: "50px" }}>
+        {aboutMeData.stack[1].map((content, index) => {
+          if (index !== aboutMeData.stack[1].length - 1) {
+            return (
+              <span key={content.id}>
+                {content.textContent + " "}
+                <strong style={{ fontSize: "20px", color: "#DC3545" }}>
+                  |
+                </strong>{" "}
+              </span>
+            );
+          } else {
+            return <span key={content.id}>{content.textContent}</span>;
+          }
+        })}
+      </p>
+    );
+  };
 
-  if (!("about" in aboutMeData) && !("stack" in aboutMeData)) {
+  if (
+    !aboutMeData.hasOwnProperty("about") ||
+    !aboutMeData.hasOwnProperty("stack")
+  ) {
     return <>Loading ...</>;
   }
 
   return (
     <AboutMeDiv className='about'>
-      {console.log("about data", aboutMeData)}
+      {/* {console.log("about data", aboutMeData)} */}
       <Container
         style={{ borderTop: "1px solid #222", borderBottom: "1px solid #222" }}
       >
@@ -112,58 +134,10 @@ const AboutMe = () => {
             fontFamily: "Nunito",
           }}
         >
-          <span style={{ color: "#DC3545" }}>Stack</span>
+          <span style={{ color: "#DC3545" }}>{aboutMeData.stack[0].title}</span>
         </h2>
         <AboutContentDiv>
-          <Fade bottom>
-            <p style={{ lineHeight: "50px" }}>
-              HTML{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              CSS{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              JavaScript{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              React{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Hooks{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Redux{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Python{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              C{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              C#{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Styled Components{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Responsive Design{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              UI/UX{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Animation{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Node{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              GraphQL{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Apollo{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Prisma{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              RDBMS{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              SQL{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              PostgreSQL{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              JWT{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              RESTful API{" "}
-              <strong style={{ fontSize: "20px", color: "#DC3545" }}>|</strong>{" "}
-              Git{" "}
-            </p>
-          </Fade>
+          <Fade bottom>{displayStackContent()}</Fade>
         </AboutContentDiv>
       </Container>
     </AboutMeDiv>
