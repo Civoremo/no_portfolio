@@ -1,5 +1,6 @@
 /** @format */
 
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
@@ -24,9 +25,53 @@ const AboutContentDiv = styled.div`
 
 const AboutMe = () => {
   const [aboutData, setAboutData] = useState(null);
+  const [aboutMeData, setAboutMeData] = useState({});
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: `${process.env.REACT_APP_API_URL}/about/all`,
+      responseType: "json",
+    })
+      .then(result => {
+        if (result.status === 200) {
+          // console.log("about result", result.data);
+          setAboutData(result.data);
+          for (let info of result.data) {
+            // console.log(info);
+            if (info[0].title === "ABOUT") {
+              setAboutMeData(aboutMeData => ({
+                ...aboutMeData,
+                about: info,
+              }));
+            }
+            if (info[0].title === "STACK") {
+              setAboutMeData(aboutMeData => ({
+                ...aboutMeData,
+                stack: info,
+              }));
+            }
+            if (info[0].title !== "ABOUT" && info[0].title !== "STACK") {
+              setAboutMeData(aboutMeData => ({
+                ...aboutMeData,
+                [info[0].title]: info,
+              }));
+            }
+          }
+        }
+      })
+      .catch(err => {
+        console.log("failed to fetch  about data");
+      });
+  }, []);
+
+  if (aboutData === null) {
+    return <>Loading ...</>;
+  }
 
   return (
     <AboutMeDiv className='about'>
+      {console.log("about data", aboutMeData)}
       <Container
         style={{ borderTop: "1px solid #222", borderBottom: "1px solid #222" }}
       >
