@@ -65,7 +65,27 @@ const AboutMe = () => {
       });
   }, []);
 
-  if (aboutData === null) {
+  const displayAboutContent = () => {
+    return aboutMeData.about[1].map((content, index) => {
+      if (index % 2 === 0) {
+        return (
+          <Fade left key={content.id}>
+            <p>{content.textContent}</p>
+          </Fade>
+        );
+      } else {
+        return (
+          <Fade right key={content.id}>
+            <p>{content.textContent}</p>
+          </Fade>
+        );
+      }
+    });
+  };
+
+  const displayStackContent = () => {};
+
+  if (!("about" in aboutMeData) && !("stack" in aboutMeData)) {
     return <>Loading ...</>;
   }
 
@@ -82,35 +102,9 @@ const AboutMe = () => {
             fontFamily: "Nunito",
           }}
         >
-          <span style={{ color: "#DC3545" }}>About</span>
+          <span style={{ color: "#DC3545" }}>{aboutMeData.about[0].title}</span>
         </h2>
-        <AboutContentDiv>
-          <Fade left>
-            <p>
-              Creative problem solver, passionate learner and lifelong tech
-              enthusiast.
-            </p>
-          </Fade>
-          <Fade right>
-            <p>
-              Hi, my name is Nedim (Ned-eem) Omerovic, a Lambda School
-              Full-Stack graduate currently living in Orlando, Florida. My
-              passions lie in the creative and development process of software
-              development.
-            </p>
-          </Fade>
-          <Fade left>
-            <p>
-              I enjoy working on both the front-end and back-end and
-              collborating with others on creative projects.
-            </p>
-          </Fade>
-          {/* <Fade right>
-                        <p>
-												I also love to travel and experience the various cultures around the world; I've had the fortune to live in a few different countries in Europe and learn a couple of languages along the way.
-                        </p>
-											</Fade> */}
-        </AboutContentDiv>
+        <AboutContentDiv>{displayAboutContent()}</AboutContentDiv>
         <h2
           style={{
             textAlign: "left",
