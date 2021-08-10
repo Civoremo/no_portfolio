@@ -233,7 +233,7 @@ const FeaturedProjects = () => {
           slide={false}
           style={{
             backgroundColor: "#222",
-            maxHeight: "400px",
+            height: "400px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -244,12 +244,7 @@ const FeaturedProjects = () => {
               <Carousel.Item
                 key={image.id}
                 style={{
-                  // marginRight: "0px",
                   maxHeight: "400px",
-                  // width: "auto",
-                  // height: "400px",
-                  // margin: "auto",
-                  border: "1px solid yellow",
                 }}
               >
                 <img
