@@ -95,7 +95,7 @@ const FeaturedProjects = () => {
             <div className='card-body'>
               <div style={{ marginBottom: "20px" }}>
                 <h5 className='card-title'>{project.title}</h5>
-                <p className='card-text' style={{ height: "120px" }}>
+                <p className='card-text' style={{ minHeight: "10rem" }}>
                   {project.description}
                 </p>
                 <ModalLink
@@ -109,45 +109,58 @@ const FeaturedProjects = () => {
                 {displayModal(project)}
               </div>
               <ul className='list-group list-group-flush'>
-                <li className='list-group-item'>
+                <li className='list-group-item' style={{ minHeight: "12rem" }}>
                   <h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
                   <p>{project.stack}</p>
                 </li>
               </ul>
-              <div className='card-body'>
-                <a
-                  href={project.liveLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.liveLink !== null ? "block" : "none",
-                  }}
-                >
-                  Live
-                </a>
-                <a
-                  href={project.frontendLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.frontendLink !== null ? "block" : "none",
-                  }}
-                >
-                  Github FE
-                </a>
-                <a
-                  href={project.backendLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.backendLink !== null ? "block" : "none",
-                  }}
-                >
-                  Github BE
-                </a>
+              <div
+                className='card-body'
+                style={{
+                  minHeight: "7rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div>
+                  <a
+                    href={project.liveLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.liveLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Live
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href={project.frontendLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.frontendLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Github FE
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href={project.backendLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.backendLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Github BE
+                  </a>
+                </div>
               </div>
             </div>
           </div>
