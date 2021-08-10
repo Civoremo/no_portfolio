@@ -177,6 +177,7 @@ const FeaturedProjects = () => {
 
   const displayModal = project => {
     // console.log("id", selectedProjectId, " info", extendedProjectInfo);
+
     if (selectedProjectId === null && extendedProjectInfo === null) {
       return (
         <Modal
@@ -190,6 +191,9 @@ const FeaturedProjects = () => {
         </Modal>
       );
     } else {
+      let projectInfo = projectsData.filter(
+        project => project.id === selectedProjectId
+      );
       return (
         <Modal
           size='lg'
@@ -205,7 +209,7 @@ const FeaturedProjects = () => {
           {/* {console.log(project)} */}
           <Modal.Header closeButton>
             <Modal.Title id='example-modal-sizes-title-lg'>
-              {project.title}
+              {projectInfo[0].title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -220,16 +224,13 @@ const FeaturedProjects = () => {
   };
 
   const displayCarouselImages = () => {
-    // {
-    //   console.log(extendedProjectInfo);
-    // }
     if (extendedProjectInfo === null) {
       return <>Loading ...</>;
     } else {
       return (
         <Carousel
-          pauseOnHover={true}
-          interval={1500}
+          pause={true}
+          interval={2000}
           slide={false}
           style={{
             backgroundColor: "#222",
@@ -272,7 +273,7 @@ const FeaturedProjects = () => {
               display: extendedProjectInfo[0].link !== null ? "block" : "none",
             }}
           >
-            <a href={extendedProjectInfo[0].link}>Click for More</a>
+            <a href={extendedProjectInfo[0].link}>Click for Additional Info</a>
           </div>
           <br />
           <p style={{ whiteSpace: "pre-wrap" }}>
