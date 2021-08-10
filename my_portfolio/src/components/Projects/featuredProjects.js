@@ -10,7 +10,7 @@ import {
   EachCardDiv,
   EachCardWrapperDiv,
   ModalLink,
-  CarouselImage,
+  // CarouselImage,
 } from "./styledCompProjects";
 
 const CardContainerDiv = styled.div`
