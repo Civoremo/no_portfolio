@@ -10,7 +10,7 @@ import {
   EachCardDiv,
   EachCardWrapperDiv,
   ModalLink,
-  CarouselImage,
+  // CarouselImage,
 } from "./styledCompProjects";
 
 const CardContainerDiv = styled.div`
@@ -18,7 +18,7 @@ const CardContainerDiv = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0 40px 0;
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
 `;
 
 const FeaturedProjects = () => {
@@ -88,14 +88,14 @@ const FeaturedProjects = () => {
               <img
                 src={project.gifImage}
                 className='card-img-top'
-                style={{ maxWidth: "100%", maxHeight: "25rem" }}
+                style={{ maxWidth: "100%", maxHeight: "13rem" }}
                 alt={project.title + "Gif"}
               />
             </div>
             <div className='card-body'>
               <div style={{ marginBottom: "20px" }}>
                 <h5 className='card-title'>{project.title}</h5>
-                <p className='card-text' style={{ height: "120px" }}>
+                <p className='card-text' style={{ minHeight: "10rem" }}>
                   {project.description}
                 </p>
                 <ModalLink
@@ -106,48 +106,61 @@ const FeaturedProjects = () => {
                 >
                   Learn more
                 </ModalLink>
-                {displayModal(project)}
+                {displayModal()}
               </div>
               <ul className='list-group list-group-flush'>
-                <li className='list-group-item'>
+                <li className='list-group-item' style={{ minHeight: "12rem" }}>
                   <h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
                   <p>{project.stack}</p>
                 </li>
               </ul>
-              <div className='card-body'>
-                <a
-                  href={project.liveLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.liveLink !== null ? "block" : "none",
-                  }}
-                >
-                  Live
-                </a>
-                <a
-                  href={project.frontendLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.frontendLink !== null ? "block" : "none",
-                  }}
-                >
-                  Github FE
-                </a>
-                <a
-                  href={project.backendLink}
-                  className='card-link'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{
-                    display: project.backendLink !== null ? "block" : "none",
-                  }}
-                >
-                  Github BE
-                </a>
+              <div
+                className='card-body'
+                style={{
+                  minHeight: "7rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div>
+                  <a
+                    href={project.liveLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.liveLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Live
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href={project.frontendLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.frontendLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Github FE
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href={project.backendLink}
+                    className='card-link'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    style={{
+                      display: project.backendLink !== null ? "block" : "none",
+                    }}
+                  >
+                    Github BE
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -175,8 +188,9 @@ const FeaturedProjects = () => {
     });
   };
 
-  const displayModal = project => {
+  const displayModal = () => {
     // console.log("id", selectedProjectId, " info", extendedProjectInfo);
+
     if (selectedProjectId === null && extendedProjectInfo === null) {
       return (
         <Modal
@@ -190,6 +204,9 @@ const FeaturedProjects = () => {
         </Modal>
       );
     } else {
+      let projectInfo = projectsData.filter(
+        project => project.id === selectedProjectId
+      );
       return (
         <Modal
           size='lg'
@@ -205,7 +222,7 @@ const FeaturedProjects = () => {
           {/* {console.log(project)} */}
           <Modal.Header closeButton>
             <Modal.Title id='example-modal-sizes-title-lg'>
-              {project.title}
+              {projectInfo[0].title}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -220,20 +237,17 @@ const FeaturedProjects = () => {
   };
 
   const displayCarouselImages = () => {
-    // {
-    //   console.log(extendedProjectInfo);
-    // }
     if (extendedProjectInfo === null) {
       return <>Loading ...</>;
     } else {
       return (
         <Carousel
-          pauseOnHover={true}
-          interval={1500}
+          pause={true}
+          interval={2000}
           slide={false}
           style={{
             backgroundColor: "#222",
-            maxHeight: "400px",
+            height: "400px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -244,12 +258,7 @@ const FeaturedProjects = () => {
               <Carousel.Item
                 key={image.id}
                 style={{
-                  // marginRight: "0px",
                   maxHeight: "400px",
-                  // width: "auto",
-                  // height: "400px",
-                  // margin: "auto",
-                  border: "1px solid yellow",
                 }}
               >
                 <img
@@ -277,7 +286,7 @@ const FeaturedProjects = () => {
               display: extendedProjectInfo[0].link !== null ? "block" : "none",
             }}
           >
-            <a href={extendedProjectInfo[0].link}>Click for More</a>
+            <a href={extendedProjectInfo[0].link}>Click for Additional Info</a>
           </div>
           <br />
           <p style={{ whiteSpace: "pre-wrap" }}>
@@ -292,13 +301,7 @@ const FeaturedProjects = () => {
     return <>Loading ...</>;
   }
 
-  return (
-    <div>
-      {/* {console.log("projects", projectsData)} */}
-      {/* <div>Feature Project Component</div> */}
-      <CardContainerDiv>{displayFeaturedProjects()}</CardContainerDiv>
-    </div>
-  );
+  return <CardContainerDiv>{displayFeaturedProjects()}</CardContainerDiv>;
 };
 
 export default FeaturedProjects;

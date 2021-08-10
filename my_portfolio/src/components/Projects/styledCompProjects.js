@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 const EachCardDiv = styled.div`
-  margin: 20px 10px 20px 10px;
+  margin: 20px 20px 80px 20px;
   width: 18.2rem;
   position: relative;
   min-height: 660px;

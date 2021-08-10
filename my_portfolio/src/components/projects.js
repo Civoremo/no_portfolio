@@ -9,9 +9,9 @@ import FeaturedProjects from "./Projects/featuredProjects";
 import MoreProjects from "./Projects/moreProjects";
 
 const {
-  ARQ,
-  PPSR,
-  LUNCHER,
+  // ARQ,
+  // PPSR,
+  // LUNCHER,
   TETRIS,
   PORTFOLIO,
   BACKYARDSPORTLEAGUE,
@@ -27,7 +27,7 @@ const CardContainerDiv = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0 40px 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 `;
 
 const CardContainerOlderProjectsDiv = styled.div`
@@ -102,12 +102,18 @@ const Projects = () => {
           <BACKYARDSPORTLEAGUE />
           <ARCHITECT />
         </CardContainerOlderProjectsDiv>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "100px 0 0 0",
+          }}
+        >
           <ShowMoreSpan
             id='showMoreProjectsLink1'
             onClick={() => showMoreProjectsPart2()}
           >
-            Show More
+            Show More Projects
           </ShowMoreSpan>
         </div>
 
