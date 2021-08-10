@@ -23,6 +23,7 @@ const CardContainerDiv = styled.div`
 const FeaturedProjects = () => {
   const [lgProject, setLgProject] = useState(false);
   const [projectsData, setProjectsData] = useState(null);
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
 
   useEffect(() => {
     axios({
@@ -48,88 +49,117 @@ const FeaturedProjects = () => {
       });
   }, []);
 
-  const displayFeaturedProjects = () => {
-    return projectsData.map(project => {
-      return (
-        <Flip key={project.id}>
-          <EachCardDiv>
-            <EachCardWrapperDiv>
-              <div className='card' style={{ minWidth: "18rem" }}>
-                <div
+  useEffect(() => {
+    if (selectedProjectId !== null) {
+      axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}/projects/info/${selectedProjectId}`,
+        responseType: "json",
+      })
+        .then(result => {
+          console.log("extended info", result);
+        })
+        .catch(err => {
+          console.log("failed to fetch extended info");
+        });
+    }
+  }, [selectedProjectId]);
+
+  const displayCard = project => {
+    return (
+      <EachCardDiv>
+        <EachCardWrapperDiv>
+          <div className='card' style={{ minWidth: "18rem" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "250px",
+              }}
+            >
+              <img
+                src={project.gifImage}
+                className='card-img-top'
+                style={{ maxWidth: "100%", maxHeight: "25rem" }}
+                alt={project.title + "Gif"}
+              />
+            </div>
+            <div className='card-body'>
+              <div style={{ marginBottom: "20px" }}>
+                <h5 className='card-title'>{project.title}</h5>
+                <p className='card-text' style={{ height: "120px" }}>
+                  {project.description}
+                </p>
+                <ModalLink onClick={event => setLgProject(true)}>
+                  Learn more
+                </ModalLink>
+                {displayModal(project.id)}
+              </div>
+              <ul className='list-group list-group-flush'>
+                <li className='list-group-item'>
+                  <h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
+                  <p>{project.stack}</p>
+                </li>
+              </ul>
+              <div className='card-body'>
+                <a
+                  href={project.liveLink}
+                  className='card-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
                   style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "250px",
+                    display: project.liveLink !== null ? "block" : "none",
                   }}
                 >
-                  <img
-                    src={project.gifImage}
-                    className='card-img-top'
-                    style={{ maxWidth: "100%", maxHeight: "25rem" }}
-                    alt={project.title + "Gif"}
-                  />
-                </div>
-                <div className='card-body'>
-                  <div style={{ marginBottom: "20px" }}>
-                    <h5 className='card-title'>{project.title}</h5>
-                    <p className='card-text' style={{ height: "120px" }}>
-                      {project.description}
-                    </p>
-                    <ModalLink onClick={event => setLgProject(true)}>
-                      Learn more
-                    </ModalLink>
-                    {displayModal(project.id)}
-                  </div>
-                  <ul className='list-group list-group-flush'>
-                    <li className='list-group-item'>
-                      <h4 style={{ fontSize: "1.2rem" }}>Stack</h4>
-                      <p>{project.stack}</p>
-                    </li>
-                  </ul>
-                  <div className='card-body'>
-                    <a
-                      href={project.liveLink}
-                      className='card-link'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      style={{
-                        display: project.liveLink !== null ? "block" : "none",
-                      }}
-                    >
-                      Live
-                    </a>
-                    <a
-                      href={project.frontendLink}
-                      className='card-link'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      style={{
-                        display:
-                          project.frontendLink !== null ? "block" : "none",
-                      }}
-                    >
-                      Github FE
-                    </a>
-                    <a
-                      href={project.backendLink}
-                      className='card-link'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      style={{
-                        display:
-                          project.backendLink !== null ? "block" : "none",
-                      }}
-                    >
-                      Github BE
-                    </a>
-                  </div>
-                </div>
+                  Live
+                </a>
+                <a
+                  href={project.frontendLink}
+                  className='card-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{
+                    display: project.frontendLink !== null ? "block" : "none",
+                  }}
+                >
+                  Github FE
+                </a>
+                <a
+                  href={project.backendLink}
+                  className='card-link'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{
+                    display: project.backendLink !== null ? "block" : "none",
+                  }}
+                >
+                  Github BE
+                </a>
               </div>
-            </EachCardWrapperDiv>
-          </EachCardDiv>
-        </Flip>
-      );
+            </div>
+          </div>
+        </EachCardWrapperDiv>
+      </EachCardDiv>
+    );
+  };
+
+  const displayFeaturedProjects = () => {
+    return projectsData.map((project, index) => {
+      // return <Flip left key={project.id}></Flip>;
+      if (index % 2 === 0) {
+        return (
+          <Flip left key={project.id}>
+            {displayCard(project)}
+          </Flip>
+        );
+      } else {
+        return (
+          <Flip right key={project.id}>
+            {displayCard(project)}
+          </Flip>
+        );
+      }
     });
   };
 
