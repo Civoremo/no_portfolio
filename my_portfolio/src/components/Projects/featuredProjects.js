@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Flip from "react-reveal/Flip";
 import Modal from "react-bootstrap/Modal";
+import Carousel from "react-bootstrap/Carousel";
 import {
   EachCardDiv,
   EachCardWrapperDiv,
@@ -208,49 +209,8 @@ const FeaturedProjects = () => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div
-              id='carouselExampleControls'
-              className='carousel slide'
-              data-ride='carousel'
-            >
-              <div
-                className='carousel-inner'
-                style={{
-                  backgroundColor: "#222",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "400px",
-                  // minHeight: "400px",
-                  // maxHeight: "400px",
-                }}
-              >
-                {displayCarouselImages()}
-                {/* <a
-                  className='carousel-control-prev'
-                  href='#carouselExampleControls'
-                  role='button'
-                  data-slide='prev'
-                >
-                  <span
-                    className='carousel-control-prev-icon'
-                    aria-hidden='true'
-                  ></span>
-                  <span className='sr-only'>Previous</span>
-                </a>
-                <a
-                  className='carousel-control-next'
-                  href='#carouselExampleControls'
-                  role='button'
-                  data-slide='next'
-                >
-                  <span
-                    className='carousel-control-next-icon'
-                    aria-hidden='true'
-                  ></span>
-                  <span className='sr-only'>Next</span>
-                </a> */}
-              </div>
+            <div>
+              <div>{displayCarouselImages()}</div>
               <div style={{ margin: "30px 20px" }}>{displayExtendedInfo()}</div>
             </div>
           </Modal.Body>
@@ -267,59 +227,41 @@ const FeaturedProjects = () => {
       return <>Loading ...</>;
     } else {
       return (
-        <>
-          <div
-            className='carousel-item active'
-            style={{ marginRight: "0px", width: "auto" }}
-          >
-            <CarouselImage
-              src={extendedProjectInfo[1][0].image}
-              className='d-block'
-              alt={extendedProjectInfo[1][0].id + " carousel image"}
-            />
-          </div>
+        <Carousel
+          pauseOnHover={true}
+          interval={1500}
+          slide={false}
+          style={{
+            backgroundColor: "#222",
+            maxHeight: "400px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {extendedProjectInfo[1].map((image, index) => {
-            if (index !== 0) {
-              return (
-                <div
-                  key={image.id}
-                  className='carousel-item'
-                  style={{ marginRight: "0px", width: "auto" }}
-                >
-                  <CarouselImage
-                    src={extendedProjectInfo[1][index].image}
-                    className='d-block'
-                    alt={extendedProjectInfo[1][index].id + " carousel image"}
-                  />
-                </div>
-              );
-            }
+            return (
+              <Carousel.Item
+                key={image.id}
+                style={{
+                  // marginRight: "0px",
+                  maxHeight: "400px",
+                  // width: "auto",
+                  // height: "400px",
+                  // margin: "auto",
+                  border: "1px solid yellow",
+                }}
+              >
+                <img
+                  src={extendedProjectInfo[1][index].image}
+                  style={{ maxHeight: "400px" }}
+                  className='d-block w-100'
+                  alt={extendedProjectInfo[1][index].id + " carousel image"}
+                />
+              </Carousel.Item>
+            );
           })}
-          <a
-            className='carousel-control-prev'
-            href='#carouselExampleControls'
-            role='button'
-            data-slide='prev'
-          >
-            <span
-              className='carousel-control-prev-icon'
-              aria-hidden='true'
-            ></span>
-            <span className='sr-only'>Previous</span>
-          </a>
-          <a
-            className='carousel-control-next'
-            href='#carouselExampleControls'
-            role='button'
-            data-slide='next'
-          >
-            <span
-              className='carousel-control-next-icon'
-              aria-hidden='true'
-            ></span>
-            <span className='sr-only'>Next</span>
-          </a>
-        </>
+        </Carousel>
       );
     }
   };
