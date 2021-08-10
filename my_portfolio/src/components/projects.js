@@ -78,8 +78,8 @@ const Projects = () => {
         </h2>
         <CardContainerDiv>
           <FeaturedProjects />
-          {/* <ARQ />
-          <PPSR />
+          {/* <ARQ /> */}
+          {/* <PPSR />
           <LUNCHER /> */}
         </CardContainerDiv>
       </Container>
