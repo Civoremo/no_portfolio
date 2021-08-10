@@ -106,7 +106,7 @@ const FeaturedProjects = () => {
                 >
                   Learn more
                 </ModalLink>
-                {displayModal(project)}
+                {displayModal()}
               </div>
               <ul className='list-group list-group-flush'>
                 <li className='list-group-item' style={{ minHeight: "12rem" }}>
@@ -188,7 +188,7 @@ const FeaturedProjects = () => {
     });
   };
 
-  const displayModal = project => {
+  const displayModal = () => {
     // console.log("id", selectedProjectId, " info", extendedProjectInfo);
 
     if (selectedProjectId === null && extendedProjectInfo === null) {
