@@ -6,6 +6,7 @@ import styled from "styled-components";
 import * as ProjectComponents from "./Projects/indexProjects";
 
 import FeaturedProjects from "./Projects/featuredProjects";
+import MoreProjects from "./Projects/moreProjects";
 
 const {
   ARQ,
@@ -77,8 +78,8 @@ const Projects = () => {
         </h2>
         <CardContainerDiv>
           <FeaturedProjects />
-          <ARQ />
-          {/* <PPSR />
+          {/* <ARQ />
+          <PPSR />
           <LUNCHER /> */}
         </CardContainerDiv>
       </Container>
@@ -95,6 +96,7 @@ const Projects = () => {
           Projects
         </h2>
         <CardContainerOlderProjectsDiv>
+          {/* <MoreProjects /> */}
           <TETRIS />
           <PORTFOLIO />
           <BACKYARDSPORTLEAGUE />
