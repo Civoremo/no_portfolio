@@ -18,7 +18,7 @@ const CardContainerDiv = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0 40px 0;
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
 `;
 
 const FeaturedProjects = () => {
@@ -88,7 +88,7 @@ const FeaturedProjects = () => {
               <img
                 src={project.gifImage}
                 className='card-img-top'
-                style={{ maxWidth: "100%", maxHeight: "25rem" }}
+                style={{ maxWidth: "100%", maxHeight: "13rem" }}
                 alt={project.title + "Gif"}
               />
             </div>
@@ -301,13 +301,7 @@ const FeaturedProjects = () => {
     return <>Loading ...</>;
   }
 
-  return (
-    <div>
-      {/* {console.log("projects", projectsData)} */}
-      {/* <div>Feature Project Component</div> */}
-      <CardContainerDiv>{displayFeaturedProjects()}</CardContainerDiv>
-    </div>
-  );
+  return <CardContainerDiv>{displayFeaturedProjects()}</CardContainerDiv>;
 };
 
 export default FeaturedProjects;

@@ -27,7 +27,7 @@ const CardContainerDiv = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0 40px 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 `;
 
 const CardContainerOlderProjectsDiv = styled.div`

@@ -69,13 +69,13 @@ const AboutMe = () => {
     return aboutMeData.about[1].map((content, index) => {
       if (index % 2 === 0) {
         return (
-          <Fade left key={content.id}>
+          <Fade delay={300} left key={content.id}>
             <p style={{ lineHeight: "40px" }}>{content.textContent}</p>
           </Fade>
         );
       } else {
         return (
-          <Fade right key={content.id}>
+          <Fade delay={600} right key={content.id}>
             <p style={{ lineHeight: "40px" }}>{content.textContent}</p>
           </Fade>
         );
@@ -137,7 +137,9 @@ const AboutMe = () => {
           <span style={{ color: "#DC3545" }}>{aboutMeData.stack[0].title}</span>
         </h2>
         <AboutContentDiv>
-          <Fade bottom>{displayStackContent()}</Fade>
+          <Fade delay={500} bottom>
+            {displayStackContent()}
+          </Fade>
         </AboutContentDiv>
       </Container>
     </AboutMeDiv>
