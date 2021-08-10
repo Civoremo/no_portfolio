@@ -24,6 +24,7 @@ const FeaturedProjects = () => {
   const [lgProject, setLgProject] = useState(false);
   const [projectsData, setProjectsData] = useState(null);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [extendedProjectInfo, setExtendedProjectInfo] = useState(null);
 
   useEffect(() => {
     axios({
@@ -58,6 +59,11 @@ const FeaturedProjects = () => {
       })
         .then(result => {
           console.log("extended info", result);
+          if (result.status === 200) {
+            setExtendedProjectInfo(result.data);
+          } else {
+            console.log("Something went wrong fetching extended project info.");
+          }
         })
         .catch(err => {
           console.log("failed to fetch extended info");
@@ -91,10 +97,15 @@ const FeaturedProjects = () => {
                 <p className='card-text' style={{ height: "120px" }}>
                   {project.description}
                 </p>
-                <ModalLink onClick={event => setLgProject(true)}>
+                <ModalLink
+                  onClick={event => {
+                    setLgProject(true);
+                    setSelectedProjectId(project.id);
+                  }}
+                >
                   Learn more
                 </ModalLink>
-                {displayModal(project.id)}
+                {displayModal(project)}
               </div>
               <ul className='list-group list-group-flush'>
                 <li className='list-group-item'>
@@ -163,93 +174,176 @@ const FeaturedProjects = () => {
     });
   };
 
-  const displayModal = projectId => {
-    return (
-      <Modal
-        size='lg'
-        show={lgProject}
-        onHide={event => setLgProject(false)}
-        aria-labelledby='example-modal-sizes-title-lg'
-        scrollable='true'
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id='example-modal-sizes-title-lg'>
-            Project title goes here
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div
-            id='carouselExampleControls'
-            className='carousel slide'
-            data-ride='carousel'
-          >
+  const displayModal = project => {
+    // console.log("id", selectedProjectId, " info", extendedProjectInfo);
+    if (selectedProjectId === null && extendedProjectInfo === null) {
+      return (
+        <Modal
+          size='lg'
+          show={lgProject}
+          onHide={event => setLgProject(false)}
+          aria-labelledby='example-modal-sizes-title-lg'
+          scrollable='true'
+        >
+          <Modal.Body>Loading ...</Modal.Body>
+        </Modal>
+      );
+    } else {
+      return (
+        <Modal
+          size='lg'
+          show={lgProject}
+          onHide={event => {
+            setLgProject(false);
+            setSelectedProjectId(null);
+            setExtendedProjectInfo(null);
+          }}
+          aria-labelledby='example-modal-sizes-title-lg'
+          scrollable='true'
+        >
+          {/* {console.log(project)} */}
+          <Modal.Header closeButton>
+            <Modal.Title id='example-modal-sizes-title-lg'>
+              {project.title}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
             <div
-              className='carousel-inner'
-              style={{
-                backgroundColor: "#222",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "400px",
-                // minHeight: "400px",
-                // maxHeight: "400px",
-              }}
+              id='carouselExampleControls'
+              className='carousel slide'
+              data-ride='carousel'
             >
-              {displayCarouselImages()}
-              <a
-                className='carousel-control-prev'
-                href='#carouselExampleControls'
-                role='button'
-                data-slide='prev'
+              <div
+                className='carousel-inner'
+                style={{
+                  backgroundColor: "#222",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "400px",
+                  // minHeight: "400px",
+                  // maxHeight: "400px",
+                }}
               >
-                <span
-                  className='carousel-control-prev-icon'
-                  aria-hidden='true'
-                ></span>
-                <span className='sr-only'>Previous</span>
-              </a>
-              <a
-                className='carousel-control-next'
-                href='#carouselExampleControls'
-                role='button'
-                data-slide='next'
-              >
-                <span
-                  className='carousel-control-next-icon'
-                  aria-hidden='true'
-                ></span>
-                <span className='sr-only'>Next</span>
-              </a>
+                {displayCarouselImages()}
+                {/* <a
+                  className='carousel-control-prev'
+                  href='#carouselExampleControls'
+                  role='button'
+                  data-slide='prev'
+                >
+                  <span
+                    className='carousel-control-prev-icon'
+                    aria-hidden='true'
+                  ></span>
+                  <span className='sr-only'>Previous</span>
+                </a>
+                <a
+                  className='carousel-control-next'
+                  href='#carouselExampleControls'
+                  role='button'
+                  data-slide='next'
+                >
+                  <span
+                    className='carousel-control-next-icon'
+                    aria-hidden='true'
+                  ></span>
+                  <span className='sr-only'>Next</span>
+                </a> */}
+              </div>
+              <div style={{ margin: "30px 20px" }}>{displayExtendedInfo()}</div>
             </div>
-            <div style={{ margin: "30px 20px" }}>{displayExtendedInfo()}</div>
-          </div>
-        </Modal.Body>
-      </Modal>
-    );
+          </Modal.Body>
+        </Modal>
+      );
+    }
   };
 
   const displayCarouselImages = () => {
-    return (
-      <div>
-        <div
-          className='carousel-item active'
-          style={{ marginRight: "0px", width: "auto" }}
-        >
-          {/* <CarouselImage src= /> */}
-        </div>
-      </div>
-    );
+    // {
+    //   console.log(extendedProjectInfo);
+    // }
+    if (extendedProjectInfo === null) {
+      return <>Loading ...</>;
+    } else {
+      return (
+        <>
+          <div
+            className='carousel-item active'
+            style={{ marginRight: "0px", width: "auto" }}
+          >
+            <CarouselImage
+              src={extendedProjectInfo[1][0].image}
+              className='d-block'
+              alt={extendedProjectInfo[1][0].id + " carousel image"}
+            />
+          </div>
+          {extendedProjectInfo[1].map((image, index) => {
+            if (index !== 0) {
+              return (
+                <div
+                  key={image.id}
+                  className='carousel-item'
+                  style={{ marginRight: "0px", width: "auto" }}
+                >
+                  <CarouselImage
+                    src={extendedProjectInfo[1][index].image}
+                    className='d-block'
+                    alt={extendedProjectInfo[1][index].id + " carousel image"}
+                  />
+                </div>
+              );
+            }
+          })}
+          <a
+            className='carousel-control-prev'
+            href='#carouselExampleControls'
+            role='button'
+            data-slide='prev'
+          >
+            <span
+              className='carousel-control-prev-icon'
+              aria-hidden='true'
+            ></span>
+            <span className='sr-only'>Previous</span>
+          </a>
+          <a
+            className='carousel-control-next'
+            href='#carouselExampleControls'
+            role='button'
+            data-slide='next'
+          >
+            <span
+              className='carousel-control-next-icon'
+              aria-hidden='true'
+            ></span>
+            <span className='sr-only'>Next</span>
+          </a>
+        </>
+      );
+    }
   };
 
   const displayExtendedInfo = () => {
-    return (
-      <div>
+    if (extendedProjectInfo === null) {
+      return <>Loading ...</>;
+    } else {
+      return (
         <div>
-          <a>Additional Link Title</a>
+          <div
+            style={{
+              display: extendedProjectInfo[0].link !== null ? "block" : "none",
+            }}
+          >
+            <a href={extendedProjectInfo[0].link}>Click for More</a>
+          </div>
+          <br />
+          <p style={{ whiteSpace: "pre-wrap" }}>
+            {extendedProjectInfo[0].description}
+          </p>
         </div>
-        <p>Extended Project info goes here</p>
-      </div>
-    );
+      );
+    }
   };
 
   if (projectsData === null) {
