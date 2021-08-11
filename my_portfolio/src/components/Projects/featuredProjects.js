@@ -10,7 +10,7 @@ import {
   EachCardDiv,
   EachCardWrapperDiv,
   ModalLink,
-  // CarouselImage,
+  CarouselImage,
 } from "./styledCompProjects";
 
 const CardContainerDiv = styled.div`
@@ -120,6 +120,7 @@ const FeaturedProjects = () => {
                   minHeight: "7rem",
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "space-between",
                 }}
               >
                 <div>
@@ -248,9 +249,6 @@ const FeaturedProjects = () => {
           style={{
             backgroundColor: "#222",
             height: "400px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           }}
         >
           {extendedProjectInfo[1].map((image, index) => {
@@ -261,12 +259,15 @@ const FeaturedProjects = () => {
                   maxHeight: "400px",
                 }}
               >
-                <img
-                  src={extendedProjectInfo[1][index].image}
-                  style={{ maxHeight: "400px" }}
-                  className='d-block w-100'
-                  alt={extendedProjectInfo[1][index].id + " carousel image"}
-                />
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <img
+                    width='auto'
+                    height={400}
+                    src={extendedProjectInfo[1][index].image}
+                    // className='d-block w-100'
+                    alt={extendedProjectInfo[1][index].id + " carousel image"}
+                  />
+                </div>
               </Carousel.Item>
             );
           })}
