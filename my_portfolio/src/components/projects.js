@@ -96,11 +96,11 @@ const Projects = () => {
           Projects
         </h2>
         <CardContainerOlderProjectsDiv>
-          {/* <MoreProjects /> */}
-          <TETRIS />
-          <PORTFOLIO />
+          <MoreProjects />
+          {/* <TETRIS /> */}
+          {/* <PORTFOLIO />
           <BACKYARDSPORTLEAGUE />
-          <ARCHITECT />
+          <ARCHITECT /> */}
         </CardContainerOlderProjectsDiv>
         <div
           style={{
