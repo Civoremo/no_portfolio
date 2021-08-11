@@ -126,13 +126,13 @@ const MoreProjects = () => {
     return projectsData.map((project, index) => {
       if (index % 2 === 0) {
         return (
-          <Flip key={project.id} top>
+          <Flip key={project.id} top delay={index * 100}>
             {displayProjectData(project)}
           </Flip>
         );
       } else {
         return (
-          <Flip key={project.id} bottom>
+          <Flip key={project.id} bottom delay={index * 100}>
             {displayProjectData(project)}
           </Flip>
         );

@@ -175,13 +175,13 @@ const FeaturedProjects = () => {
       // return <Flip left key={project.id}></Flip>;
       if (index % 2 === 0) {
         return (
-          <Flip left key={project.id}>
+          <Flip left key={project.id} delay={index * 500}>
             {displayCard(project)}
           </Flip>
         );
       } else {
         return (
-          <Flip right key={project.id}>
+          <Flip right key={project.id} delay={index * 500}>
             {displayCard(project)}
           </Flip>
         );

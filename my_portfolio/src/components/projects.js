@@ -97,7 +97,7 @@ const Projects = () => {
         </h2>
         <CardContainerOlderProjectsDiv>
           <MoreProjects />
-          <TETRIS />
+          {/* <TETRIS /> */}
           {/* <PORTFOLIO />
           <BACKYARDSPORTLEAGUE />
           <ARCHITECT /> */}
