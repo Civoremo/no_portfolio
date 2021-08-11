@@ -14,6 +14,8 @@ import {
 const MoreProjects = () => {
   const [lgProjects, setLgProjects] = useState(false);
   const [projectsData, setProjectsData] = useState(null);
+  const [projectGroupIndex, setProjectGroupIndex] = useState(0);
+  const [projectIndexes, setProjectIndexes] = useState({});
 
   useEffect(() => {
     axios({
@@ -23,20 +25,25 @@ const MoreProjects = () => {
     }).then(result => {
       if (result.status === 200) {
         let tempProjects = [];
+        let tempIndexes = {};
+        let assignedIndex = 0;
 
         for (let project of result.data) {
           if (project.featured === false) {
             tempProjects.push(project);
+            if (tempProjects.length % 5 === 0) {
+              assignedIndex += 1;
+            }
+            tempIndexes = { ...tempIndexes, [project.id]: assignedIndex };
           }
         }
-
         setProjectsData(tempProjects);
+        setProjectIndexes(tempIndexes);
       }
     });
   }, []);
 
   const displayProjectData = project => {
-    console.log(project);
     return (
       <EachCardWrapperDiv style={{ margin: "10px 10px 85px 10px" }}>
         <div className='card' style={{ width: "14rem" }}>
@@ -127,13 +134,31 @@ const MoreProjects = () => {
       if (index % 2 === 0) {
         return (
           <Flip key={project.id} top delay={index * 100}>
-            {displayProjectData(project)}
+            <div
+              style={{
+                display:
+                  projectIndexes[project.id] <= projectGroupIndex
+                    ? "block"
+                    : "none",
+              }}
+            >
+              {displayProjectData(project)}
+            </div>
           </Flip>
         );
       } else {
         return (
           <Flip key={project.id} bottom delay={index * 100}>
-            {displayProjectData(project)}
+            <div
+              style={{
+                display:
+                  projectIndexes[project.id] <= projectGroupIndex
+                    ? "block"
+                    : "none",
+              }}
+            >
+              {displayProjectData(project)}
+            </div>
           </Flip>
         );
       }
@@ -152,6 +177,7 @@ const MoreProjects = () => {
         justifyContent: "space-around",
       }}
     >
+      {console.log("indexes", projectIndexes)}
       {displayProjectCards()}
     </div>
   );
