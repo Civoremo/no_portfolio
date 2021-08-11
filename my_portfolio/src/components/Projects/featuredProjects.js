@@ -120,6 +120,7 @@ const FeaturedProjects = () => {
                   minHeight: "7rem",
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "space-between",
                 }}
               >
                 <div>
