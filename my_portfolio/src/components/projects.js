@@ -1,26 +1,11 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
-import * as ProjectComponents from "./Projects/indexProjects";
 
 import FeaturedProjects from "./Projects/featuredProjects";
 import MoreProjects from "./Projects/moreProjects";
-
-const {
-  // ARQ,
-  // PPSR,
-  // LUNCHER,
-  // TETRIS,
-  // PORTFOLIO,
-  // BACKYARDSPORTLEAGUE,
-  // ARCHITECT,
-  NOTES,
-  ORBITDANGER,
-  QUIZBLISS,
-  BRICKBREAKER,
-} = ProjectComponents;
 
 const CardContainerDiv = styled.div`
   display: flex;
@@ -51,17 +36,8 @@ const ShowMoreSpan = styled.span`
 `;
 
 const Projects = () => {
-  function showMoreProjectsPart2() {
-    let projectsDiv = document.getElementById("olderProjectsPart2");
-    let showMoreProjectsLink = document.getElementById("showMoreProjectsLink1");
-    if (projectsDiv.style.display === "none") {
-      showMoreProjectsLink.style.display = "none";
-      projectsDiv.style.display = "block";
-    } else {
-      projectsDiv.style.display = "none";
-      showMoreProjectsLink.style.display = "block";
-    }
-  }
+  const [projectGroupIndex, setProjectGroupIndex] = useState(0);
+  const [maxIndex, setMaxIndex] = useState(null);
 
   return (
     <div className='projects'>
@@ -78,9 +54,6 @@ const Projects = () => {
         </h2>
         <CardContainerDiv>
           <FeaturedProjects />
-          {/* <ARQ /> */}
-          {/* <PPSR />
-          <LUNCHER /> */}
         </CardContainerDiv>
       </Container>
 
@@ -96,11 +69,10 @@ const Projects = () => {
           Projects
         </h2>
         <CardContainerOlderProjectsDiv>
-          <MoreProjects />
-          {/* <TETRIS /> */}
-          {/* <PORTFOLIO />
-          <BACKYARDSPORTLEAGUE />
-          <ARCHITECT /> */}
+          <MoreProjects
+            projectGroupIndex={projectGroupIndex}
+            setMaxIndex={setMaxIndex}
+          />
         </CardContainerOlderProjectsDiv>
         <div
           style={{
@@ -110,20 +82,14 @@ const Projects = () => {
           }}
         >
           <ShowMoreSpan
+            style={{
+              display: projectGroupIndex >= maxIndex ? "none" : "block",
+            }}
             id='showMoreProjectsLink1'
-            onClick={() => showMoreProjectsPart2()}
+            onClick={event => setProjectGroupIndex(projectGroupIndex + 1)}
           >
             Show More Projects
           </ShowMoreSpan>
-        </div>
-
-        <div id='olderProjectsPart2' style={{ display: "none" }}>
-          <CardContainerOlderProjectsDiv>
-            <NOTES />
-            <ORBITDANGER />
-            <QUIZBLISS />
-            <BRICKBREAKER />
-          </CardContainerOlderProjectsDiv>
         </div>
       </Container>
     </div>
