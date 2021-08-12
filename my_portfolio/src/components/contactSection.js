@@ -9,6 +9,8 @@ import { Github, Linkedin } from "styled-icons/boxicons-logos";
 import * as emailjs from "emailjs-com";
 import Reaptcha from "reaptcha";
 
+import SocialSection from "./socialSection";
+
 const ContactContainerDiv = styled.div`
   background: #222;
   color: #fff;
@@ -304,7 +306,9 @@ class ContactForm extends Component {
                   </button>
                 </form>
               </FormContainer>
-              <SocialLinksContainer>
+
+              <SocialSection />
+              {/* <SocialLinksContainer>
                 <TitleDiv>Current Location</TitleDiv>
                 <div
                   style={{
@@ -329,19 +333,6 @@ class ContactForm extends Component {
                     contact@nedim.info
                   </a>
                 </div>
-                {/* <TitleDiv>Resume</TitleDiv>
-								<div
-									style={{
-										marginBottom: "15px",
-										marginLeft: "10px",
-										fontFamily: "Open Sans Condensed",
-										letterSpacing: "4px",
-									}}
-								>
-									<a href={PDFResume} target="Nedim_Omerovic_Resume">
-										<FilePdf style={{ width: "50px", color: "#fff" }} />
-									</a>
-								</div> */}
                 <TitleDiv>Github</TitleDiv>
                 <div
                   style={{
@@ -376,7 +367,7 @@ class ContactForm extends Component {
                     <Linkedin style={{ width: "50px", color: "#fff" }} />
                   </a>
                 </div>
-              </SocialLinksContainer>
+              </SocialLinksContainer> */}
             </ContactSectionWrapper>
           </Container>
         </Container>
