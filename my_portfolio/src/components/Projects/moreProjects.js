@@ -299,12 +299,12 @@ const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
   };
 
   const displayExtendedInfo = () => {
-    let mainProjectInfo = projectsData.filter(
-      project => project.id === selectedProjectId
-    );
     if (extendedProjectInfo === null) {
       return <>Loading ...</>;
     } else {
+      let mainProjectInfo = projectsData.filter(
+        project => project.id === selectedProjectId
+      );
       return (
         <div>
           <div
@@ -317,11 +317,13 @@ const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
           <br />
           <div>
             <h5>Stack</h5>
-            <div>{mainProjectInfo.stack}</div>
+            <div>{mainProjectInfo[0].stack}</div>
           </div>
           <hr />
           <div>
-            <p>{extendedProjectInfo[0].description}</p>
+            <p style={{ whiteSpace: "pre-wrap" }}>
+              {extendedProjectInfo[0].description}
+            </p>
           </div>
         </div>
       );
