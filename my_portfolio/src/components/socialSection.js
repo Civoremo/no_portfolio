@@ -39,13 +39,38 @@ const SocialSection = () => {
       });
   }, []);
 
+  const displaySocials = () => {
+    return socialData[1].map(social => {
+      return (
+        <div key={social.id}>
+          <TitleDiv>{social.platform_title}</TitleDiv>
+          <div
+            style={{
+              marginBottom: "15px",
+              marginLeft: "10px",
+              fontFamily: "Open Sans Condensed",
+              letterSpacing: "4px",
+            }}
+          >
+            <a href={social.link} target='_blank' rel='noopener noreferrer'>
+              <img
+                src={social.image}
+                alt={social.platform_title}
+                style={{ width: "50px", height: "auto" }}
+              />
+            </a>
+          </div>
+        </div>
+      );
+    });
+  };
+
   if (socialData === null) {
     return <>Loading ...</>;
   }
 
   return (
     <SocialLinksContainer>
-      {console.log("social", socialData)}
       <TitleDiv>Current Location</TitleDiv>
       <div
         style={{
@@ -57,6 +82,18 @@ const SocialSection = () => {
       >
         {socialData[0].location}
       </div>
+      <TitleDiv>Email</TitleDiv>
+      <div
+        style={{
+          marginBottom: "15px",
+          marginLeft: "10px",
+          fontFamily: "Open Sans Condensed",
+          letterSpacing: "4px",
+        }}
+      >
+        {socialData[0].email}
+      </div>
+      {displaySocials()}
     </SocialLinksContainer>
   );
 };
