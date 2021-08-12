@@ -3,11 +3,10 @@
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import styled from "styled-components";
-import { Github, Linkedin } from "styled-icons/boxicons-logos";
-// import { FilePdf } from "styled-icons/boxicons-solid";
-// import PDFResume from "./assets/Nedim_Omerovic_resume.pdf";
 import * as emailjs from "emailjs-com";
 import Reaptcha from "reaptcha";
+
+import SocialSection from "./socialSection";
 
 const ContactContainerDiv = styled.div`
   background: #222;
@@ -25,20 +24,6 @@ const ContactSectionWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-`;
-
-const SocialLinksContainer = styled.div`
-  padding-left: 64px;
-  min-width: 300px;
-  text-align: left;
-  padding-top: 25px;
-`;
-
-const TitleDiv = styled.div`
-  font-family: Nunito;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 4px;
 `;
 
 class ContactForm extends Component {
@@ -304,79 +289,8 @@ class ContactForm extends Component {
                   </button>
                 </form>
               </FormContainer>
-              <SocialLinksContainer>
-                <TitleDiv>Current Location</TitleDiv>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    marginLeft: "10px",
-                    fontFamily: "Open Sans Condensed",
-                    letterSpacing: "4px",
-                  }}
-                >
-                  Orlando, Florida
-                </div>
-                <TitleDiv>Email</TitleDiv>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    marginLeft: "10px",
-                    fontFamily: "Open Sans Condensed",
-                    letterSpacing: "4px",
-                  }}
-                >
-                  <a href='mailto:contact@nedim.info' style={{ color: "#fff" }}>
-                    contact@nedim.info
-                  </a>
-                </div>
-                {/* <TitleDiv>Resume</TitleDiv>
-								<div
-									style={{
-										marginBottom: "15px",
-										marginLeft: "10px",
-										fontFamily: "Open Sans Condensed",
-										letterSpacing: "4px",
-									}}
-								>
-									<a href={PDFResume} target="Nedim_Omerovic_Resume">
-										<FilePdf style={{ width: "50px", color: "#fff" }} />
-									</a>
-								</div> */}
-                <TitleDiv>Github</TitleDiv>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    marginLeft: "10px",
-                    fontFamily: "Open Sans Condensed",
-                    letterSpacing: "4px",
-                  }}
-                >
-                  <a
-                    href='https://github.com/Civoremo'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Github style={{ width: "50px", color: "#fff" }} />
-                  </a>
-                </div>
-                <TitleDiv>LinkedIn</TitleDiv>
-                <div
-                  style={{
-                    marginBottom: "15px",
-                    marginLeft: "10px",
-                    fontFamily: "Open Sans Condensed",
-                    letterSpacing: "4px",
-                  }}
-                >
-                  <a
-                    href='https://www.linkedin.com/in/nedim-omerovic-46088b25'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Linkedin style={{ width: "50px", color: "#fff" }} />
-                  </a>
-                </div>
-              </SocialLinksContainer>
+
+              <SocialSection />
             </ContactSectionWrapper>
           </Container>
         </Container>

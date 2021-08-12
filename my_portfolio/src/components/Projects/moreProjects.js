@@ -12,10 +12,9 @@ import {
   // CarouselImage,
 } from "./styledCompProjects";
 
-const MoreProjects = () => {
+const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
   const [lgProject, setLgProject] = useState(false);
   const [projectsData, setProjectsData] = useState(null);
-  const [projectGroupIndex, setProjectGroupIndex] = useState(0);
   const [projectIndexes, setProjectIndexes] = useState({});
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [extendedProjectInfo, setExtendedProjectInfo] = useState(null);
@@ -34,18 +33,20 @@ const MoreProjects = () => {
 
         for (let project of result.data) {
           if (project.featured === false) {
-            tempProjects.push(project);
-            if (tempProjects.length % 5 === 0) {
+            if (tempProjects.length % 4 === 0 && tempProjects.length !== 0) {
               assignedIndex += 1;
             }
+            tempProjects.push(project);
+
             tempIndexes = { ...tempIndexes, [project.id]: assignedIndex };
           }
         }
+        setMaxIndex(assignedIndex);
         setProjectsData(tempProjects);
         setProjectIndexes(tempIndexes);
       }
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // render quantity of project cards based on index
   useEffect(() => {
@@ -175,7 +176,7 @@ const MoreProjects = () => {
       return projectsData.map((project, index) => {
         if (index % 2 === 0) {
           return (
-            <Flip key={project.id} top delay={index * 100}>
+            <Flip key={project.id} top>
               <div
                 style={{
                   display:
@@ -190,7 +191,7 @@ const MoreProjects = () => {
           );
         } else {
           return (
-            <Flip key={project.id} bottom delay={index * 100}>
+            <Flip key={project.id} bottom>
               <div
                 style={{
                   display:
