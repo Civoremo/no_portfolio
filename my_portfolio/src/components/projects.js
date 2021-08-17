@@ -6,13 +6,14 @@ import styled from "styled-components";
 
 import FeaturedProjects from "./Projects/featuredProjects";
 import MoreProjects from "./Projects/moreProjects";
+import GridProjects from "./Projects/gridProjects";
 
 const CardContainerDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 0 40px 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 
 const CardContainerOlderProjectsDiv = styled.div`
@@ -50,7 +51,7 @@ const Projects = () => {
             fontFamily: "Nunito",
           }}
         >
-          Featured Projects
+          Projects
         </h2>
         <CardContainerDiv>
           <FeaturedProjects />
@@ -66,13 +67,14 @@ const Projects = () => {
             fontFamily: "Nunito",
           }}
         >
-          Projects
+          Even More Projects
         </h2>
         <CardContainerOlderProjectsDiv>
-          <MoreProjects
+          {/* <MoreProjects
             projectGroupIndex={projectGroupIndex}
             setMaxIndex={setMaxIndex}
-          />
+          /> */}
+          <GridProjects />
         </CardContainerOlderProjectsDiv>
         <div
           style={{
