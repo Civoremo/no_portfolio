@@ -24,6 +24,10 @@ const ProjectCard = styled.div`
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -91,8 +95,8 @@ const GridProjects = () => {
               alt={project.id + " " + project.title}
             />
             <ProjectOverlay>
-              <h4 style={{ fontSize: "12px" }}>{project.title}</h4>
-              <p style={{ fontSize: "10px" }}>{project.description}</p>
+              <h4 style={{ fontSize: "14px" }}>{project.title}</h4>
+              <p style={{ fontSize: "12px" }}>{project.description}</p>
             </ProjectOverlay>
           </ProjectCard>
         </ProjectContainer>

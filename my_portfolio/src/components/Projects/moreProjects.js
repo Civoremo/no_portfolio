@@ -344,6 +344,7 @@ const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
       }}
     >
       {displayProjectCards()}
+      {/* {displayProjectsContainers()} */}
     </div>
   );
 };
