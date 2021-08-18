@@ -112,9 +112,10 @@ class ContactForm extends Component {
     }
 
     let templateParams = {
-      from_name: this.state.senderName + " ( " + this.state.senderEmail + " ) ",
+      from_name: this.state.senderName,
+      sender_email: this.state.senderEmail,
       to_name: "Nedim",
-      subject: "Nedim Protfolio Contact Form",
+      subject: "Portfolio Contact",
       message_html: this.state.senderMessage,
     };
 
