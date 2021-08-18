@@ -12,7 +12,7 @@ const ContactContainerDiv = styled.div`
   background: #222;
   color: #fff;
   padding: 50px 0 50px 0;
-  margin-top: 100px;
+  // margin-top: 100px;
 `;
 
 const FormContainer = styled.div`
@@ -290,7 +290,7 @@ class ContactForm extends Component {
                 </form>
               </FormContainer>
 
-              <SocialSection />
+              {/* <SocialSection /> */}
             </ContactSectionWrapper>
           </Container>
         </Container>

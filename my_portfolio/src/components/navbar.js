@@ -9,6 +9,7 @@ import styled from "styled-components";
 import left_bracket from "./my_images/left_bracket.png";
 import right_bracket from "./my_images/right_bracket.png";
 import rsScroller from "react-smooth-scroller";
+// import NavLink from "react-bootstrap/esm/NavLink";
 
 const NavBG = styled.nav`
   background-color: #fff;
@@ -36,6 +37,8 @@ const NavBar = () => {
   let linkElementAbout = useRef(null);
   let linkElementProjects = useRef(null);
   let linkElementContact = useRef(null);
+  let linkElementGithub = useRef(null);
+  let linkElementLinkedin = useRef(null);
 
   let tlStart = new TimelineLite();
   let tlOpen = new TimelineLite();
@@ -166,6 +169,22 @@ const NavBar = () => {
     TweenMax.to(linkElementContact, 0.05, { scale: 1, ease: Linear.ease });
   }
 
+  function scaleLinkUpGithub() {
+    TweenMax.to(linkElementGithub, 0.1, { scale: 1.1, ease: Linear.ease });
+  }
+
+  function scaleLinkDownGithub() {
+    TweenMax.to(linkElementGithub, 0.05, { scale: 1, ease: Linear.ease });
+  }
+
+  function scaleLinkUpLinkedin() {
+    TweenMax.to(linkElementLinkedin, 0.1, { scale: 1.1, ease: Linear.ease });
+  }
+
+  function scaleLinkDownLinkedin() {
+    TweenMax.to(linkElementLinkedin, 0.05, { scale: 1, ease: Linear.ease });
+  }
+
   let logoWrapper = {
     position: "absolute",
     width: "200px",
@@ -290,6 +309,37 @@ const NavBar = () => {
                   <NavLinkColor>Contact</NavLinkColor>
                 </div>
               </Nav.Link>
+              <Nav.Link
+                href='https://github.com/Civoremo'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div
+                  ref={element => {
+                    linkElementGithub = element;
+                  }}
+                  onMouseEnter={scaleLinkUpGithub}
+                  onMouseLeave={scaleLinkDownGithub}
+                >
+                  <NavLinkColor>Github</NavLinkColor>
+                </div>
+              </Nav.Link>
+              <Nav.Link
+                href='https://www.linkedin.com/in/nedim-omerovic-46088b25'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div
+                  ref={element => {
+                    linkElementLinkedin = element;
+                  }}
+                  onMouseEnter={scaleLinkUpLinkedin}
+                  onMouseLeave={scaleLinkDownLinkedin}
+                >
+                  <NavLinkColor>LinkedIn</NavLinkColor>
+                </div>
+              </Nav.Link>
+              {/* <Nav.Link>Twitter</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>

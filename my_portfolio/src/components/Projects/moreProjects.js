@@ -41,6 +41,7 @@ const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
             tempIndexes = { ...tempIndexes, [project.id]: assignedIndex };
           }
         }
+
         setMaxIndex(assignedIndex);
         setProjectsData(tempProjects);
         setProjectIndexes(tempIndexes);
@@ -343,6 +344,7 @@ const MoreProjects = ({ projectGroupIndex, setMaxIndex }) => {
       }}
     >
       {displayProjectCards()}
+      {/* {displayProjectsContainers()} */}
     </div>
   );
 };
