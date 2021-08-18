@@ -29,7 +29,7 @@ const ShowMoreSpan = styled.span`
   margin-bottom: 64px;
   font-size: 1.2rem;
   transition: 0.3s ease;
-  border: 1px solid red;
+  border: 1px solid #dc3545;
 
   :hover {
     cursor: pointer;
@@ -94,7 +94,6 @@ const Projects = () => {
           <ShowMoreSpan
             style={{
               display: projectGroupIndex >= maxIndex ? "none" : "block",
-
               padding: "10px 20px",
             }}
             id='showMoreProjectsLink1'

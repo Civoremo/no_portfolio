@@ -290,7 +290,7 @@ class ContactForm extends Component {
                 </form>
               </FormContainer>
 
-              <SocialSection />
+              {/* <SocialSection /> */}
             </ContactSectionWrapper>
           </Container>
         </Container>
